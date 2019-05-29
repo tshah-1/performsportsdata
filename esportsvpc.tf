@@ -8,8 +8,6 @@ resource "aws_vpc" "esports" {
   }
 }
 
-data "aws_availability_zones" "available" {}
-
 resource "aws_subnet" "esports_public_subnet_a" {
   vpc_id     = "${aws_vpc.esports.id}"
   cidr_block = "172.24.16.0/24"

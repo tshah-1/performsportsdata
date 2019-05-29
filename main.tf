@@ -3,6 +3,8 @@ provider "aws" {
   region  = "${terraform.workspace}"
 }
 
+data "aws_availability_zones" "available" {}
+
 # create a dynamodb table for locking the state file
 resource "aws_dynamodb_table" "dynamodb-performsportsdata-terraform-state-lock" {
   name           = "terraform.dynamo.lock"
