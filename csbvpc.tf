@@ -26,7 +26,7 @@ resource "aws_subnet" "csb_public_subnet_b" {
   vpc_id     = "${aws_vpc.csb.id}"
   cidr_block = "172.24.33.0/24"
 
-  availability_zone       = "${data.aws_availability_zones.available.names[0]}"
+  availability_zone       = "${data.aws_availability_zones.available.names[1]}"
   map_public_ip_on_launch = "true"
 
   tags {
@@ -40,7 +40,7 @@ resource "aws_subnet" "csb_public_subnet_c" {
   vpc_id     = "${aws_vpc.csb.id}"
   cidr_block = "172.24.34.0/24"
 
-  availability_zone       = "${data.aws_availability_zones.available.names[1]}"
+  availability_zone       = "${data.aws_availability_zones.available.names[2]}"
   map_public_ip_on_launch = "true"
 
   tags {
@@ -80,10 +80,10 @@ resource "aws_subnet" "csb_be_subnet_b" {
 resource "aws_subnet" "csb_be_subnet_c" {
   vpc_id            = "${aws_vpc.csb.id}"
   cidr_block        = "172.24.37.0/24"
-  availability_zone = "${data.aws_availability_zones.available.names[0]}"
+  availability_zone = "${data.aws_availability_zones.available.names[2]}"
 
   tags {
-    Name        = "csb_be_b"
+    Name        = "csb_be_c"
     Application = "csb"
     Tier = "BE"
   }
@@ -92,7 +92,7 @@ resource "aws_subnet" "csb_be_subnet_c" {
 resource "aws_subnet" "csb_db_subnet_a" {
   vpc_id            = "${aws_vpc.csb.id}"
   cidr_block        = "172.24.38.0/24"
-  availability_zone = "${data.aws_availability_zones.available.names[1]}"
+  availability_zone = "${data.aws_availability_zones.available.names[0]}"
 
   tags {
     Name        = "csb_db_a"
@@ -104,7 +104,7 @@ resource "aws_subnet" "csb_db_subnet_a" {
 resource "aws_subnet" "csb_db_subnet_b" {
   vpc_id            = "${aws_vpc.csb.id}"
   cidr_block        = "172.24.39.0/24"
-  availability_zone = "${data.aws_availability_zones.available.names[2]}"
+  availability_zone = "${data.aws_availability_zones.available.names[1]}"
 
   tags {
     Name        = "csb_db_b"
@@ -116,7 +116,7 @@ resource "aws_subnet" "csb_db_subnet_b" {
 resource "aws_subnet" "csb_db_subnet_c" {
   vpc_id            = "${aws_vpc.csb.id}"
   cidr_block        = "172.24.40.0/24"
-  availability_zone = "${data.aws_availability_zones.available.names[0]}"
+  availability_zone = "${data.aws_availability_zones.available.names[2]}"
 
   tags {
     Name        = "csb_db_c"
@@ -144,6 +144,7 @@ resource "aws_route_table" "csb_public_routetable" {
 
   tags {
     label = "csb"
+    Name = "csb_public_routetable"
   }
 }
 
@@ -186,6 +187,7 @@ resource "aws_route_table" "csb_private_routetable" {
 
   tags {
     label = "csb"
+    Name = "csb_private_routetable"
   }
 }
 

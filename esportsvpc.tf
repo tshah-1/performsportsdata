@@ -26,7 +26,7 @@ resource "aws_subnet" "esports_public_subnet_b" {
   vpc_id     = "${aws_vpc.esports.id}"
   cidr_block = "172.24.17.0/24"
 
-  availability_zone       = "${data.aws_availability_zones.available.names[0]}"
+  availability_zone       = "${data.aws_availability_zones.available.names[1]}"
   map_public_ip_on_launch = "true"
 
   tags {
@@ -40,7 +40,7 @@ resource "aws_subnet" "esports_public_subnet_c" {
   vpc_id     = "${aws_vpc.esports.id}"
   cidr_block = "172.24.18.0/24"
 
-  availability_zone       = "${data.aws_availability_zones.available.names[1]}"
+  availability_zone       = "${data.aws_availability_zones.available.names[2]}"
   map_public_ip_on_launch = "true"
 
   tags {
@@ -80,10 +80,10 @@ resource "aws_subnet" "esports_be_subnet_b" {
 resource "aws_subnet" "esports_be_subnet_c" {
   vpc_id            = "${aws_vpc.esports.id}"
   cidr_block        = "172.24.21.0/24"
-  availability_zone = "${data.aws_availability_zones.available.names[0]}"
+  availability_zone = "${data.aws_availability_zones.available.names[2]}"
 
   tags {
-    Name        = "esports_be_b"
+    Name        = "esports_be_c"
     Application = "esports"
     Tier = "BE"
   }
@@ -92,7 +92,7 @@ resource "aws_subnet" "esports_be_subnet_c" {
 resource "aws_subnet" "esports_db_subnet_a" {
   vpc_id            = "${aws_vpc.esports.id}"
   cidr_block        = "172.24.22.0/24"
-  availability_zone = "${data.aws_availability_zones.available.names[1]}"
+  availability_zone = "${data.aws_availability_zones.available.names[0]}"
 
   tags {
     Name        = "esports_db_a"
@@ -104,7 +104,7 @@ resource "aws_subnet" "esports_db_subnet_a" {
 resource "aws_subnet" "esports_db_subnet_b" {
   vpc_id            = "${aws_vpc.esports.id}"
   cidr_block        = "172.24.23.0/24"
-  availability_zone = "${data.aws_availability_zones.available.names[2]}"
+  availability_zone = "${data.aws_availability_zones.available.names[1]}"
 
   tags {
     Name        = "esports_db_b"
@@ -116,7 +116,7 @@ resource "aws_subnet" "esports_db_subnet_b" {
 resource "aws_subnet" "esports_db_subnet_c" {
   vpc_id            = "${aws_vpc.esports.id}"
   cidr_block        = "172.24.24.0/24"
-  availability_zone = "${data.aws_availability_zones.available.names[0]}"
+  availability_zone = "${data.aws_availability_zones.available.names[2]}"
 
   tags {
     Name        = "esports_db_c"
@@ -144,6 +144,7 @@ resource "aws_route_table" "esports_public_routetable" {
 
   tags {
     label = "esports"
+    Name = "esports_public_routetable"
   }
 }
 
@@ -186,6 +187,7 @@ resource "aws_route_table" "esports_private_routetable" {
 
   tags {
     label = "esports"
+    Name = "esports_private_routetable"
   }
 }
 
@@ -218,4 +220,48 @@ resource "aws_route_table_association" "esports_db_subnet_b" {
 resource "aws_route_table_association" "esports_db_subnet_c" {
   subnet_id      = "${aws_subnet.esports_db_subnet_c.id}"
   route_table_id = "${aws_route_table.esports_private_routetable.id}"
+}
+
+resource "aws_vpc_peering_connection" "gearboxpeer" {
+  vpc_id        = "${aws_vpc.esports.id}"
+  peer_vpc_id   = "vpc-b590e0dd"
+  peer_owner_id = "447795335313"
+  peer_region   = "eu-west-1"
+  auto_accept   = false
+
+  requester {
+    allow_remote_vpc_dns_resolution = true
+  }
+
+ accepter {
+    allow_remote_vpc_dns_resolution = true
+  }
+
+  tags = {
+    Name = "esports VPC to gearbox VPC peering"
+    Application = "esports"
+    Company = "Perform"
+    Side = "requestor"
+  }
+}
+
+resource "aws_route" "esports2gearbox" {
+  route_table_id = "${aws_route_table.esports_private_routetable.id}"
+  destination_cidr_block = "10.0.0.0/16"
+  vpc_peering_connection_id = "${aws_vpc_peering_connection.gearboxpeer.id}"
+
+}
+
+resource "aws_route" "esportspublic2gearbox" {
+  route_table_id = "${aws_route_table.esports_public_routetable.id}"
+  destination_cidr_block = "10.0.0.0/16"
+  vpc_peering_connection_id = "${aws_vpc_peering_connection.gearboxpeer.id}"
+
+}
+
+resource "aws_route" "esportsp2escluster" {
+  route_table_id = "${aws_route_table.esports_public_routetable.id}"
+  destination_cidr_block = "172.24.64.0/22"
+  vpc_peering_connection_id = "pcx-0a38009c4dc88e7f5"
+
 }
