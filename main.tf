@@ -7,7 +7,7 @@ data "aws_availability_zones" "available" {}
 
 # create a dynamodb table for locking the state file
 resource "aws_dynamodb_table" "dynamodb-performsportsdata-terraform-state-lock" {
-  name           = "terraform.dynamo.lock"
+  name           = "terraform.performsportsdata.dynamo.lock"
   hash_key       = "LockID"
   read_capacity  = 20
   write_capacity = 20
@@ -24,11 +24,11 @@ resource "aws_dynamodb_table" "dynamodb-performsportsdata-terraform-state-lock" 
 
 terraform {
   backend "s3" {
-    bucket         = "sportsdata-terraform-state-v1"
-    key            = "sportsdata-terraform.tfstate"
-    region         = "eu-west-2"
+    bucket         = "terraform-state-v1"
+    key            = "performsportsdata-terraform.tfstate"
+    region         = "eu-west-1"
     encrypt        = true
-    profile        = "performsportsdata"
-    dynamodb_table = "terraform.dynamo.lock"
+    profile        = "perform-content-master"
+    dynamodb_table = "terraform.performsportsdata.dynamo.lock"
   }
 }
