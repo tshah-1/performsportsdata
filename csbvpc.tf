@@ -142,6 +142,36 @@ resource "aws_route_table" "csb_public_routetable" {
     gateway_id = "${aws_internet_gateway.csb-ig.id}"
   }
 
+  route {
+    cidr_block = "10.0.2.0/24"
+    gateway_id = "${aws_vpc_peering_connection.stagingcsb2gearboxpeer.id}"
+  }
+
+  route {
+    cidr_block = "10.0.3.0/24"
+    gateway_id = "${aws_vpc_peering_connection.stagingcsb2gearboxpeer.id}"
+  }
+  route {
+    cidr_block = "10.0.64.0/24"
+    gateway_id = "${aws_vpc_peering_connection.stagingcsb2gearboxpeer.id}"
+  }
+  route {
+    cidr_block = "10.0.11.0/24"
+    gateway_id = "${aws_vpc_peering_connection.csb2gearboxpeer.id}"
+  }
+  route {
+    cidr_block = "10.0.12.0/24"
+    gateway_id = "${aws_vpc_peering_connection.csb2gearboxpeer.id}"
+  }
+  route {
+    cidr_block = "10.0.13.0/24"
+    gateway_id = "${aws_vpc_peering_connection.csb2gearboxpeer.id}"
+  }
+  route {
+    cidr_block = "10.0.14.0/24"
+    gateway_id = "${aws_vpc_peering_connection.csb2gearboxpeer.id}"
+  }
+
   tags {
     label = "csb"
     Name = "csb_public_routetable"
@@ -183,6 +213,35 @@ resource "aws_route_table" "csb_private_routetable" {
     cidr_block     = "0.0.0.0/0"
     nat_gateway_id = "${aws_nat_gateway.csb.id}"
   }
+  route {
+    cidr_block = "10.0.2.0/24"
+    gateway_id = "${aws_vpc_peering_connection.stagingcsb2gearboxpeer.id}"
+  }
+
+  route {
+    cidr_block = "10.0.3.0/24"
+    gateway_id = "${aws_vpc_peering_connection.stagingcsb2gearboxpeer.id}"
+  }
+  route {
+    cidr_block = "10.0.64.0/24"
+    gateway_id = "${aws_vpc_peering_connection.stagingcsb2gearboxpeer.id}"
+  }
+  route {
+    cidr_block = "10.0.11.0/24"
+    gateway_id = "${aws_vpc_peering_connection.csb2gearboxpeer.id}"
+  }
+  route {
+    cidr_block = "10.0.12.0/24"
+    gateway_id = "${aws_vpc_peering_connection.csb2gearboxpeer.id}"
+  }
+  route {
+    cidr_block = "10.0.13.0/24"
+    gateway_id = "${aws_vpc_peering_connection.csb2gearboxpeer.id}"
+  }
+  route {
+    cidr_block = "10.0.14.0/24"
+    gateway_id = "${aws_vpc_peering_connection.csb2gearboxpeer.id}"
+  }
   depends_on = ["aws_nat_gateway.csb"]
 
   tags {
@@ -220,4 +279,50 @@ resource "aws_route_table_association" "csb_db_subnet_b" {
 resource "aws_route_table_association" "csb_db_subnet_c" {
   subnet_id      = "${aws_subnet.csb_db_subnet_c.id}"
   route_table_id = "${aws_route_table.csb_private_routetable.id}"
+}
+
+resource "aws_vpc_peering_connection" "csb2gearboxpeer" {
+  vpc_id        = "${aws_vpc.csb.id}"
+  peer_vpc_id   = "vpc-b590e0dd"
+  peer_owner_id = "447795335313"
+  peer_region   = "eu-west-1"
+  auto_accept   = false
+
+#  requester {
+#    allow_remote_vpc_dns_resolution = true
+#  }
+
+# accepter {
+#    allow_remote_vpc_dns_resolution = true
+#  }
+
+  tags = {
+    Name = "CSB VPC to gearbox VPC peering"
+    Application = "CSB"
+    Company = "Perform"
+    Side = "requestor"
+  }
+}
+
+resource "aws_vpc_peering_connection" "stagingcsb2gearboxpeer" {
+  vpc_id        = "${aws_vpc.csb.id}"
+  peer_vpc_id   = "vpc-e1691a88"
+  peer_owner_id = "447795335313"
+  peer_region   = "us-west-1"
+  auto_accept   = false
+
+#  requester {
+#    allow_remote_vpc_dns_resolution = true
+#  }
+
+# accepter {
+#    allow_remote_vpc_dns_resolution = true
+#  }
+
+  tags = {
+    Name = "CSB VPC to gearbox staging VPC peering"
+    Application = "CSB"
+    Company = "Perform"
+    Side = "requestor"
+  }
 }

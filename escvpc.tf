@@ -75,6 +75,10 @@ resource "aws_route_table" "es_cluster_private_routetable" {
     cidr_block     = "0.0.0.0/0"
     nat_gateway_id = "${aws_nat_gateway.es_cluster.id}"
   }
+  route {
+    cidr_block     = "172.24.16.0/20"
+    vpc_peering_connection_id = "pcx-0a38009c4dc88e7f5"
+  }
   depends_on = ["aws_nat_gateway.es_cluster"]
 
   tags {

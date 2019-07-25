@@ -193,10 +193,6 @@ resource "aws_route_table" "esports_private_routetable" {
     cidr_block     = "0.0.0.0/0"
     nat_gateway_id = "${aws_nat_gateway.esports.id}"
   }
-  route {
-    cidr_block     = "10.0.0.0/16"
-    vpc_peering_connection_id = "${aws_vpc_peering_connection.gearboxpeer.id}"
-  }
   depends_on = ["aws_nat_gateway.esports"]
 
   tags {
@@ -257,4 +253,11 @@ resource "aws_vpc_peering_connection" "gearboxpeer" {
     Company = "Perform"
     Side = "requestor"
   }
+}
+
+resource "aws_route" "esports2gearbox" {
+  route_table_id = "${aws_route_table.esports_private_routetable.id}"
+  destination_cidr_block = "10.0.0.0/16"
+  vpc_peering_connection_id = "${aws_vpc_peering_connection.gearboxpeer.id}"
+
 }
