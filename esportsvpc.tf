@@ -243,13 +243,13 @@ resource "aws_vpc_peering_connection" "gearboxpeer" {
   peer_region   = "eu-west-1"
   auto_accept   = false
 
-  requester {
-    allow_remote_vpc_dns_resolution = true
-  }
+#  requester {
+#    allow_remote_vpc_dns_resolution = true
+#  }
 
- accepter {
-    allow_remote_vpc_dns_resolution = true
-  }
+# accepter {
+#    allow_remote_vpc_dns_resolution = true
+#  }
 
   tags = {
     Name = "esports VPC to gearbox VPC peering"
