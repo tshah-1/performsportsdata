@@ -171,6 +171,10 @@ resource "aws_route_table" "csb_public_routetable" {
     cidr_block = "10.0.14.0/24"
     gateway_id = "${aws_vpc_peering_connection.csb2gearboxpeer.id}"
   }
+  route {
+    cidr_block = "${aws_vpc.general.cidr_block}"
+    gateway_id = "${aws_vpc_peering_connection.csb2general.id}"
+  }
 
   tags {
     label = "csb"
@@ -241,6 +245,10 @@ resource "aws_route_table" "csb_private_routetable" {
   route {
     cidr_block = "10.0.14.0/24"
     gateway_id = "${aws_vpc_peering_connection.csb2gearboxpeer.id}"
+  }
+  route {
+    cidr_block = "${aws_vpc.general.cidr_block}"
+    gateway_id = "${aws_vpc_peering_connection.csb2general.id}"
   }
   depends_on = ["aws_nat_gateway.csb"]
 
@@ -324,5 +332,17 @@ resource "aws_vpc_peering_connection" "stagingcsb2gearboxpeer" {
     Application = "CSB"
     Company = "Perform"
     Side = "requestor"
+  }
+}
+
+resource "aws_vpc_peering_connection" "csb2general" {
+  vpc_id      = "${aws_vpc.csb.id}"
+  peer_vpc_id = "${aws_vpc.general.id}"
+  auto_accept = true
+
+  tags = {
+    Name        = "csb VPC to general VPC peering"
+    Application = "csb"
+    Company     = "Perform"
   }
 }
