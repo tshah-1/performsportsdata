@@ -141,6 +141,10 @@ resource "aws_route_table" "sddp_public_routetable" {
     cidr_block = "0.0.0.0/0"
     gateway_id = "${aws_internet_gateway.sddp-ig.id}"
   }
+  route {
+    cidr_block = "${aws_vpc.general.cidr_block}"
+    gateway_id = "${aws_vpc_peering_connection.sddp2general.id}"
+  }
 
   tags {
     label = "sddp"
@@ -182,6 +186,10 @@ resource "aws_route_table" "sddp_private_routetable" {
   route {
     cidr_block     = "0.0.0.0/0"
     nat_gateway_id = "${aws_nat_gateway.sddp.id}"
+  }
+  route {
+    cidr_block = "${aws_vpc.general.cidr_block}"
+    gateway_id = "${aws_vpc_peering_connection.sddp2general.id}"
   }
   depends_on = ["aws_nat_gateway.sddp"]
 
