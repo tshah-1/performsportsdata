@@ -221,3 +221,15 @@ resource "aws_route_table_association" "sddp_db_subnet_c" {
   subnet_id      = "${aws_subnet.sddp_db_subnet_c.id}"
   route_table_id = "${aws_route_table.sddp_private_routetable.id}"
 }
+
+resource "aws_vpc_peering_connection" "sddp2general" {
+  vpc_id      = "${aws_vpc.sddp.id}"
+  peer_vpc_id = "${aws_vpc.general.id}"
+  auto_accept = true
+
+  tags = {
+    Name        = "sddp VPC to general VPC peering"
+    Application = "sddp"
+    Company     = "Perform"
+  }
+}

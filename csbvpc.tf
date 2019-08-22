@@ -326,3 +326,15 @@ resource "aws_vpc_peering_connection" "stagingcsb2gearboxpeer" {
     Side = "requestor"
   }
 }
+
+resource "aws_vpc_peering_connection" "csb2general" {
+  vpc_id      = "${aws_vpc.csb.id}"
+  peer_vpc_id = "${aws_vpc.general.id}"
+  auto_accept = true
+
+  tags = {
+    Name        = "csb VPC to general VPC peering"
+    Application = "csb"
+    Company     = "Perform"
+  }
+}
