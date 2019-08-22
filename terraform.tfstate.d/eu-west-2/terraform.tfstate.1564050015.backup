@@ -1,0 +1,3800 @@
+{
+    "version": 3,
+    "terraform_version": "0.11.13",
+    "serial": 37,
+    "lineage": "89ffef85-7cf1-28b1-a46f-ecd9dfb88916",
+    "modules": [
+        {
+            "path": [
+                "root"
+            ],
+            "outputs": {},
+            "resources": {
+                "aws_eip.csb_nat": {
+                    "type": "aws_eip",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "eipalloc-0a1038dee4b885057",
+                        "attributes": {
+                            "association_id": "eipassoc-0fcc0cc2",
+                            "domain": "vpc",
+                            "id": "eipalloc-0a1038dee4b885057",
+                            "instance": "",
+                            "network_interface": "eni-064af5800a14c0955",
+                            "private_dns": "ip-172-24-32-197.eu-west-2.compute.internal",
+                            "private_ip": "172.24.32.197",
+                            "public_dns": "ec2-3-9-72-229.eu-west-2.compute.amazonaws.com",
+                            "public_ip": "3.9.72.229",
+                            "public_ipv4_pool": "amazon",
+                            "tags.%": "0",
+                            "vpc": "true"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "delete": 180000000000,
+                                "read": 900000000000,
+                                "update": 300000000000
+                            }
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_eip.es_cluster_nat": {
+                    "type": "aws_eip",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "eipalloc-04f8ae51d7b3e1983",
+                        "attributes": {
+                            "association_id": "eipassoc-20ca0aed",
+                            "domain": "vpc",
+                            "id": "eipalloc-04f8ae51d7b3e1983",
+                            "instance": "",
+                            "network_interface": "eni-0cf7f85c886e06f28",
+                            "private_dns": "ip-172-24-64-23.eu-west-2.compute.internal",
+                            "private_ip": "172.24.64.23",
+                            "public_dns": "ec2-35-178-227-122.eu-west-2.compute.amazonaws.com",
+                            "public_ip": "35.178.227.122",
+                            "public_ipv4_pool": "amazon",
+                            "tags.%": "0",
+                            "vpc": "true"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "delete": 180000000000,
+                                "read": 900000000000,
+                                "update": 300000000000
+                            }
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_eip.esports_nat": {
+                    "type": "aws_eip",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "eipalloc-0b19188e4e3590fb7",
+                        "attributes": {
+                            "association_id": "eipassoc-46c9098b",
+                            "domain": "vpc",
+                            "id": "eipalloc-0b19188e4e3590fb7",
+                            "instance": "",
+                            "network_interface": "eni-03ac4005f24b3831a",
+                            "private_dns": "ip-172-24-16-9.eu-west-2.compute.internal",
+                            "private_ip": "172.24.16.9",
+                            "public_dns": "ec2-35-177-223-43.eu-west-2.compute.amazonaws.com",
+                            "public_ip": "35.177.223.43",
+                            "public_ipv4_pool": "amazon",
+                            "tags.%": "0",
+                            "vpc": "true"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "delete": 180000000000,
+                                "read": 900000000000,
+                                "update": 300000000000
+                            }
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_eip.esportsstaging_nat": {
+                    "type": "aws_eip",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "eipalloc-0529239f166a70631",
+                        "attributes": {
+                            "association_id": "eipassoc-3cdb16f1",
+                            "domain": "vpc",
+                            "id": "eipalloc-0529239f166a70631",
+                            "instance": "",
+                            "network_interface": "eni-03a4ef96a3b596c43",
+                            "private_dns": "ip-172-29-1-146.eu-west-2.compute.internal",
+                            "private_ip": "172.29.1.146",
+                            "public_dns": "ec2-3-9-136-191.eu-west-2.compute.amazonaws.com",
+                            "public_ip": "3.9.136.191",
+                            "public_ipv4_pool": "amazon",
+                            "tags.%": "0",
+                            "vpc": "true"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "delete": 180000000000,
+                                "read": 900000000000,
+                                "update": 300000000000
+                            }
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_eip.sddp_nat": {
+                    "type": "aws_eip",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "eipalloc-00365f2e29ed794a1",
+                        "attributes": {
+                            "association_id": "eipassoc-cfc00002",
+                            "domain": "vpc",
+                            "id": "eipalloc-00365f2e29ed794a1",
+                            "instance": "",
+                            "network_interface": "eni-010504263ebbfc77b",
+                            "private_dns": "ip-172-24-48-84.eu-west-2.compute.internal",
+                            "private_ip": "172.24.48.84",
+                            "public_dns": "ec2-3-9-88-153.eu-west-2.compute.amazonaws.com",
+                            "public_ip": "3.9.88.153",
+                            "public_ipv4_pool": "amazon",
+                            "tags.%": "0",
+                            "vpc": "true"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "delete": 180000000000,
+                                "read": 900000000000,
+                                "update": 300000000000
+                            }
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_iam_group.admin-users": {
+                    "type": "aws_iam_group",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "admin-users",
+                        "attributes": {
+                            "arn": "arn:aws:iam::464211975658:group/admin-users",
+                            "id": "admin-users",
+                            "name": "admin-users",
+                            "path": "/",
+                            "unique_id": "AGPAWYFJQTXVODTI3VC4W"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_iam_group.codecommit-admin": {
+                    "type": "aws_iam_group",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "codecommit-admin",
+                        "attributes": {
+                            "arn": "arn:aws:iam::464211975658:group/codecommit-admin",
+                            "id": "codecommit-admin",
+                            "name": "codecommit-admin",
+                            "path": "/",
+                            "unique_id": "AGPAWYFJQTXVIW36OO34I"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_iam_group.codecommit-user": {
+                    "type": "aws_iam_group",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "codecommit-user",
+                        "attributes": {
+                            "arn": "arn:aws:iam::464211975658:group/codecommit-user",
+                            "id": "codecommit-user",
+                            "name": "codecommit-user",
+                            "path": "/",
+                            "unique_id": "AGPAWYFJQTXVAGWYBV2JU"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_iam_group_membership.admin-users": {
+                    "type": "aws_iam_group_membership",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "admin-users-group-membership",
+                        "attributes": {
+                            "group": "admin-users",
+                            "id": "admin-users-group-membership",
+                            "name": "admin-users-group-membership",
+                            "users.#": "12",
+                            "users.120475139": "harald.saringer",
+                            "users.1238867702": "damian.czarnecki",
+                            "users.1327211884": "chris.muzyunda",
+                            "users.169997838": "robert.hamilton",
+                            "users.1987928217": "zsolt.biro",
+                            "users.2222581211": "tomasz.harazin",
+                            "users.2346269551": "volker.hutten",
+                            "users.2588959472": "bernd.dielacher",
+                            "users.3303679852": "christian.ringhofer",
+                            "users.3353835798": "bostjan.bele",
+                            "users.3379967492": "karl.ferk",
+                            "users.4268297838": "gernot.heschl"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_iam_group_membership.codecommit-admin": {
+                    "type": "aws_iam_group_membership",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "codecommit-admin-group-membership",
+                        "attributes": {
+                            "group": "codecommit-admin",
+                            "id": "codecommit-admin-group-membership",
+                            "name": "codecommit-admin-group-membership",
+                            "users.#": "1",
+                            "users.2707332138": "csb-deployer"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_iam_group_membership.codecommit-user": {
+                    "type": "aws_iam_group_membership",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "codecommit-user-group-membership",
+                        "attributes": {
+                            "group": "codecommit-user",
+                            "id": "codecommit-user-group-membership",
+                            "name": "codecommit-user-group-membership",
+                            "users.#": "0"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_iam_group_policy.admin-users_explicit-admin": {
+                    "type": "aws_iam_group_policy",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "admin-users:explicit-admin",
+                        "attributes": {
+                            "group": "admin-users",
+                            "id": "admin-users:explicit-admin",
+                            "name": "explicit-admin",
+                            "policy": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Action\": \"*\",\n      \"Effect\": \"Allow\",\n      \"Resource\": \"*\"\n    }\n  ]\n}\n"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_iam_policy_attachment.AdministratorAccess-policy-attachment": {
+                    "type": "aws_iam_policy_attachment",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "AdministratorAccess-policy-attachment",
+                        "attributes": {
+                            "groups.#": "0",
+                            "id": "AdministratorAccess-policy-attachment",
+                            "name": "AdministratorAccess-policy-attachment",
+                            "policy_arn": "arn:aws:iam::aws:policy/AdministratorAccess",
+                            "roles.#": "0",
+                            "users.#": "1",
+                            "users.2723380188": "trishul.shah"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_iam_user.bernd-dielacher": {
+                    "type": "aws_iam_user",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "bernd.dielacher",
+                        "attributes": {
+                            "arn": "arn:aws:iam::464211975658:user/bernd.dielacher",
+                            "force_destroy": "false",
+                            "id": "bernd.dielacher",
+                            "name": "bernd.dielacher",
+                            "path": "/",
+                            "tags.%": "0",
+                            "unique_id": "AIDAWYFJQTXVDWGI4F6VB"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_iam_user.bostjan-bele": {
+                    "type": "aws_iam_user",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "bostjan.bele",
+                        "attributes": {
+                            "arn": "arn:aws:iam::464211975658:user/bostjan.bele",
+                            "force_destroy": "false",
+                            "id": "bostjan.bele",
+                            "name": "bostjan.bele",
+                            "path": "/",
+                            "tags.%": "0",
+                            "unique_id": "AIDAWYFJQTXVJBWRJR4M3"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_iam_user.chris-muzyunda": {
+                    "type": "aws_iam_user",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "chris.muzyunda",
+                        "attributes": {
+                            "arn": "arn:aws:iam::464211975658:user/chris.muzyunda",
+                            "force_destroy": "false",
+                            "id": "chris.muzyunda",
+                            "name": "chris.muzyunda",
+                            "path": "/",
+                            "tags.%": "0",
+                            "unique_id": "AIDAWYFJQTXVI2GXZMRGP"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_iam_user.christian-ringhofer": {
+                    "type": "aws_iam_user",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "christian.ringhofer",
+                        "attributes": {
+                            "arn": "arn:aws:iam::464211975658:user/christian.ringhofer",
+                            "force_destroy": "false",
+                            "id": "christian.ringhofer",
+                            "name": "christian.ringhofer",
+                            "path": "/",
+                            "tags.%": "0",
+                            "unique_id": "AIDAWYFJQTXVDOA2P7ZGV"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_iam_user.christianringhofer": {
+                    "type": "aws_iam_user",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "christian.ringhofer",
+                        "attributes": {
+                            "arn": "arn:aws:iam::464211975658:user/christian.ringhofer",
+                            "force_destroy": "false",
+                            "id": "christian.ringhofer",
+                            "name": "christian.ringhofer",
+                            "path": "/",
+                            "tags.%": "0",
+                            "unique_id": "AIDAWYFJQTXVDOA2P7ZGV"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_iam_user.csb-deployer": {
+                    "type": "aws_iam_user",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "csb-deployer",
+                        "attributes": {
+                            "arn": "arn:aws:iam::464211975658:user/csb-deployer",
+                            "force_destroy": "false",
+                            "id": "csb-deployer",
+                            "name": "csb-deployer",
+                            "path": "/",
+                            "tags.%": "0",
+                            "unique_id": "AIDAWYFJQTXVGEQXTQGDL"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_iam_user.damian-czarnecki": {
+                    "type": "aws_iam_user",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "damian.czarnecki",
+                        "attributes": {
+                            "arn": "arn:aws:iam::464211975658:user/damian.czarnecki",
+                            "force_destroy": "false",
+                            "id": "damian.czarnecki",
+                            "name": "damian.czarnecki",
+                            "path": "/",
+                            "tags.%": "0",
+                            "unique_id": "AIDAWYFJQTXVAY637KWHA"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_iam_user.gernot-heschl": {
+                    "type": "aws_iam_user",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "gernot.heschl",
+                        "attributes": {
+                            "arn": "arn:aws:iam::464211975658:user/gernot.heschl",
+                            "force_destroy": "false",
+                            "id": "gernot.heschl",
+                            "name": "gernot.heschl",
+                            "path": "/",
+                            "tags.%": "0",
+                            "unique_id": "AIDAWYFJQTXVN6MC57CM5"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_iam_user.harald-saringer": {
+                    "type": "aws_iam_user",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "harald.saringer",
+                        "attributes": {
+                            "arn": "arn:aws:iam::464211975658:user/harald.saringer",
+                            "force_destroy": "false",
+                            "id": "harald.saringer",
+                            "name": "harald.saringer",
+                            "path": "/",
+                            "tags.%": "0",
+                            "unique_id": "AIDAWYFJQTXVJORMCV577"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_iam_user.karl-ferk": {
+                    "type": "aws_iam_user",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "karl.ferk",
+                        "attributes": {
+                            "arn": "arn:aws:iam::464211975658:user/karl.ferk",
+                            "force_destroy": "false",
+                            "id": "karl.ferk",
+                            "name": "karl.ferk",
+                            "path": "/",
+                            "tags.%": "0",
+                            "unique_id": "AIDAWYFJQTXVML33EKPZZ"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_iam_user.robert-hamilton": {
+                    "type": "aws_iam_user",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "robert.hamilton",
+                        "attributes": {
+                            "arn": "arn:aws:iam::464211975658:user/robert.hamilton",
+                            "force_destroy": "false",
+                            "id": "robert.hamilton",
+                            "name": "robert.hamilton",
+                            "path": "/",
+                            "tags.%": "0",
+                            "unique_id": "AIDAWYFJQTXVD4PYSCYL6"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_iam_user.tomasz-harazin": {
+                    "type": "aws_iam_user",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "tomasz.harazin",
+                        "attributes": {
+                            "arn": "arn:aws:iam::464211975658:user/tomasz.harazin",
+                            "force_destroy": "false",
+                            "id": "tomasz.harazin",
+                            "name": "tomasz.harazin",
+                            "path": "/",
+                            "tags.%": "0",
+                            "unique_id": "AIDAWYFJQTXVMMYLBU7GZ"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_iam_user.trishul-shah": {
+                    "type": "aws_iam_user",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "trishul.shah",
+                        "attributes": {
+                            "arn": "arn:aws:iam::464211975658:user/trishul.shah",
+                            "force_destroy": "false",
+                            "id": "trishul.shah",
+                            "name": "trishul.shah",
+                            "path": "/",
+                            "tags.%": "0",
+                            "unique_id": "AIDAWYFJQTXVMJPMPS4X6"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_iam_user.volker-hutten": {
+                    "type": "aws_iam_user",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "volker.hutten",
+                        "attributes": {
+                            "arn": "arn:aws:iam::464211975658:user/volker.hutten",
+                            "force_destroy": "false",
+                            "id": "volker.hutten",
+                            "name": "volker.hutten",
+                            "path": "/",
+                            "tags.%": "0",
+                            "unique_id": "AIDAWYFJQTXVKLQ65WR3D"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_iam_user.zsolt-biro": {
+                    "type": "aws_iam_user",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "zsolt.biro",
+                        "attributes": {
+                            "arn": "arn:aws:iam::464211975658:user/zsolt.biro",
+                            "force_destroy": "false",
+                            "id": "zsolt.biro",
+                            "name": "zsolt.biro",
+                            "path": "/",
+                            "tags.%": "0",
+                            "unique_id": "AIDAWYFJQTXVJAJBWOUZU"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_internet_gateway.csb-ig": {
+                    "type": "aws_internet_gateway",
+                    "depends_on": [
+                        "aws_vpc.csb"
+                    ],
+                    "primary": {
+                        "id": "igw-06fb26351bf9a94a2",
+                        "attributes": {
+                            "id": "igw-06fb26351bf9a94a2",
+                            "owner_id": "464211975658",
+                            "tags.%": "2",
+                            "tags.Application": "csb",
+                            "tags.Name": "csb IG",
+                            "vpc_id": "vpc-00bd6df56bbf1e801"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_internet_gateway.es_cluster-ig": {
+                    "type": "aws_internet_gateway",
+                    "depends_on": [
+                        "aws_vpc.es_cluster"
+                    ],
+                    "primary": {
+                        "id": "igw-0363cd13818b1e095",
+                        "attributes": {
+                            "id": "igw-0363cd13818b1e095",
+                            "owner_id": "464211975658",
+                            "tags.%": "2",
+                            "tags.Application": "es_cluster",
+                            "tags.Name": "es_cluster IG",
+                            "vpc_id": "vpc-0aaf6fa256e1fc5af"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_internet_gateway.esports-ig": {
+                    "type": "aws_internet_gateway",
+                    "depends_on": [
+                        "aws_vpc.esports"
+                    ],
+                    "primary": {
+                        "id": "igw-07ed0e610afeab549",
+                        "attributes": {
+                            "id": "igw-07ed0e610afeab549",
+                            "owner_id": "464211975658",
+                            "tags.%": "2",
+                            "tags.Application": "esports",
+                            "tags.Name": "esports IG",
+                            "vpc_id": "vpc-0ad47aa6cdcf75b40"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_internet_gateway.esportsstaging-ig": {
+                    "type": "aws_internet_gateway",
+                    "depends_on": [
+                        "aws_vpc.esportsstaging"
+                    ],
+                    "primary": {
+                        "id": "igw-0b7133200ccb4b122",
+                        "attributes": {
+                            "id": "igw-0b7133200ccb4b122",
+                            "owner_id": "464211975658",
+                            "tags.%": "2",
+                            "tags.Application": "esportsstaging",
+                            "tags.Name": "esportsstaging IG",
+                            "vpc_id": "vpc-05b62c1e7cc938e38"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_internet_gateway.sddp-ig": {
+                    "type": "aws_internet_gateway",
+                    "depends_on": [
+                        "aws_vpc.sddp"
+                    ],
+                    "primary": {
+                        "id": "igw-0da382e6cf79f898b",
+                        "attributes": {
+                            "id": "igw-0da382e6cf79f898b",
+                            "owner_id": "464211975658",
+                            "tags.%": "2",
+                            "tags.Application": "sddp",
+                            "tags.Name": "sddp IG",
+                            "vpc_id": "vpc-0e0c8150af78b40ba"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_nat_gateway.csb": {
+                    "type": "aws_nat_gateway",
+                    "depends_on": [
+                        "aws_eip.csb_nat",
+                        "aws_subnet.csb_public_subnet_a"
+                    ],
+                    "primary": {
+                        "id": "nat-0aa05775df72e9c00",
+                        "attributes": {
+                            "allocation_id": "eipalloc-0a1038dee4b885057",
+                            "id": "nat-0aa05775df72e9c00",
+                            "network_interface_id": "eni-064af5800a14c0955",
+                            "private_ip": "172.24.32.197",
+                            "public_ip": "3.9.72.229",
+                            "subnet_id": "subnet-031b74aaac076a967",
+                            "tags.%": "1",
+                            "tags.Name": "csb VPC NAT"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_nat_gateway.es_cluster": {
+                    "type": "aws_nat_gateway",
+                    "depends_on": [
+                        "aws_eip.es_cluster_nat",
+                        "aws_subnet.es_cluster_subnet_a"
+                    ],
+                    "primary": {
+                        "id": "nat-0fc2c631935d04250",
+                        "attributes": {
+                            "allocation_id": "eipalloc-04f8ae51d7b3e1983",
+                            "id": "nat-0fc2c631935d04250",
+                            "network_interface_id": "eni-0cf7f85c886e06f28",
+                            "private_ip": "172.24.64.23",
+                            "public_ip": "35.178.227.122",
+                            "subnet_id": "subnet-0c007d24da66b734d",
+                            "tags.%": "1",
+                            "tags.Name": "es_cluster VPC NAT"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_nat_gateway.esports": {
+                    "type": "aws_nat_gateway",
+                    "depends_on": [
+                        "aws_eip.esports_nat",
+                        "aws_subnet.esports_public_subnet_a"
+                    ],
+                    "primary": {
+                        "id": "nat-029b3c2759345f853",
+                        "attributes": {
+                            "allocation_id": "eipalloc-0b19188e4e3590fb7",
+                            "id": "nat-029b3c2759345f853",
+                            "network_interface_id": "eni-03ac4005f24b3831a",
+                            "private_ip": "172.24.16.9",
+                            "public_ip": "35.177.223.43",
+                            "subnet_id": "subnet-09dfd7eab4f7f17ec",
+                            "tags.%": "1",
+                            "tags.Name": "esports VPC NAT"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_nat_gateway.esportsstaging": {
+                    "type": "aws_nat_gateway",
+                    "depends_on": [
+                        "aws_eip.esportsstaging_nat",
+                        "aws_subnet.esportsstaging_public_subnet_a"
+                    ],
+                    "primary": {
+                        "id": "nat-05c8fd745bd293f07",
+                        "attributes": {
+                            "allocation_id": "eipalloc-0529239f166a70631",
+                            "id": "nat-05c8fd745bd293f07",
+                            "network_interface_id": "eni-03a4ef96a3b596c43",
+                            "private_ip": "172.29.1.146",
+                            "public_ip": "3.9.136.191",
+                            "subnet_id": "subnet-03a25267d3b46d573",
+                            "tags.%": "1",
+                            "tags.Name": "esportsstaging VPC NAT"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_nat_gateway.sddp": {
+                    "type": "aws_nat_gateway",
+                    "depends_on": [
+                        "aws_eip.sddp_nat",
+                        "aws_subnet.sddp_public_subnet_a"
+                    ],
+                    "primary": {
+                        "id": "nat-0364a58c33c118748",
+                        "attributes": {
+                            "allocation_id": "eipalloc-00365f2e29ed794a1",
+                            "id": "nat-0364a58c33c118748",
+                            "network_interface_id": "eni-010504263ebbfc77b",
+                            "private_ip": "172.24.48.84",
+                            "public_ip": "3.9.88.153",
+                            "subnet_id": "subnet-091230cce38681beb",
+                            "tags.%": "1",
+                            "tags.Name": "sddp VPC NAT"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table.csb_private_routetable": {
+                    "type": "aws_route_table",
+                    "depends_on": [
+                        "aws_nat_gateway.csb",
+                        "aws_vpc.csb",
+                        "aws_vpc_peering_connection.csb2gearboxpeer",
+                        "aws_vpc_peering_connection.stagingcsb2gearboxpeer"
+                    ],
+                    "primary": {
+                        "id": "rtb-021d40d807d607c3e",
+                        "attributes": {
+                            "id": "rtb-021d40d807d607c3e",
+                            "owner_id": "464211975658",
+                            "propagating_vgws.#": "0",
+                            "route.#": "8",
+                            "route.1079013695.cidr_block": "10.0.3.0/24",
+                            "route.1079013695.egress_only_gateway_id": "",
+                            "route.1079013695.gateway_id": "",
+                            "route.1079013695.instance_id": "",
+                            "route.1079013695.ipv6_cidr_block": "",
+                            "route.1079013695.nat_gateway_id": "",
+                            "route.1079013695.network_interface_id": "",
+                            "route.1079013695.transit_gateway_id": "",
+                            "route.1079013695.vpc_peering_connection_id": "pcx-09f7f4ed21c6a43f7",
+                            "route.1401252631.cidr_block": "10.0.12.0/24",
+                            "route.1401252631.egress_only_gateway_id": "",
+                            "route.1401252631.gateway_id": "",
+                            "route.1401252631.instance_id": "",
+                            "route.1401252631.ipv6_cidr_block": "",
+                            "route.1401252631.nat_gateway_id": "",
+                            "route.1401252631.network_interface_id": "",
+                            "route.1401252631.transit_gateway_id": "",
+                            "route.1401252631.vpc_peering_connection_id": "pcx-04b535dc83dd5c946",
+                            "route.2412668663.cidr_block": "10.0.2.0/24",
+                            "route.2412668663.egress_only_gateway_id": "",
+                            "route.2412668663.gateway_id": "",
+                            "route.2412668663.instance_id": "",
+                            "route.2412668663.ipv6_cidr_block": "",
+                            "route.2412668663.nat_gateway_id": "",
+                            "route.2412668663.network_interface_id": "",
+                            "route.2412668663.transit_gateway_id": "",
+                            "route.2412668663.vpc_peering_connection_id": "pcx-09f7f4ed21c6a43f7",
+                            "route.2619047135.cidr_block": "10.0.13.0/24",
+                            "route.2619047135.egress_only_gateway_id": "",
+                            "route.2619047135.gateway_id": "",
+                            "route.2619047135.instance_id": "",
+                            "route.2619047135.ipv6_cidr_block": "",
+                            "route.2619047135.nat_gateway_id": "",
+                            "route.2619047135.network_interface_id": "",
+                            "route.2619047135.transit_gateway_id": "",
+                            "route.2619047135.vpc_peering_connection_id": "pcx-04b535dc83dd5c946",
+                            "route.2672955748.cidr_block": "10.0.14.0/24",
+                            "route.2672955748.egress_only_gateway_id": "",
+                            "route.2672955748.gateway_id": "",
+                            "route.2672955748.instance_id": "",
+                            "route.2672955748.ipv6_cidr_block": "",
+                            "route.2672955748.nat_gateway_id": "",
+                            "route.2672955748.network_interface_id": "",
+                            "route.2672955748.transit_gateway_id": "",
+                            "route.2672955748.vpc_peering_connection_id": "pcx-04b535dc83dd5c946",
+                            "route.3629536526.cidr_block": "10.0.11.0/24",
+                            "route.3629536526.egress_only_gateway_id": "",
+                            "route.3629536526.gateway_id": "",
+                            "route.3629536526.instance_id": "",
+                            "route.3629536526.ipv6_cidr_block": "",
+                            "route.3629536526.nat_gateway_id": "",
+                            "route.3629536526.network_interface_id": "",
+                            "route.3629536526.transit_gateway_id": "",
+                            "route.3629536526.vpc_peering_connection_id": "pcx-04b535dc83dd5c946",
+                            "route.661039314.cidr_block": "0.0.0.0/0",
+                            "route.661039314.egress_only_gateway_id": "",
+                            "route.661039314.gateway_id": "",
+                            "route.661039314.instance_id": "",
+                            "route.661039314.ipv6_cidr_block": "",
+                            "route.661039314.nat_gateway_id": "nat-0aa05775df72e9c00",
+                            "route.661039314.network_interface_id": "",
+                            "route.661039314.transit_gateway_id": "",
+                            "route.661039314.vpc_peering_connection_id": "",
+                            "route.882976016.cidr_block": "10.0.64.0/24",
+                            "route.882976016.egress_only_gateway_id": "",
+                            "route.882976016.gateway_id": "",
+                            "route.882976016.instance_id": "",
+                            "route.882976016.ipv6_cidr_block": "",
+                            "route.882976016.nat_gateway_id": "",
+                            "route.882976016.network_interface_id": "",
+                            "route.882976016.transit_gateway_id": "",
+                            "route.882976016.vpc_peering_connection_id": "pcx-09f7f4ed21c6a43f7",
+                            "tags.%": "2",
+                            "tags.Name": "csb_private_routetable",
+                            "tags.label": "csb",
+                            "vpc_id": "vpc-00bd6df56bbf1e801"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table.csb_public_routetable": {
+                    "type": "aws_route_table",
+                    "depends_on": [
+                        "aws_internet_gateway.csb-ig",
+                        "aws_vpc.csb",
+                        "aws_vpc_peering_connection.csb2gearboxpeer",
+                        "aws_vpc_peering_connection.stagingcsb2gearboxpeer"
+                    ],
+                    "primary": {
+                        "id": "rtb-0a2d676d3a8f3d0b3",
+                        "attributes": {
+                            "id": "rtb-0a2d676d3a8f3d0b3",
+                            "owner_id": "464211975658",
+                            "propagating_vgws.#": "0",
+                            "route.#": "8",
+                            "route.1079013695.cidr_block": "10.0.3.0/24",
+                            "route.1079013695.egress_only_gateway_id": "",
+                            "route.1079013695.gateway_id": "",
+                            "route.1079013695.instance_id": "",
+                            "route.1079013695.ipv6_cidr_block": "",
+                            "route.1079013695.nat_gateway_id": "",
+                            "route.1079013695.network_interface_id": "",
+                            "route.1079013695.transit_gateway_id": "",
+                            "route.1079013695.vpc_peering_connection_id": "pcx-09f7f4ed21c6a43f7",
+                            "route.1401252631.cidr_block": "10.0.12.0/24",
+                            "route.1401252631.egress_only_gateway_id": "",
+                            "route.1401252631.gateway_id": "",
+                            "route.1401252631.instance_id": "",
+                            "route.1401252631.ipv6_cidr_block": "",
+                            "route.1401252631.nat_gateway_id": "",
+                            "route.1401252631.network_interface_id": "",
+                            "route.1401252631.transit_gateway_id": "",
+                            "route.1401252631.vpc_peering_connection_id": "pcx-04b535dc83dd5c946",
+                            "route.2412668663.cidr_block": "10.0.2.0/24",
+                            "route.2412668663.egress_only_gateway_id": "",
+                            "route.2412668663.gateway_id": "",
+                            "route.2412668663.instance_id": "",
+                            "route.2412668663.ipv6_cidr_block": "",
+                            "route.2412668663.nat_gateway_id": "",
+                            "route.2412668663.network_interface_id": "",
+                            "route.2412668663.transit_gateway_id": "",
+                            "route.2412668663.vpc_peering_connection_id": "pcx-09f7f4ed21c6a43f7",
+                            "route.2619047135.cidr_block": "10.0.13.0/24",
+                            "route.2619047135.egress_only_gateway_id": "",
+                            "route.2619047135.gateway_id": "",
+                            "route.2619047135.instance_id": "",
+                            "route.2619047135.ipv6_cidr_block": "",
+                            "route.2619047135.nat_gateway_id": "",
+                            "route.2619047135.network_interface_id": "",
+                            "route.2619047135.transit_gateway_id": "",
+                            "route.2619047135.vpc_peering_connection_id": "pcx-04b535dc83dd5c946",
+                            "route.2672955748.cidr_block": "10.0.14.0/24",
+                            "route.2672955748.egress_only_gateway_id": "",
+                            "route.2672955748.gateway_id": "",
+                            "route.2672955748.instance_id": "",
+                            "route.2672955748.ipv6_cidr_block": "",
+                            "route.2672955748.nat_gateway_id": "",
+                            "route.2672955748.network_interface_id": "",
+                            "route.2672955748.transit_gateway_id": "",
+                            "route.2672955748.vpc_peering_connection_id": "pcx-04b535dc83dd5c946",
+                            "route.3629536526.cidr_block": "10.0.11.0/24",
+                            "route.3629536526.egress_only_gateway_id": "",
+                            "route.3629536526.gateway_id": "",
+                            "route.3629536526.instance_id": "",
+                            "route.3629536526.ipv6_cidr_block": "",
+                            "route.3629536526.nat_gateway_id": "",
+                            "route.3629536526.network_interface_id": "",
+                            "route.3629536526.transit_gateway_id": "",
+                            "route.3629536526.vpc_peering_connection_id": "pcx-04b535dc83dd5c946",
+                            "route.4102654225.cidr_block": "0.0.0.0/0",
+                            "route.4102654225.egress_only_gateway_id": "",
+                            "route.4102654225.gateway_id": "igw-06fb26351bf9a94a2",
+                            "route.4102654225.instance_id": "",
+                            "route.4102654225.ipv6_cidr_block": "",
+                            "route.4102654225.nat_gateway_id": "",
+                            "route.4102654225.network_interface_id": "",
+                            "route.4102654225.transit_gateway_id": "",
+                            "route.4102654225.vpc_peering_connection_id": "",
+                            "route.882976016.cidr_block": "10.0.64.0/24",
+                            "route.882976016.egress_only_gateway_id": "",
+                            "route.882976016.gateway_id": "",
+                            "route.882976016.instance_id": "",
+                            "route.882976016.ipv6_cidr_block": "",
+                            "route.882976016.nat_gateway_id": "",
+                            "route.882976016.network_interface_id": "",
+                            "route.882976016.transit_gateway_id": "",
+                            "route.882976016.vpc_peering_connection_id": "pcx-09f7f4ed21c6a43f7",
+                            "tags.%": "2",
+                            "tags.Name": "csb_public_routetable",
+                            "tags.label": "csb",
+                            "vpc_id": "vpc-00bd6df56bbf1e801"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table.es_cluster_private_routetable": {
+                    "type": "aws_route_table",
+                    "depends_on": [
+                        "aws_nat_gateway.es_cluster",
+                        "aws_vpc.es_cluster"
+                    ],
+                    "primary": {
+                        "id": "rtb-0e9c926c9417502c6",
+                        "attributes": {
+                            "id": "rtb-0e9c926c9417502c6",
+                            "owner_id": "464211975658",
+                            "propagating_vgws.#": "0",
+                            "route.#": "2",
+                            "route.2053375495.cidr_block": "172.24.16.0/20",
+                            "route.2053375495.egress_only_gateway_id": "",
+                            "route.2053375495.gateway_id": "",
+                            "route.2053375495.instance_id": "",
+                            "route.2053375495.ipv6_cidr_block": "",
+                            "route.2053375495.nat_gateway_id": "",
+                            "route.2053375495.network_interface_id": "",
+                            "route.2053375495.transit_gateway_id": "",
+                            "route.2053375495.vpc_peering_connection_id": "pcx-0a38009c4dc88e7f5",
+                            "route.393086174.cidr_block": "0.0.0.0/0",
+                            "route.393086174.egress_only_gateway_id": "",
+                            "route.393086174.gateway_id": "",
+                            "route.393086174.instance_id": "",
+                            "route.393086174.ipv6_cidr_block": "",
+                            "route.393086174.nat_gateway_id": "nat-0fc2c631935d04250",
+                            "route.393086174.network_interface_id": "",
+                            "route.393086174.transit_gateway_id": "",
+                            "route.393086174.vpc_peering_connection_id": "",
+                            "tags.%": "2",
+                            "tags.Name": "es_cluster_private_routetable",
+                            "tags.label": "es_cluster",
+                            "vpc_id": "vpc-0aaf6fa256e1fc5af"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table.esports_private_routetable": {
+                    "type": "aws_route_table",
+                    "depends_on": [
+                        "aws_nat_gateway.esports",
+                        "aws_vpc.esports",
+                        "aws_vpc_peering_connection.gearboxpeer"
+                    ],
+                    "primary": {
+                        "id": "rtb-08373f9d1ba24ec53",
+                        "attributes": {
+                            "id": "rtb-08373f9d1ba24ec53",
+                            "owner_id": "464211975658",
+                            "propagating_vgws.#": "0",
+                            "route.#": "2",
+                            "route.2054989192.cidr_block": "10.0.0.0/16",
+                            "route.2054989192.egress_only_gateway_id": "",
+                            "route.2054989192.gateway_id": "",
+                            "route.2054989192.instance_id": "",
+                            "route.2054989192.ipv6_cidr_block": "",
+                            "route.2054989192.nat_gateway_id": "",
+                            "route.2054989192.network_interface_id": "",
+                            "route.2054989192.transit_gateway_id": "",
+                            "route.2054989192.vpc_peering_connection_id": "pcx-0d7894ad5182390ac",
+                            "route.495645892.cidr_block": "0.0.0.0/0",
+                            "route.495645892.egress_only_gateway_id": "",
+                            "route.495645892.gateway_id": "",
+                            "route.495645892.instance_id": "",
+                            "route.495645892.ipv6_cidr_block": "",
+                            "route.495645892.nat_gateway_id": "nat-029b3c2759345f853",
+                            "route.495645892.network_interface_id": "",
+                            "route.495645892.transit_gateway_id": "",
+                            "route.495645892.vpc_peering_connection_id": "",
+                            "tags.%": "2",
+                            "tags.Name": "esports_private_routetable",
+                            "tags.label": "esports",
+                            "vpc_id": "vpc-0ad47aa6cdcf75b40"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table.esports_public_routetable": {
+                    "type": "aws_route_table",
+                    "depends_on": [
+                        "aws_internet_gateway.esports-ig",
+                        "aws_vpc.esports",
+                        "aws_vpc_peering_connection.gearboxpeer"
+                    ],
+                    "primary": {
+                        "id": "rtb-0519a9de1de61b806",
+                        "attributes": {
+                            "id": "rtb-0519a9de1de61b806",
+                            "owner_id": "464211975658",
+                            "propagating_vgws.#": "0",
+                            "route.#": "3",
+                            "route.2054989192.cidr_block": "10.0.0.0/16",
+                            "route.2054989192.egress_only_gateway_id": "",
+                            "route.2054989192.gateway_id": "",
+                            "route.2054989192.instance_id": "",
+                            "route.2054989192.ipv6_cidr_block": "",
+                            "route.2054989192.nat_gateway_id": "",
+                            "route.2054989192.network_interface_id": "",
+                            "route.2054989192.transit_gateway_id": "",
+                            "route.2054989192.vpc_peering_connection_id": "pcx-0d7894ad5182390ac",
+                            "route.4249417279.cidr_block": "0.0.0.0/0",
+                            "route.4249417279.egress_only_gateway_id": "",
+                            "route.4249417279.gateway_id": "igw-07ed0e610afeab549",
+                            "route.4249417279.instance_id": "",
+                            "route.4249417279.ipv6_cidr_block": "",
+                            "route.4249417279.nat_gateway_id": "",
+                            "route.4249417279.network_interface_id": "",
+                            "route.4249417279.transit_gateway_id": "",
+                            "route.4249417279.vpc_peering_connection_id": "",
+                            "route.442026671.cidr_block": "172.24.64.0/22",
+                            "route.442026671.egress_only_gateway_id": "",
+                            "route.442026671.gateway_id": "",
+                            "route.442026671.instance_id": "",
+                            "route.442026671.ipv6_cidr_block": "",
+                            "route.442026671.nat_gateway_id": "",
+                            "route.442026671.network_interface_id": "",
+                            "route.442026671.transit_gateway_id": "",
+                            "route.442026671.vpc_peering_connection_id": "pcx-0a38009c4dc88e7f5",
+                            "tags.%": "2",
+                            "tags.Name": "esports_public_routetable",
+                            "tags.label": "esports",
+                            "vpc_id": "vpc-0ad47aa6cdcf75b40"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table.esportsstaging_private_routetable": {
+                    "type": "aws_route_table",
+                    "depends_on": [
+                        "aws_nat_gateway.esportsstaging",
+                        "aws_vpc.esportsstaging"
+                    ],
+                    "primary": {
+                        "id": "rtb-09a70ae9350ef6625",
+                        "attributes": {
+                            "id": "rtb-09a70ae9350ef6625",
+                            "owner_id": "464211975658",
+                            "propagating_vgws.#": "0",
+                            "route.#": "1",
+                            "route.1773922587.cidr_block": "0.0.0.0/0",
+                            "route.1773922587.egress_only_gateway_id": "",
+                            "route.1773922587.gateway_id": "",
+                            "route.1773922587.instance_id": "",
+                            "route.1773922587.ipv6_cidr_block": "",
+                            "route.1773922587.nat_gateway_id": "nat-05c8fd745bd293f07",
+                            "route.1773922587.network_interface_id": "",
+                            "route.1773922587.transit_gateway_id": "",
+                            "route.1773922587.vpc_peering_connection_id": "",
+                            "tags.%": "2",
+                            "tags.Name": "esportsstaging_private_routetable",
+                            "tags.label": "esportsstaging",
+                            "vpc_id": "vpc-05b62c1e7cc938e38"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table.esportsstaging_public_routetable": {
+                    "type": "aws_route_table",
+                    "depends_on": [
+                        "aws_internet_gateway.esportsstaging-ig",
+                        "aws_vpc.esportsstaging"
+                    ],
+                    "primary": {
+                        "id": "rtb-075088157fd17bd67",
+                        "attributes": {
+                            "id": "rtb-075088157fd17bd67",
+                            "owner_id": "464211975658",
+                            "propagating_vgws.#": "0",
+                            "route.#": "1",
+                            "route.791996058.cidr_block": "0.0.0.0/0",
+                            "route.791996058.egress_only_gateway_id": "",
+                            "route.791996058.gateway_id": "igw-0b7133200ccb4b122",
+                            "route.791996058.instance_id": "",
+                            "route.791996058.ipv6_cidr_block": "",
+                            "route.791996058.nat_gateway_id": "",
+                            "route.791996058.network_interface_id": "",
+                            "route.791996058.transit_gateway_id": "",
+                            "route.791996058.vpc_peering_connection_id": "",
+                            "tags.%": "2",
+                            "tags.Name": "esportsstaging_public_routetable",
+                            "tags.label": "esportsstaging",
+                            "vpc_id": "vpc-05b62c1e7cc938e38"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table.sddp_private_routetable": {
+                    "type": "aws_route_table",
+                    "depends_on": [
+                        "aws_nat_gateway.sddp",
+                        "aws_vpc.sddp"
+                    ],
+                    "primary": {
+                        "id": "rtb-0919ac32653052732",
+                        "attributes": {
+                            "id": "rtb-0919ac32653052732",
+                            "owner_id": "464211975658",
+                            "propagating_vgws.#": "0",
+                            "route.#": "1",
+                            "route.2125086358.cidr_block": "0.0.0.0/0",
+                            "route.2125086358.egress_only_gateway_id": "",
+                            "route.2125086358.gateway_id": "",
+                            "route.2125086358.instance_id": "",
+                            "route.2125086358.ipv6_cidr_block": "",
+                            "route.2125086358.nat_gateway_id": "nat-0364a58c33c118748",
+                            "route.2125086358.network_interface_id": "",
+                            "route.2125086358.transit_gateway_id": "",
+                            "route.2125086358.vpc_peering_connection_id": "",
+                            "tags.%": "2",
+                            "tags.Name": "sddp_private_routetable",
+                            "tags.label": "sddp",
+                            "vpc_id": "vpc-0e0c8150af78b40ba"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table.sddp_public_routetable": {
+                    "type": "aws_route_table",
+                    "depends_on": [
+                        "aws_internet_gateway.sddp-ig",
+                        "aws_vpc.sddp"
+                    ],
+                    "primary": {
+                        "id": "rtb-055cc83130bf0b204",
+                        "attributes": {
+                            "id": "rtb-055cc83130bf0b204",
+                            "owner_id": "464211975658",
+                            "propagating_vgws.#": "0",
+                            "route.#": "1",
+                            "route.2611632761.cidr_block": "0.0.0.0/0",
+                            "route.2611632761.egress_only_gateway_id": "",
+                            "route.2611632761.gateway_id": "igw-0da382e6cf79f898b",
+                            "route.2611632761.instance_id": "",
+                            "route.2611632761.ipv6_cidr_block": "",
+                            "route.2611632761.nat_gateway_id": "",
+                            "route.2611632761.network_interface_id": "",
+                            "route.2611632761.transit_gateway_id": "",
+                            "route.2611632761.vpc_peering_connection_id": "",
+                            "tags.%": "2",
+                            "tags.Name": "sddp_public_routetable",
+                            "tags.label": "sddp",
+                            "vpc_id": "vpc-0e0c8150af78b40ba"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.csb_be_subnet_a": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.csb_private_routetable",
+                        "aws_subnet.csb_be_subnet_a"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-020abbc76d719a52f",
+                        "attributes": {
+                            "id": "rtbassoc-020abbc76d719a52f",
+                            "route_table_id": "rtb-021d40d807d607c3e",
+                            "subnet_id": "subnet-02508da9cfe0eaab4"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.csb_be_subnet_b": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.csb_private_routetable",
+                        "aws_subnet.csb_be_subnet_b"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-04e5509146c6f85a4",
+                        "attributes": {
+                            "id": "rtbassoc-04e5509146c6f85a4",
+                            "route_table_id": "rtb-021d40d807d607c3e",
+                            "subnet_id": "subnet-09b063558e1a239b1"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.csb_be_subnet_c": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.csb_private_routetable",
+                        "aws_subnet.csb_be_subnet_c"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-0d43845822b6f1290",
+                        "attributes": {
+                            "id": "rtbassoc-0d43845822b6f1290",
+                            "route_table_id": "rtb-021d40d807d607c3e",
+                            "subnet_id": "subnet-0edb63f3c997a9364"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.csb_db_subnet_a": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.csb_private_routetable",
+                        "aws_subnet.csb_db_subnet_a"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-050f2b51b82513e96",
+                        "attributes": {
+                            "id": "rtbassoc-050f2b51b82513e96",
+                            "route_table_id": "rtb-021d40d807d607c3e",
+                            "subnet_id": "subnet-0800331a19004ce86"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.csb_db_subnet_b": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.csb_private_routetable",
+                        "aws_subnet.csb_db_subnet_b"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-09168ea8ef3d2b630",
+                        "attributes": {
+                            "id": "rtbassoc-09168ea8ef3d2b630",
+                            "route_table_id": "rtb-021d40d807d607c3e",
+                            "subnet_id": "subnet-080e24c0702ca63f4"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.csb_db_subnet_c": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.csb_private_routetable",
+                        "aws_subnet.csb_db_subnet_c"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-0e0d62dd5c61eea0b",
+                        "attributes": {
+                            "id": "rtbassoc-0e0d62dd5c61eea0b",
+                            "route_table_id": "rtb-021d40d807d607c3e",
+                            "subnet_id": "subnet-09c9b7d1d349f0d44"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.csb_public_subnet_a": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.csb_public_routetable",
+                        "aws_subnet.csb_public_subnet_a"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-009ea03a499aebba6",
+                        "attributes": {
+                            "id": "rtbassoc-009ea03a499aebba6",
+                            "route_table_id": "rtb-0a2d676d3a8f3d0b3",
+                            "subnet_id": "subnet-031b74aaac076a967"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.csb_public_subnet_b": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.csb_public_routetable",
+                        "aws_subnet.csb_public_subnet_b"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-0f62c2ba11bfaf42f",
+                        "attributes": {
+                            "id": "rtbassoc-0f62c2ba11bfaf42f",
+                            "route_table_id": "rtb-0a2d676d3a8f3d0b3",
+                            "subnet_id": "subnet-048ce45798a7b0737"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.csb_public_subnet_c": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.csb_public_routetable",
+                        "aws_subnet.csb_public_subnet_c"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-09d28dddf6ccf0908",
+                        "attributes": {
+                            "id": "rtbassoc-09d28dddf6ccf0908",
+                            "route_table_id": "rtb-0a2d676d3a8f3d0b3",
+                            "subnet_id": "subnet-0af5eb47a612e4efc"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.es_cluster_subnet_a": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.es_cluster_private_routetable",
+                        "aws_subnet.es_cluster_subnet_a"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-058d520e201913b7f",
+                        "attributes": {
+                            "id": "rtbassoc-058d520e201913b7f",
+                            "route_table_id": "rtb-0e9c926c9417502c6",
+                            "subnet_id": "subnet-0c007d24da66b734d"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.es_cluster_subnet_b": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.es_cluster_private_routetable",
+                        "aws_subnet.es_cluster_subnet_b"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-0fb1b84ef02a6ecdc",
+                        "attributes": {
+                            "id": "rtbassoc-0fb1b84ef02a6ecdc",
+                            "route_table_id": "rtb-0e9c926c9417502c6",
+                            "subnet_id": "subnet-0d7ff41a8afc4ccdb"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.es_cluster_subnet_c": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.es_cluster_private_routetable",
+                        "aws_subnet.es_cluster_subnet_c"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-0d28087d2535666f3",
+                        "attributes": {
+                            "id": "rtbassoc-0d28087d2535666f3",
+                            "route_table_id": "rtb-0e9c926c9417502c6",
+                            "subnet_id": "subnet-0a48397b7a3634150"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.esports_be_subnet_a": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.esports_private_routetable",
+                        "aws_subnet.esports_be_subnet_a"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-099e26fa932bf0263",
+                        "attributes": {
+                            "id": "rtbassoc-099e26fa932bf0263",
+                            "route_table_id": "rtb-08373f9d1ba24ec53",
+                            "subnet_id": "subnet-01414c9dbc66fd187"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.esports_be_subnet_b": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.esports_private_routetable",
+                        "aws_subnet.esports_be_subnet_b"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-09de1d9b479c0c63e",
+                        "attributes": {
+                            "id": "rtbassoc-09de1d9b479c0c63e",
+                            "route_table_id": "rtb-08373f9d1ba24ec53",
+                            "subnet_id": "subnet-036899889784f3166"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.esports_be_subnet_c": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.esports_private_routetable",
+                        "aws_subnet.esports_be_subnet_c"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-08035caaecd11dba0",
+                        "attributes": {
+                            "id": "rtbassoc-08035caaecd11dba0",
+                            "route_table_id": "rtb-08373f9d1ba24ec53",
+                            "subnet_id": "subnet-0efa3f572b85c0b74"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.esports_db_subnet_a": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.esports_private_routetable",
+                        "aws_subnet.esports_db_subnet_a"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-038af477c26246e49",
+                        "attributes": {
+                            "id": "rtbassoc-038af477c26246e49",
+                            "route_table_id": "rtb-08373f9d1ba24ec53",
+                            "subnet_id": "subnet-0ecf5666dc76a4277"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.esports_db_subnet_b": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.esports_private_routetable",
+                        "aws_subnet.esports_db_subnet_b"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-0570378bddf07410c",
+                        "attributes": {
+                            "id": "rtbassoc-0570378bddf07410c",
+                            "route_table_id": "rtb-08373f9d1ba24ec53",
+                            "subnet_id": "subnet-0ab220b9188e89be4"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.esports_db_subnet_c": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.esports_private_routetable",
+                        "aws_subnet.esports_db_subnet_c"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-013a3a97d20223595",
+                        "attributes": {
+                            "id": "rtbassoc-013a3a97d20223595",
+                            "route_table_id": "rtb-08373f9d1ba24ec53",
+                            "subnet_id": "subnet-0e733e2ebfb57f784"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.esports_public_subnet_a": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.esports_public_routetable",
+                        "aws_subnet.esports_public_subnet_a"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-06b2a2717e7cba2a7",
+                        "attributes": {
+                            "id": "rtbassoc-06b2a2717e7cba2a7",
+                            "route_table_id": "rtb-0519a9de1de61b806",
+                            "subnet_id": "subnet-09dfd7eab4f7f17ec"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.esports_public_subnet_b": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.esports_public_routetable",
+                        "aws_subnet.esports_public_subnet_b"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-09c3efddfc8efcbe7",
+                        "attributes": {
+                            "id": "rtbassoc-09c3efddfc8efcbe7",
+                            "route_table_id": "rtb-0519a9de1de61b806",
+                            "subnet_id": "subnet-06466b52945fcea9b"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.esports_public_subnet_c": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.esports_public_routetable",
+                        "aws_subnet.esports_public_subnet_c"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-0832fc5f2bbd68cca",
+                        "attributes": {
+                            "id": "rtbassoc-0832fc5f2bbd68cca",
+                            "route_table_id": "rtb-0519a9de1de61b806",
+                            "subnet_id": "subnet-0f80631062ff6d552"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.esportsstaging_be_subnet_a": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.esportsstaging_private_routetable",
+                        "aws_subnet.esportsstaging_be_subnet_a"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-0cc2cf137512aca34",
+                        "attributes": {
+                            "id": "rtbassoc-0cc2cf137512aca34",
+                            "route_table_id": "rtb-09a70ae9350ef6625",
+                            "subnet_id": "subnet-0c3435f185ec5ab77"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.esportsstaging_be_subnet_b": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.esportsstaging_private_routetable",
+                        "aws_subnet.esportsstaging_be_subnet_b"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-0d4ef4fcd0c015032",
+                        "attributes": {
+                            "id": "rtbassoc-0d4ef4fcd0c015032",
+                            "route_table_id": "rtb-09a70ae9350ef6625",
+                            "subnet_id": "subnet-0f0c996a0d1010182"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.esportsstaging_be_subnet_c": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.esportsstaging_private_routetable",
+                        "aws_subnet.esportsstaging_be_subnet_c"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-0766b06a7c3b0fd1f",
+                        "attributes": {
+                            "id": "rtbassoc-0766b06a7c3b0fd1f",
+                            "route_table_id": "rtb-09a70ae9350ef6625",
+                            "subnet_id": "subnet-05a128ac71dfbecef"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.esportsstaging_db_subnet_a": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.esportsstaging_private_routetable",
+                        "aws_subnet.esportsstaging_db_subnet_a"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-03775adbcef89e7c3",
+                        "attributes": {
+                            "id": "rtbassoc-03775adbcef89e7c3",
+                            "route_table_id": "rtb-09a70ae9350ef6625",
+                            "subnet_id": "subnet-03d1a60f26a7f17ca"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.esportsstaging_db_subnet_b": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.esportsstaging_private_routetable",
+                        "aws_subnet.esportsstaging_db_subnet_b"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-0b3705a4d6a391bcf",
+                        "attributes": {
+                            "id": "rtbassoc-0b3705a4d6a391bcf",
+                            "route_table_id": "rtb-09a70ae9350ef6625",
+                            "subnet_id": "subnet-00edb9df60a38d676"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.esportsstaging_db_subnet_c": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.esportsstaging_private_routetable",
+                        "aws_subnet.esportsstaging_db_subnet_c"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-027ee92f7aff27353",
+                        "attributes": {
+                            "id": "rtbassoc-027ee92f7aff27353",
+                            "route_table_id": "rtb-09a70ae9350ef6625",
+                            "subnet_id": "subnet-09c718e1135616fb7"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.esportsstaging_public_subnet_a": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.esportsstaging_public_routetable",
+                        "aws_subnet.esportsstaging_public_subnet_a"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-0afffe60ed9a4c7f1",
+                        "attributes": {
+                            "id": "rtbassoc-0afffe60ed9a4c7f1",
+                            "route_table_id": "rtb-075088157fd17bd67",
+                            "subnet_id": "subnet-03a25267d3b46d573"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.esportsstaging_public_subnet_b": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.esportsstaging_public_routetable",
+                        "aws_subnet.esportsstaging_public_subnet_b"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-00e0e1197765c617c",
+                        "attributes": {
+                            "id": "rtbassoc-00e0e1197765c617c",
+                            "route_table_id": "rtb-075088157fd17bd67",
+                            "subnet_id": "subnet-0803444b6f2629b97"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.esportsstaging_public_subnet_c": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.esportsstaging_public_routetable",
+                        "aws_subnet.esportsstaging_public_subnet_c"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-07d638d069a3da563",
+                        "attributes": {
+                            "id": "rtbassoc-07d638d069a3da563",
+                            "route_table_id": "rtb-075088157fd17bd67",
+                            "subnet_id": "subnet-0404acab4eb78191e"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.sddp_be_subnet_a": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.sddp_private_routetable",
+                        "aws_subnet.sddp_be_subnet_a"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-0d2626fd3c7eab409",
+                        "attributes": {
+                            "id": "rtbassoc-0d2626fd3c7eab409",
+                            "route_table_id": "rtb-0919ac32653052732",
+                            "subnet_id": "subnet-0ef0d9522f9b2f7a6"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.sddp_be_subnet_b": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.sddp_private_routetable",
+                        "aws_subnet.sddp_be_subnet_b"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-0a1e5138d5d8597d8",
+                        "attributes": {
+                            "id": "rtbassoc-0a1e5138d5d8597d8",
+                            "route_table_id": "rtb-0919ac32653052732",
+                            "subnet_id": "subnet-0f324d3378c2be3cd"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.sddp_be_subnet_c": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.sddp_private_routetable",
+                        "aws_subnet.sddp_be_subnet_c"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-05e244a42fbc6a0d1",
+                        "attributes": {
+                            "id": "rtbassoc-05e244a42fbc6a0d1",
+                            "route_table_id": "rtb-0919ac32653052732",
+                            "subnet_id": "subnet-03b5410669ac07ab3"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.sddp_db_subnet_a": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.sddp_private_routetable",
+                        "aws_subnet.sddp_db_subnet_a"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-0fd4055250fa13087",
+                        "attributes": {
+                            "id": "rtbassoc-0fd4055250fa13087",
+                            "route_table_id": "rtb-0919ac32653052732",
+                            "subnet_id": "subnet-0ee946e6859c17dfd"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.sddp_db_subnet_b": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.sddp_private_routetable",
+                        "aws_subnet.sddp_db_subnet_b"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-092654c5282cbe2a3",
+                        "attributes": {
+                            "id": "rtbassoc-092654c5282cbe2a3",
+                            "route_table_id": "rtb-0919ac32653052732",
+                            "subnet_id": "subnet-054de551d81e8ce25"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.sddp_db_subnet_c": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.sddp_private_routetable",
+                        "aws_subnet.sddp_db_subnet_c"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-044ad487388715e95",
+                        "attributes": {
+                            "id": "rtbassoc-044ad487388715e95",
+                            "route_table_id": "rtb-0919ac32653052732",
+                            "subnet_id": "subnet-0d8ee8d7cb13f5cf2"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.sddp_public_subnet_a": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.sddp_public_routetable",
+                        "aws_subnet.sddp_public_subnet_a"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-09d3b13673119cc02",
+                        "attributes": {
+                            "id": "rtbassoc-09d3b13673119cc02",
+                            "route_table_id": "rtb-055cc83130bf0b204",
+                            "subnet_id": "subnet-091230cce38681beb"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.sddp_public_subnet_b": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.sddp_public_routetable",
+                        "aws_subnet.sddp_public_subnet_b"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-050696772360a005f",
+                        "attributes": {
+                            "id": "rtbassoc-050696772360a005f",
+                            "route_table_id": "rtb-055cc83130bf0b204",
+                            "subnet_id": "subnet-00840bb31a0b50fbd"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_route_table_association.sddp_public_subnet_c": {
+                    "type": "aws_route_table_association",
+                    "depends_on": [
+                        "aws_route_table.sddp_public_routetable",
+                        "aws_subnet.sddp_public_subnet_c"
+                    ],
+                    "primary": {
+                        "id": "rtbassoc-02e3e3244409a2d71",
+                        "attributes": {
+                            "id": "rtbassoc-02e3e3244409a2d71",
+                            "route_table_id": "rtb-055cc83130bf0b204",
+                            "subnet_id": "subnet-0d0fc6fd721681984"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.csb_be_subnet_a": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.csb",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-02508da9cfe0eaab4",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-02508da9cfe0eaab4",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2a",
+                            "availability_zone_id": "euw2-az2",
+                            "cidr_block": "172.24.35.0/24",
+                            "id": "subnet-02508da9cfe0eaab4",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "false",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "csb",
+                            "tags.Name": "csb_be_a",
+                            "tags.Tier": "BE",
+                            "vpc_id": "vpc-00bd6df56bbf1e801"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.csb_be_subnet_b": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.csb",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-09b063558e1a239b1",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-09b063558e1a239b1",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2b",
+                            "availability_zone_id": "euw2-az3",
+                            "cidr_block": "172.24.36.0/24",
+                            "id": "subnet-09b063558e1a239b1",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "false",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "csb",
+                            "tags.Name": "csb_be_b",
+                            "tags.Tier": "BE",
+                            "vpc_id": "vpc-00bd6df56bbf1e801"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.csb_be_subnet_c": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.csb",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-0edb63f3c997a9364",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-0edb63f3c997a9364",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2c",
+                            "availability_zone_id": "euw2-az1",
+                            "cidr_block": "172.24.37.0/24",
+                            "id": "subnet-0edb63f3c997a9364",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "false",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "csb",
+                            "tags.Name": "csb_be_c",
+                            "tags.Tier": "BE",
+                            "vpc_id": "vpc-00bd6df56bbf1e801"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.csb_db_subnet_a": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.csb",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-0800331a19004ce86",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-0800331a19004ce86",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2a",
+                            "availability_zone_id": "euw2-az2",
+                            "cidr_block": "172.24.38.0/24",
+                            "id": "subnet-0800331a19004ce86",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "false",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "csb",
+                            "tags.Name": "csb_db_a",
+                            "tags.Tier": "DB",
+                            "vpc_id": "vpc-00bd6df56bbf1e801"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.csb_db_subnet_b": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.csb",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-080e24c0702ca63f4",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-080e24c0702ca63f4",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2b",
+                            "availability_zone_id": "euw2-az3",
+                            "cidr_block": "172.24.39.0/24",
+                            "id": "subnet-080e24c0702ca63f4",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "false",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "csb",
+                            "tags.Name": "csb_db_b",
+                            "tags.Tier": "DB",
+                            "vpc_id": "vpc-00bd6df56bbf1e801"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.csb_db_subnet_c": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.csb",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-09c9b7d1d349f0d44",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-09c9b7d1d349f0d44",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2c",
+                            "availability_zone_id": "euw2-az1",
+                            "cidr_block": "172.24.40.0/24",
+                            "id": "subnet-09c9b7d1d349f0d44",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "false",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "csb",
+                            "tags.Name": "csb_db_c",
+                            "tags.Tier": "DB",
+                            "vpc_id": "vpc-00bd6df56bbf1e801"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.csb_public_subnet_a": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.csb",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-031b74aaac076a967",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-031b74aaac076a967",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2a",
+                            "availability_zone_id": "euw2-az2",
+                            "cidr_block": "172.24.32.0/24",
+                            "id": "subnet-031b74aaac076a967",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "true",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "csb",
+                            "tags.Name": "csb_fe_a",
+                            "tags.Tier": "FE",
+                            "vpc_id": "vpc-00bd6df56bbf1e801"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.csb_public_subnet_b": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.csb",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-048ce45798a7b0737",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-048ce45798a7b0737",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2b",
+                            "availability_zone_id": "euw2-az3",
+                            "cidr_block": "172.24.33.0/24",
+                            "id": "subnet-048ce45798a7b0737",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "true",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "csb",
+                            "tags.Name": "csb_fe_b",
+                            "tags.Tier": "FE",
+                            "vpc_id": "vpc-00bd6df56bbf1e801"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.csb_public_subnet_c": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.csb",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-0af5eb47a612e4efc",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-0af5eb47a612e4efc",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2c",
+                            "availability_zone_id": "euw2-az1",
+                            "cidr_block": "172.24.34.0/24",
+                            "id": "subnet-0af5eb47a612e4efc",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "true",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "csb",
+                            "tags.Name": "csb_fe_c",
+                            "tags.Tier": "FE",
+                            "vpc_id": "vpc-00bd6df56bbf1e801"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.es_cluster_subnet_a": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.es_cluster",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-0c007d24da66b734d",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-0c007d24da66b734d",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2a",
+                            "availability_zone_id": "euw2-az2",
+                            "cidr_block": "172.24.64.0/24",
+                            "id": "subnet-0c007d24da66b734d",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "false",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "es_cluster",
+                            "tags.Name": "es_cluster_a",
+                            "tags.Tier": "BE",
+                            "vpc_id": "vpc-0aaf6fa256e1fc5af"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.es_cluster_subnet_b": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.es_cluster",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-0d7ff41a8afc4ccdb",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-0d7ff41a8afc4ccdb",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2b",
+                            "availability_zone_id": "euw2-az3",
+                            "cidr_block": "172.24.65.0/24",
+                            "id": "subnet-0d7ff41a8afc4ccdb",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "false",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "es_cluster",
+                            "tags.Name": "es_cluster_b",
+                            "tags.Tier": "BE",
+                            "vpc_id": "vpc-0aaf6fa256e1fc5af"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.es_cluster_subnet_c": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.es_cluster",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-0a48397b7a3634150",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-0a48397b7a3634150",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2c",
+                            "availability_zone_id": "euw2-az1",
+                            "cidr_block": "172.24.66.0/24",
+                            "id": "subnet-0a48397b7a3634150",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "false",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "es_cluster",
+                            "tags.Name": "es_cluster_c",
+                            "tags.Tier": "BE",
+                            "vpc_id": "vpc-0aaf6fa256e1fc5af"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.esports_be_subnet_a": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.esports",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-01414c9dbc66fd187",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-01414c9dbc66fd187",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2a",
+                            "availability_zone_id": "euw2-az2",
+                            "cidr_block": "172.24.19.0/24",
+                            "id": "subnet-01414c9dbc66fd187",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "false",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "esports",
+                            "tags.Name": "esports_be_a",
+                            "tags.Tier": "BE",
+                            "vpc_id": "vpc-0ad47aa6cdcf75b40"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.esports_be_subnet_b": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.esports",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-036899889784f3166",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-036899889784f3166",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2b",
+                            "availability_zone_id": "euw2-az3",
+                            "cidr_block": "172.24.20.0/24",
+                            "id": "subnet-036899889784f3166",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "false",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "esports",
+                            "tags.Name": "esports_be_b",
+                            "tags.Tier": "BE",
+                            "vpc_id": "vpc-0ad47aa6cdcf75b40"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.esports_be_subnet_c": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.esports",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-0efa3f572b85c0b74",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-0efa3f572b85c0b74",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2c",
+                            "availability_zone_id": "euw2-az1",
+                            "cidr_block": "172.24.21.0/24",
+                            "id": "subnet-0efa3f572b85c0b74",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "false",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "esports",
+                            "tags.Name": "esports_be_c",
+                            "tags.Tier": "BE",
+                            "vpc_id": "vpc-0ad47aa6cdcf75b40"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.esports_db_subnet_a": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.esports",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-0ecf5666dc76a4277",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-0ecf5666dc76a4277",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2a",
+                            "availability_zone_id": "euw2-az2",
+                            "cidr_block": "172.24.22.0/24",
+                            "id": "subnet-0ecf5666dc76a4277",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "false",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "esports",
+                            "tags.Name": "esports_db_a",
+                            "tags.Tier": "DB",
+                            "vpc_id": "vpc-0ad47aa6cdcf75b40"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.esports_db_subnet_b": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.esports",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-0ab220b9188e89be4",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-0ab220b9188e89be4",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2b",
+                            "availability_zone_id": "euw2-az3",
+                            "cidr_block": "172.24.23.0/24",
+                            "id": "subnet-0ab220b9188e89be4",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "false",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "esports",
+                            "tags.Name": "esports_db_b",
+                            "tags.Tier": "DB",
+                            "vpc_id": "vpc-0ad47aa6cdcf75b40"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.esports_db_subnet_c": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.esports",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-0e733e2ebfb57f784",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-0e733e2ebfb57f784",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2c",
+                            "availability_zone_id": "euw2-az1",
+                            "cidr_block": "172.24.24.0/24",
+                            "id": "subnet-0e733e2ebfb57f784",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "false",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "esports",
+                            "tags.Name": "esports_db_c",
+                            "tags.Tier": "DB",
+                            "vpc_id": "vpc-0ad47aa6cdcf75b40"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.esports_public_subnet_a": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.esports",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-09dfd7eab4f7f17ec",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-09dfd7eab4f7f17ec",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2a",
+                            "availability_zone_id": "euw2-az2",
+                            "cidr_block": "172.24.16.0/24",
+                            "id": "subnet-09dfd7eab4f7f17ec",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "true",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "esports",
+                            "tags.Name": "esports_fe_a",
+                            "tags.Tier": "FE",
+                            "vpc_id": "vpc-0ad47aa6cdcf75b40"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.esports_public_subnet_b": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.esports",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-06466b52945fcea9b",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-06466b52945fcea9b",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2b",
+                            "availability_zone_id": "euw2-az3",
+                            "cidr_block": "172.24.17.0/24",
+                            "id": "subnet-06466b52945fcea9b",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "true",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "esports",
+                            "tags.Name": "esports_fe_b",
+                            "tags.Tier": "FE",
+                            "vpc_id": "vpc-0ad47aa6cdcf75b40"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.esports_public_subnet_c": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.esports",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-0f80631062ff6d552",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-0f80631062ff6d552",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2c",
+                            "availability_zone_id": "euw2-az1",
+                            "cidr_block": "172.24.18.0/24",
+                            "id": "subnet-0f80631062ff6d552",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "true",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "esports",
+                            "tags.Name": "esports_fe_c",
+                            "tags.Tier": "FE",
+                            "vpc_id": "vpc-0ad47aa6cdcf75b40"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.esportsstaging_be_subnet_a": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.esportsstaging",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-0c3435f185ec5ab77",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-0c3435f185ec5ab77",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2a",
+                            "availability_zone_id": "euw2-az2",
+                            "cidr_block": "172.29.4.0/24",
+                            "id": "subnet-0c3435f185ec5ab77",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "false",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "esportsstaging",
+                            "tags.Name": "esportsstaging_be_a",
+                            "tags.Tier": "BE",
+                            "vpc_id": "vpc-05b62c1e7cc938e38"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.esportsstaging_be_subnet_b": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.esportsstaging",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-0f0c996a0d1010182",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-0f0c996a0d1010182",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2b",
+                            "availability_zone_id": "euw2-az3",
+                            "cidr_block": "172.29.5.0/24",
+                            "id": "subnet-0f0c996a0d1010182",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "false",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "esportsstaging",
+                            "tags.Name": "esportsstaging_be_b",
+                            "tags.Tier": "BE",
+                            "vpc_id": "vpc-05b62c1e7cc938e38"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.esportsstaging_be_subnet_c": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.esportsstaging",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-05a128ac71dfbecef",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-05a128ac71dfbecef",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2c",
+                            "availability_zone_id": "euw2-az1",
+                            "cidr_block": "172.29.6.0/24",
+                            "id": "subnet-05a128ac71dfbecef",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "false",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "esportsstaging",
+                            "tags.Name": "esportsstaging_be_c",
+                            "tags.Tier": "BE",
+                            "vpc_id": "vpc-05b62c1e7cc938e38"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.esportsstaging_db_subnet_a": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.esportsstaging",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-03d1a60f26a7f17ca",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-03d1a60f26a7f17ca",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2a",
+                            "availability_zone_id": "euw2-az2",
+                            "cidr_block": "172.29.7.0/24",
+                            "id": "subnet-03d1a60f26a7f17ca",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "false",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "esportsstaging",
+                            "tags.Name": "esportsstaging_db_a",
+                            "tags.Tier": "DB",
+                            "vpc_id": "vpc-05b62c1e7cc938e38"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.esportsstaging_db_subnet_b": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.esportsstaging",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-00edb9df60a38d676",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-00edb9df60a38d676",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2b",
+                            "availability_zone_id": "euw2-az3",
+                            "cidr_block": "172.29.8.0/24",
+                            "id": "subnet-00edb9df60a38d676",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "false",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "esportsstaging",
+                            "tags.Name": "esportsstaging_db_b",
+                            "tags.Tier": "DB",
+                            "vpc_id": "vpc-05b62c1e7cc938e38"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.esportsstaging_db_subnet_c": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.esportsstaging",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-09c718e1135616fb7",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-09c718e1135616fb7",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2c",
+                            "availability_zone_id": "euw2-az1",
+                            "cidr_block": "172.29.9.0/24",
+                            "id": "subnet-09c718e1135616fb7",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "false",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "esportsstaging",
+                            "tags.Name": "esportsstaging_db_c",
+                            "tags.Tier": "DB",
+                            "vpc_id": "vpc-05b62c1e7cc938e38"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.esportsstaging_public_subnet_a": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.esportsstaging",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-03a25267d3b46d573",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-03a25267d3b46d573",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2a",
+                            "availability_zone_id": "euw2-az2",
+                            "cidr_block": "172.29.1.0/24",
+                            "id": "subnet-03a25267d3b46d573",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "true",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "esportsstaging",
+                            "tags.Name": "esportsstaging_fe_a",
+                            "tags.Tier": "FE",
+                            "vpc_id": "vpc-05b62c1e7cc938e38"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.esportsstaging_public_subnet_b": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.esportsstaging",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-0803444b6f2629b97",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-0803444b6f2629b97",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2b",
+                            "availability_zone_id": "euw2-az3",
+                            "cidr_block": "172.29.2.0/24",
+                            "id": "subnet-0803444b6f2629b97",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "true",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "esportsstaging",
+                            "tags.Name": "esportsstaging_fe_b",
+                            "tags.Tier": "FE",
+                            "vpc_id": "vpc-05b62c1e7cc938e38"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.esportsstaging_public_subnet_c": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.esportsstaging",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-0404acab4eb78191e",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-0404acab4eb78191e",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2c",
+                            "availability_zone_id": "euw2-az1",
+                            "cidr_block": "172.29.3.0/24",
+                            "id": "subnet-0404acab4eb78191e",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "true",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "esportsstaging",
+                            "tags.Name": "esportsstaging_fe_c",
+                            "tags.Tier": "FE",
+                            "vpc_id": "vpc-05b62c1e7cc938e38"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.sddp_be_subnet_a": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.sddp",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-0ef0d9522f9b2f7a6",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-0ef0d9522f9b2f7a6",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2a",
+                            "availability_zone_id": "euw2-az2",
+                            "cidr_block": "172.24.51.0/24",
+                            "id": "subnet-0ef0d9522f9b2f7a6",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "false",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "sddp",
+                            "tags.Name": "sddp_be_a",
+                            "tags.Tier": "BE",
+                            "vpc_id": "vpc-0e0c8150af78b40ba"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.sddp_be_subnet_b": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.sddp",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-0f324d3378c2be3cd",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-0f324d3378c2be3cd",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2b",
+                            "availability_zone_id": "euw2-az3",
+                            "cidr_block": "172.24.52.0/24",
+                            "id": "subnet-0f324d3378c2be3cd",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "false",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "sddp",
+                            "tags.Name": "sddp_be_b",
+                            "tags.Tier": "BE",
+                            "vpc_id": "vpc-0e0c8150af78b40ba"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.sddp_be_subnet_c": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.sddp",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-03b5410669ac07ab3",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-03b5410669ac07ab3",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2c",
+                            "availability_zone_id": "euw2-az1",
+                            "cidr_block": "172.24.53.0/24",
+                            "id": "subnet-03b5410669ac07ab3",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "false",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "sddp",
+                            "tags.Name": "sddp_be_c",
+                            "tags.Tier": "BE",
+                            "vpc_id": "vpc-0e0c8150af78b40ba"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.sddp_db_subnet_a": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.sddp",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-0ee946e6859c17dfd",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-0ee946e6859c17dfd",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2a",
+                            "availability_zone_id": "euw2-az2",
+                            "cidr_block": "172.24.54.0/24",
+                            "id": "subnet-0ee946e6859c17dfd",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "false",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "sddp",
+                            "tags.Name": "sddp_db_a",
+                            "tags.Tier": "DB",
+                            "vpc_id": "vpc-0e0c8150af78b40ba"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.sddp_db_subnet_b": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.sddp",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-054de551d81e8ce25",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-054de551d81e8ce25",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2b",
+                            "availability_zone_id": "euw2-az3",
+                            "cidr_block": "172.24.55.0/24",
+                            "id": "subnet-054de551d81e8ce25",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "false",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "sddp",
+                            "tags.Name": "sddp_db_b",
+                            "tags.Tier": "DB",
+                            "vpc_id": "vpc-0e0c8150af78b40ba"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.sddp_db_subnet_c": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.sddp",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-0d8ee8d7cb13f5cf2",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-0d8ee8d7cb13f5cf2",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2c",
+                            "availability_zone_id": "euw2-az1",
+                            "cidr_block": "172.24.56.0/24",
+                            "id": "subnet-0d8ee8d7cb13f5cf2",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "false",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "sddp",
+                            "tags.Name": "sddp_db_c",
+                            "tags.Tier": "DB",
+                            "vpc_id": "vpc-0e0c8150af78b40ba"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.sddp_public_subnet_a": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.sddp",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-091230cce38681beb",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-091230cce38681beb",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2a",
+                            "availability_zone_id": "euw2-az2",
+                            "cidr_block": "172.24.48.0/24",
+                            "id": "subnet-091230cce38681beb",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "true",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "sddp",
+                            "tags.Name": "sddp_fe_a",
+                            "tags.Tier": "FE",
+                            "vpc_id": "vpc-0e0c8150af78b40ba"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.sddp_public_subnet_b": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.sddp",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-00840bb31a0b50fbd",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-00840bb31a0b50fbd",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2b",
+                            "availability_zone_id": "euw2-az3",
+                            "cidr_block": "172.24.49.0/24",
+                            "id": "subnet-00840bb31a0b50fbd",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "true",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "sddp",
+                            "tags.Name": "sddp_fe_b",
+                            "tags.Tier": "FE",
+                            "vpc_id": "vpc-0e0c8150af78b40ba"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_subnet.sddp_public_subnet_c": {
+                    "type": "aws_subnet",
+                    "depends_on": [
+                        "aws_vpc.sddp",
+                        "data.aws_availability_zones.available"
+                    ],
+                    "primary": {
+                        "id": "subnet-0d0fc6fd721681984",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:subnet/subnet-0d0fc6fd721681984",
+                            "assign_ipv6_address_on_creation": "false",
+                            "availability_zone": "eu-west-2c",
+                            "availability_zone_id": "euw2-az1",
+                            "cidr_block": "172.24.50.0/24",
+                            "id": "subnet-0d0fc6fd721681984",
+                            "ipv6_cidr_block": "",
+                            "ipv6_cidr_block_association_id": "",
+                            "map_public_ip_on_launch": "true",
+                            "owner_id": "464211975658",
+                            "tags.%": "3",
+                            "tags.Application": "sddp",
+                            "tags.Name": "sddp_fe_c",
+                            "tags.Tier": "FE",
+                            "vpc_id": "vpc-0e0c8150af78b40ba"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 600000000000,
+                                "delete": 600000000000
+                            },
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_vpc.csb": {
+                    "type": "aws_vpc",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "vpc-00bd6df56bbf1e801",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:vpc/vpc-00bd6df56bbf1e801",
+                            "assign_generated_ipv6_cidr_block": "false",
+                            "cidr_block": "172.24.32.0/20",
+                            "default_network_acl_id": "acl-052ac5a218c65f4a3",
+                            "default_route_table_id": "rtb-0d5c37bdb982b7529",
+                            "default_security_group_id": "sg-09bea23d64ba05bf3",
+                            "dhcp_options_id": "dopt-96a3dbfe",
+                            "enable_dns_hostnames": "true",
+                            "enable_dns_support": "true",
+                            "id": "vpc-00bd6df56bbf1e801",
+                            "instance_tenancy": "default",
+                            "ipv6_association_id": "",
+                            "ipv6_cidr_block": "",
+                            "main_route_table_id": "rtb-0d5c37bdb982b7529",
+                            "owner_id": "464211975658",
+                            "tags.%": "1",
+                            "tags.Name": "csb"
+                        },
+                        "meta": {
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_vpc.es_cluster": {
+                    "type": "aws_vpc",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "vpc-0aaf6fa256e1fc5af",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:vpc/vpc-0aaf6fa256e1fc5af",
+                            "assign_generated_ipv6_cidr_block": "false",
+                            "cidr_block": "172.24.64.0/22",
+                            "default_network_acl_id": "acl-075d600f027a5c044",
+                            "default_route_table_id": "rtb-07af8f05e6b084994",
+                            "default_security_group_id": "sg-02e81ca29d30000a4",
+                            "dhcp_options_id": "dopt-96a3dbfe",
+                            "enable_dns_hostnames": "true",
+                            "enable_dns_support": "true",
+                            "id": "vpc-0aaf6fa256e1fc5af",
+                            "instance_tenancy": "default",
+                            "ipv6_association_id": "",
+                            "ipv6_cidr_block": "",
+                            "main_route_table_id": "rtb-07af8f05e6b084994",
+                            "owner_id": "464211975658",
+                            "tags.%": "1",
+                            "tags.Name": "es_cluster"
+                        },
+                        "meta": {
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_vpc.esports": {
+                    "type": "aws_vpc",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "vpc-0ad47aa6cdcf75b40",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:vpc/vpc-0ad47aa6cdcf75b40",
+                            "assign_generated_ipv6_cidr_block": "false",
+                            "cidr_block": "172.24.16.0/20",
+                            "default_network_acl_id": "acl-0adb42ae7171aa1cf",
+                            "default_route_table_id": "rtb-03d651d2a16fd922c",
+                            "default_security_group_id": "sg-09ba2b01b01a8dcd8",
+                            "dhcp_options_id": "dopt-96a3dbfe",
+                            "enable_dns_hostnames": "true",
+                            "enable_dns_support": "true",
+                            "id": "vpc-0ad47aa6cdcf75b40",
+                            "instance_tenancy": "default",
+                            "ipv6_association_id": "",
+                            "ipv6_cidr_block": "",
+                            "main_route_table_id": "rtb-03d651d2a16fd922c",
+                            "owner_id": "464211975658",
+                            "tags.%": "1",
+                            "tags.Name": "esports"
+                        },
+                        "meta": {
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_vpc.esportsstaging": {
+                    "type": "aws_vpc",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "vpc-05b62c1e7cc938e38",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:vpc/vpc-05b62c1e7cc938e38",
+                            "assign_generated_ipv6_cidr_block": "false",
+                            "cidr_block": "172.29.0.0/20",
+                            "default_network_acl_id": "acl-0619eeab4e5b74c58",
+                            "default_route_table_id": "rtb-0bad491220ffb1137",
+                            "default_security_group_id": "sg-0f4aa0fc4651c5282",
+                            "dhcp_options_id": "dopt-96a3dbfe",
+                            "enable_dns_hostnames": "true",
+                            "enable_dns_support": "true",
+                            "id": "vpc-05b62c1e7cc938e38",
+                            "instance_tenancy": "default",
+                            "ipv6_association_id": "",
+                            "ipv6_cidr_block": "",
+                            "main_route_table_id": "rtb-0bad491220ffb1137",
+                            "owner_id": "464211975658",
+                            "tags.%": "1",
+                            "tags.Name": "esportsstaging"
+                        },
+                        "meta": {
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_vpc.sddp": {
+                    "type": "aws_vpc",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "vpc-0e0c8150af78b40ba",
+                        "attributes": {
+                            "arn": "arn:aws:ec2:eu-west-2:464211975658:vpc/vpc-0e0c8150af78b40ba",
+                            "assign_generated_ipv6_cidr_block": "false",
+                            "cidr_block": "172.24.48.0/20",
+                            "default_network_acl_id": "acl-080dcca1381fbd9e5",
+                            "default_route_table_id": "rtb-0fe6e358af459830b",
+                            "default_security_group_id": "sg-0da9664d79c447ece",
+                            "dhcp_options_id": "dopt-96a3dbfe",
+                            "enable_dns_hostnames": "true",
+                            "enable_dns_support": "true",
+                            "id": "vpc-0e0c8150af78b40ba",
+                            "instance_tenancy": "default",
+                            "ipv6_association_id": "",
+                            "ipv6_cidr_block": "",
+                            "main_route_table_id": "rtb-0fe6e358af459830b",
+                            "owner_id": "464211975658",
+                            "tags.%": "1",
+                            "tags.Name": "sddp"
+                        },
+                        "meta": {
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_vpc_peering_connection.csb2gearboxpeer": {
+                    "type": "aws_vpc_peering_connection",
+                    "depends_on": [
+                        "aws_vpc.csb"
+                    ],
+                    "primary": {
+                        "id": "pcx-04b535dc83dd5c946",
+                        "attributes": {
+                            "accept_status": "active",
+                            "accepter.#": "0",
+                            "auto_accept": "false",
+                            "id": "pcx-04b535dc83dd5c946",
+                            "peer_owner_id": "447795335313",
+                            "peer_region": "eu-west-1",
+                            "peer_vpc_id": "vpc-b590e0dd",
+                            "requester.#": "1",
+                            "requester.3244290774.allow_classic_link_to_remote_vpc": "false",
+                            "requester.3244290774.allow_remote_vpc_dns_resolution": "false",
+                            "requester.3244290774.allow_vpc_to_remote_classic_link": "false",
+                            "tags.%": "4",
+                            "tags.Application": "CSB",
+                            "tags.Company": "Perform",
+                            "tags.Name": "CSB VPC to gearbox VPC peering",
+                            "tags.Side": "requestor",
+                            "vpc_id": "vpc-00bd6df56bbf1e801"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 60000000000,
+                                "delete": 60000000000,
+                                "update": 60000000000
+                            }
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_vpc_peering_connection.gearboxpeer": {
+                    "type": "aws_vpc_peering_connection",
+                    "depends_on": [
+                        "aws_vpc.esports"
+                    ],
+                    "primary": {
+                        "id": "pcx-0d7894ad5182390ac",
+                        "attributes": {
+                            "accept_status": "active",
+                            "accepter.#": "1",
+                            "accepter.1102046665.allow_classic_link_to_remote_vpc": "false",
+                            "accepter.1102046665.allow_remote_vpc_dns_resolution": "true",
+                            "accepter.1102046665.allow_vpc_to_remote_classic_link": "false",
+                            "auto_accept": "false",
+                            "id": "pcx-0d7894ad5182390ac",
+                            "peer_owner_id": "447795335313",
+                            "peer_region": "eu-west-1",
+                            "peer_vpc_id": "vpc-b590e0dd",
+                            "requester.#": "1",
+                            "requester.3244290774.allow_classic_link_to_remote_vpc": "false",
+                            "requester.3244290774.allow_remote_vpc_dns_resolution": "false",
+                            "requester.3244290774.allow_vpc_to_remote_classic_link": "false",
+                            "tags.%": "4",
+                            "tags.Application": "esports",
+                            "tags.Company": "Perform",
+                            "tags.Name": "esports VPC to gearbox VPC peering",
+                            "tags.Side": "requestor",
+                            "vpc_id": "vpc-0ad47aa6cdcf75b40"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 60000000000,
+                                "delete": 60000000000,
+                                "update": 60000000000
+                            }
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "aws_vpc_peering_connection.stagingcsb2gearboxpeer": {
+                    "type": "aws_vpc_peering_connection",
+                    "depends_on": [
+                        "aws_vpc.csb"
+                    ],
+                    "primary": {
+                        "id": "pcx-09f7f4ed21c6a43f7",
+                        "attributes": {
+                            "accept_status": "active",
+                            "accepter.#": "0",
+                            "auto_accept": "false",
+                            "id": "pcx-09f7f4ed21c6a43f7",
+                            "peer_owner_id": "447795335313",
+                            "peer_region": "us-west-1",
+                            "peer_vpc_id": "vpc-e1691a88",
+                            "requester.#": "1",
+                            "requester.3244290774.allow_classic_link_to_remote_vpc": "false",
+                            "requester.3244290774.allow_remote_vpc_dns_resolution": "false",
+                            "requester.3244290774.allow_vpc_to_remote_classic_link": "false",
+                            "tags.%": "4",
+                            "tags.Application": "CSB",
+                            "tags.Company": "Perform",
+                            "tags.Name": "CSB VPC to gearbox staging VPC peering",
+                            "tags.Side": "requestor",
+                            "vpc_id": "vpc-00bd6df56bbf1e801"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 60000000000,
+                                "delete": 60000000000,
+                                "update": 60000000000
+                            }
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                },
+                "data.aws_availability_zones.available": {
+                    "type": "aws_availability_zones",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "2019-07-25 10:11:33.352499 +0000 UTC",
+                        "attributes": {
+                            "id": "2019-07-25 10:11:33.352499 +0000 UTC",
+                            "names.#": "3",
+                            "names.0": "eu-west-2a",
+                            "names.1": "eu-west-2b",
+                            "names.2": "eu-west-2c",
+                            "zone_ids.#": "3",
+                            "zone_ids.0": "euw2-az2",
+                            "zone_ids.1": "euw2-az3",
+                            "zone_ids.2": "euw2-az1"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.aws"
+                }
+            },
+            "depends_on": []
+        }
+    ]
+}

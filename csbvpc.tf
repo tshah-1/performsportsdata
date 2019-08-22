@@ -175,6 +175,14 @@ resource "aws_route_table" "csb_public_routetable" {
     cidr_block = "${aws_vpc.general.cidr_block}"
     gateway_id = "${aws_vpc_peering_connection.csb2general.id}"
   }
+  route {
+    cidr_block = "172.31.0.0/16"
+    gateway_id = "pcx-07e8150d8d3556258"
+  }
+  route {
+    cidr_block = "172.24.0.0/24"
+    gateway_id = "pcx-05750b249ed659ec8"
+  }
 
   tags {
     label = "csb"
