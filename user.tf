@@ -15,7 +15,7 @@ resource "aws_iam_group" "codecommit-user" {
 
 resource "aws_iam_group_membership" "admin-users" {
     name  = "admin-users-group-membership"
-    users = ["damian.czarnecki", "robert.hamilton", "christian.ringhofer", "volker.hutten", "harald.saringer", "bernd.dielacher", "gernot.heschl", "zsolt.biro", "karl.ferk", "tomasz.harazin", "chris.muzyunda", "bostjan.bele"]
+    users = ["damian.czarnecki", "robert.hamilton", "christian.ringhofer", "volker.hutten", "harald.saringer", "bernd.dielacher", "gernot.heschl", "zsolt.biro", "karl.ferk", "tomasz.harazin", "chris.muzyunda", "bostjan.bele", "krzysztof.magosa"]
     group = "admin-users"
 }
 
@@ -124,6 +124,11 @@ resource "aws_iam_user" "volker-hutten" {
 
 resource "aws_iam_user" "zsolt-biro" {
     name = "zsolt.biro"
+    path = "/"
+}
+
+resource "aws_iam_user" "krzysztof-magosa" {
+    name = "krzysztof.magosa"
     path = "/"
 }
 
