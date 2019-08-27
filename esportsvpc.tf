@@ -85,7 +85,7 @@ resource "aws_subnet" "esports_be_subnet_c" {
   tags = {
     Name        = "esports_be_c"
     Application = "esports"
-    Tier = "BE"
+    Tier        = "BE"
   }
 }
 
@@ -97,7 +97,7 @@ resource "aws_subnet" "esports_db_subnet_a" {
   tags = {
     Name        = "esports_db_a"
     Application = "esports"
-    Tier = "DB"
+    Tier        = "DB"
   }
 }
 
@@ -109,7 +109,7 @@ resource "aws_subnet" "esports_db_subnet_b" {
   tags = {
     Name        = "esports_db_b"
     Application = "esports"
-    Tier = "DB"
+    Tier        = "DB"
   }
 }
 
@@ -121,7 +121,7 @@ resource "aws_subnet" "esports_db_subnet_c" {
   tags = {
     Name        = "esports_db_c"
     Application = "esports"
-    Tier = "DB"
+    Tier        = "DB"
   }
 }
 
@@ -143,18 +143,18 @@ resource "aws_route_table" "esports_public_routetable" {
   }
 
   route {
-    cidr_block = "172.24.64.0/22"
+    cidr_block                = "172.24.64.0/22"
     vpc_peering_connection_id = "pcx-0a38009c4dc88e7f5"
   }
 
   route {
-    cidr_block = "10.0.0.0/16"
+    cidr_block                = "10.0.0.0/16"
     vpc_peering_connection_id = "${aws_vpc_peering_connection.gearboxpeer.id}"
   }
 
   tags = {
     label = "esports"
-    Name = "esports_public_routetable"
+    Name  = "esports_public_routetable"
   }
 }
 
@@ -194,14 +194,14 @@ resource "aws_route_table" "esports_private_routetable" {
     nat_gateway_id = "${aws_nat_gateway.esports.id}"
   }
   route {
-    cidr_block     = "10.0.0.0/16"
+    cidr_block                = "10.0.0.0/16"
     vpc_peering_connection_id = "${aws_vpc_peering_connection.gearboxpeer.id}"
   }
   depends_on = ["aws_nat_gateway.esports"]
 
   tags = {
     label = "esports"
-    Name = "esports_private_routetable"
+    Name  = "esports_private_routetable"
   }
 }
 
@@ -243,18 +243,18 @@ resource "aws_vpc_peering_connection" "gearboxpeer" {
   peer_region   = "eu-west-1"
   auto_accept   = false
 
-#  requester {
-#    allow_remote_vpc_dns_resolution = true
-#  }
+  #  requester {
+  #    allow_remote_vpc_dns_resolution = true
+  #  }
 
-# accepter {
-#    allow_remote_vpc_dns_resolution = true
-#  }
+  # accepter {
+  #    allow_remote_vpc_dns_resolution = true
+  #  }
 
   tags = {
-    Name = "esports VPC to gearbox VPC peering"
+    Name        = "esports VPC to gearbox VPC peering"
     Application = "esports"
-    Company = "Perform"
-    Side = "requestor"
+    Company     = "Perform"
+    Side        = "requestor"
   }
 }

@@ -84,7 +84,7 @@ resource "aws_subnet" "esportsstaging_be_subnet_c" {
   tags = {
     Name        = "esportsstaging_be_c"
     Application = "esportsstaging"
-    Tier = "BE"
+    Tier        = "BE"
   }
 }
 
@@ -96,7 +96,7 @@ resource "aws_subnet" "esportsstaging_db_subnet_a" {
   tags = {
     Name        = "esportsstaging_db_a"
     Application = "esportsstaging"
-    Tier = "DB"
+    Tier        = "DB"
   }
 }
 
@@ -108,7 +108,7 @@ resource "aws_subnet" "esportsstaging_db_subnet_b" {
   tags = {
     Name        = "esportsstaging_db_b"
     Application = "esportsstaging"
-    Tier = "DB"
+    Tier        = "DB"
   }
 }
 
@@ -120,7 +120,7 @@ resource "aws_subnet" "esportsstaging_db_subnet_c" {
   tags = {
     Name        = "esportsstaging_db_c"
     Application = "esportsstaging"
-    Tier = "DB"
+    Tier        = "DB"
   }
 }
 
@@ -143,7 +143,7 @@ resource "aws_route_table" "esportsstaging_public_routetable" {
 
   tags = {
     label = "esportsstaging"
-    Name = "esportsstaging_public_routetable"
+    Name  = "esportsstaging_public_routetable"
   }
 }
 
@@ -186,7 +186,7 @@ resource "aws_route_table" "esportsstaging_private_routetable" {
 
   tags = {
     label = "esportsstaging"
-    Name = "esportsstaging_private_routetable"
+    Name  = "esportsstaging_private_routetable"
   }
 }
 
