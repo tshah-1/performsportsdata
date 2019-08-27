@@ -3,7 +3,7 @@ resource "aws_vpc" "csb" {
   enable_dns_support   = true
   enable_dns_hostnames = true
 
-  tags {
+  tags = {
     Name = "csb"
   }
 }
@@ -15,7 +15,7 @@ resource "aws_subnet" "csb_public_subnet_a" {
   availability_zone       = "${data.aws_availability_zones.available.names[0]}"
   map_public_ip_on_launch = "true"
 
-  tags {
+  tags = {
     Name        = "csb_fe_a"
     Application = "csb"
     Tier        = "FE"
@@ -29,7 +29,7 @@ resource "aws_subnet" "csb_public_subnet_b" {
   availability_zone       = "${data.aws_availability_zones.available.names[1]}"
   map_public_ip_on_launch = "true"
 
-  tags {
+  tags = {
     Name        = "csb_fe_b"
     Application = "csb"
     Tier        = "FE"
@@ -43,7 +43,7 @@ resource "aws_subnet" "csb_public_subnet_c" {
   availability_zone       = "${data.aws_availability_zones.available.names[2]}"
   map_public_ip_on_launch = "true"
 
-  tags {
+  tags = {
     Name        = "csb_fe_c"
     Application = "csb"
     Tier        = "FE"
@@ -57,7 +57,7 @@ resource "aws_subnet" "csb_be_subnet_a" {
   availability_zone       = "${data.aws_availability_zones.available.names[0]}"
   map_public_ip_on_launch = "false"
 
-  tags {
+  tags = {
     Name        = "csb_be_a"
     Application = "csb"
     Tier        = "BE"
@@ -70,7 +70,7 @@ resource "aws_subnet" "csb_be_subnet_b" {
   availability_zone       = "${data.aws_availability_zones.available.names[1]}"
   map_public_ip_on_launch = "false"
 
-  tags {
+  tags = {
     Name        = "csb_be_b"
     Application = "csb"
     Tier        = "BE"
@@ -82,7 +82,7 @@ resource "aws_subnet" "csb_be_subnet_c" {
   cidr_block        = "172.24.37.0/24"
   availability_zone = "${data.aws_availability_zones.available.names[2]}"
 
-  tags {
+  tags = {
     Name        = "csb_be_c"
     Application = "csb"
     Tier = "BE"
@@ -94,7 +94,7 @@ resource "aws_subnet" "csb_db_subnet_a" {
   cidr_block        = "172.24.38.0/24"
   availability_zone = "${data.aws_availability_zones.available.names[0]}"
 
-  tags {
+  tags = {
     Name        = "csb_db_a"
     Application = "csb"
     Tier = "DB"
@@ -106,7 +106,7 @@ resource "aws_subnet" "csb_db_subnet_b" {
   cidr_block        = "172.24.39.0/24"
   availability_zone = "${data.aws_availability_zones.available.names[1]}"
 
-  tags {
+  tags = {
     Name        = "csb_db_b"
     Application = "csb"
     Tier = "DB"
@@ -118,7 +118,7 @@ resource "aws_subnet" "csb_db_subnet_c" {
   cidr_block        = "172.24.40.0/24"
   availability_zone = "${data.aws_availability_zones.available.names[2]}"
 
-  tags {
+  tags = {
     Name        = "csb_db_c"
     Application = "csb"
     Tier = "DB"
@@ -128,7 +128,7 @@ resource "aws_subnet" "csb_db_subnet_c" {
 resource "aws_internet_gateway" "csb-ig" {
   vpc_id = "${aws_vpc.csb.id}"
 
-  tags {
+  tags = {
     Name        = "csb IG"
     Application = "csb"
   }
@@ -184,7 +184,7 @@ resource "aws_route_table" "csb_public_routetable" {
     gateway_id = "pcx-05750b249ed659ec8"
   }
 
-  tags {
+  tags = {
     label = "csb"
     Name = "csb_public_routetable"
   }
@@ -213,7 +213,7 @@ resource "aws_nat_gateway" "csb" {
   allocation_id = "${aws_eip.csb_nat.id}"
   subnet_id     = "${aws_subnet.csb_public_subnet_a.id}"
 
-  tags {
+  tags = {
     Name = "csb VPC NAT"
   }
 }
@@ -260,7 +260,7 @@ resource "aws_route_table" "csb_private_routetable" {
   }
   depends_on = ["aws_nat_gateway.csb"]
 
-  tags {
+  tags = {
     label = "csb"
     Name = "csb_private_routetable"
   }

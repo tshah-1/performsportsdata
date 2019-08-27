@@ -3,7 +3,7 @@ resource "aws_vpc" "es_cluster" {
   enable_dns_support   = true
   enable_dns_hostnames = true
 
-  tags {
+  tags = {
     Name = "es_cluster"
   }
 }
@@ -14,7 +14,7 @@ resource "aws_subnet" "es_cluster_subnet_a" {
   availability_zone       = "${data.aws_availability_zones.available.names[0]}"
   map_public_ip_on_launch = "false"
 
-  tags {
+  tags = {
     Name        = "es_cluster_a"
     Application = "es_cluster"
     Tier        = "BE"
@@ -27,7 +27,7 @@ resource "aws_subnet" "es_cluster_subnet_b" {
   availability_zone       = "${data.aws_availability_zones.available.names[1]}"
   map_public_ip_on_launch = "false"
 
-  tags {
+  tags = {
     Name        = "es_cluster_b"
     Application = "es_cluster"
     Tier        = "BE"
@@ -39,7 +39,7 @@ resource "aws_subnet" "es_cluster_subnet_c" {
   cidr_block        = "172.24.66.0/24"
   availability_zone = "${data.aws_availability_zones.available.names[2]}"
 
-  tags {
+  tags = {
     Name        = "es_cluster_c"
     Application = "es_cluster"
     Tier = "BE"
@@ -49,7 +49,7 @@ resource "aws_subnet" "es_cluster_subnet_c" {
 resource "aws_internet_gateway" "es_cluster-ig" {
   vpc_id = "${aws_vpc.es_cluster.id}"
 
-  tags {
+  tags = {
     Name        = "es_cluster IG"
     Application = "es_cluster"
   }
@@ -63,7 +63,7 @@ resource "aws_nat_gateway" "es_cluster" {
   allocation_id = "${aws_eip.es_cluster_nat.id}"
   subnet_id     = "${aws_subnet.es_cluster_subnet_a.id}"
 
-  tags {
+  tags = {
     Name = "es_cluster VPC NAT"
   }
 }
@@ -81,7 +81,7 @@ resource "aws_route_table" "es_cluster_private_routetable" {
   }
   depends_on = ["aws_nat_gateway.es_cluster"]
 
-  tags {
+  tags = {
     label = "es_cluster"
     Name = "es_cluster_private_routetable"
   }

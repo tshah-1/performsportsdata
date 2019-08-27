@@ -3,7 +3,7 @@ resource "aws_vpc" "sddp_stage" {
   enable_dns_support   = true
   enable_dns_hostnames = true
 
-  tags {
+  tags = {
     Name = "sddp_stage"
   }
 }
@@ -15,7 +15,7 @@ resource "aws_subnet" "sddp_stage_public_subnet_a" {
   availability_zone       = "${data.aws_availability_zones.available.names[0]}"
   map_public_ip_on_launch = "true"
 
-  tags {
+  tags = {
     Name        = "sddp_stage_fe_a"
     Application = "sddp_stage"
     Tier        = "FE"
@@ -29,7 +29,7 @@ resource "aws_subnet" "sddp_stage_public_subnet_b" {
   availability_zone       = "${data.aws_availability_zones.available.names[1]}"
   map_public_ip_on_launch = "true"
 
-  tags {
+  tags = {
     Name        = "sddp_stage_fe_b"
     Application = "sddp_stage"
     Tier        = "FE"
@@ -43,7 +43,7 @@ resource "aws_subnet" "sddp_stage_public_subnet_c" {
   availability_zone       = "${data.aws_availability_zones.available.names[2]}"
   map_public_ip_on_launch = "true"
 
-  tags {
+  tags = {
     Name        = "sddp_stage_fe_c"
     Application = "sddp_stage"
     Tier        = "FE"
@@ -57,7 +57,7 @@ resource "aws_subnet" "sddp_stage_be_subnet_a" {
   availability_zone       = "${data.aws_availability_zones.available.names[0]}"
   map_public_ip_on_launch = "false"
 
-  tags {
+  tags = {
     Name        = "sddp_stage_be_a"
     Application = "sddp_stage"
     Tier        = "BE"
@@ -70,7 +70,7 @@ resource "aws_subnet" "sddp_stage_be_subnet_b" {
   availability_zone       = "${data.aws_availability_zones.available.names[1]}"
   map_public_ip_on_launch = "false"
 
-  tags {
+  tags = {
     Name        = "sddp_stage_be_b"
     Application = "sddp_stage"
     Tier        = "BE"
@@ -82,7 +82,7 @@ resource "aws_subnet" "sddp_stage_be_subnet_c" {
   cidr_block        = "172.29.21.0/24"
   availability_zone = "${data.aws_availability_zones.available.names[2]}"
 
-  tags {
+  tags = {
     Name        = "sddp_stage_be_c"
     Application = "sddp_stage"
     Tier        = "BE"
@@ -94,7 +94,7 @@ resource "aws_subnet" "sddp_stage_db_subnet_a" {
   cidr_block        = "172.29.22.0/24"
   availability_zone = "${data.aws_availability_zones.available.names[0]}"
 
-  tags {
+  tags = {
     Name        = "sddp_stage_db_a"
     Application = "sddp_stage"
     Tier        = "DB"
@@ -106,7 +106,7 @@ resource "aws_subnet" "sddp_stage_db_subnet_b" {
   cidr_block        = "172.29.23.0/24"
   availability_zone = "${data.aws_availability_zones.available.names[1]}"
 
-  tags {
+  tags = {
     Name        = "sddp_stage_db_b"
     Application = "sddp_stage"
     Tier        = "DB"
@@ -118,7 +118,7 @@ resource "aws_subnet" "sddp_stage_db_subnet_c" {
   cidr_block        = "172.29.24.0/24"
   availability_zone = "${data.aws_availability_zones.available.names[2]}"
 
-  tags {
+  tags = {
     Name        = "sddp_stage_db_c"
     Application = "sddp_stage"
     Tier        = "DB"
@@ -128,7 +128,7 @@ resource "aws_subnet" "sddp_stage_db_subnet_c" {
 resource "aws_internet_gateway" "sddp_stage-ig" {
   vpc_id = "${aws_vpc.sddp_stage.id}"
 
-  tags {
+  tags = {
     Name        = "sddp_stage IG"
     Application = "sddp_stage"
   }
@@ -146,7 +146,7 @@ resource "aws_route_table" "sddp_stage_public_routetable" {
     gateway_id = "${aws_vpc_peering_connection.sddp_stage2general_stage.id}"
   }
 
-  tags {
+  tags = {
     label = "sddp_stage"
     Name  = "sddp_stage_public_routetable"
   }
@@ -175,7 +175,7 @@ resource "aws_nat_gateway" "sddp_stage" {
   allocation_id = "${aws_eip.sddp_stage_nat.id}"
   subnet_id     = "${aws_subnet.sddp_stage_public_subnet_a.id}"
 
-  tags {
+  tags = {
     Name = "sddp_stage VPC NAT"
   }
 }
@@ -193,7 +193,7 @@ resource "aws_route_table" "sddp_stage_private_routetable" {
   }
   depends_on = ["aws_nat_gateway.sddp_stage"]
 
-  tags {
+  tags = {
     label = "sddp_stage"
     Name  = "sddp_stage_private_routetable"
   }

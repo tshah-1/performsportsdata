@@ -3,7 +3,7 @@ resource "aws_vpc" "general_stage" {
   enable_dns_support   = true
   enable_dns_hostnames = true
 
-  tags {
+  tags = {
     Name = "general_stage"
   }
 }
@@ -15,7 +15,7 @@ resource "aws_subnet" "general_stage_public_subnet_a" {
   availability_zone       = "${data.aws_availability_zones.available.names[0]}"
   map_public_ip_on_launch = "true"
 
-  tags {
+  tags = {
     Name        = "general_stage_fe_a"
     Application = "general_stage"
     Tier        = "FE"
@@ -29,7 +29,7 @@ resource "aws_subnet" "general_stage_public_subnet_b" {
   availability_zone       = "${data.aws_availability_zones.available.names[1]}"
   map_public_ip_on_launch = "true"
 
-  tags {
+  tags = {
     Name        = "general_stage_fe_b"
     Application = "general_stage"
     Tier        = "FE"
@@ -43,7 +43,7 @@ resource "aws_subnet" "general_stage_public_subnet_c" {
   availability_zone       = "${data.aws_availability_zones.available.names[2]}"
   map_public_ip_on_launch = "true"
 
-  tags {
+  tags = {
     Name        = "general_stage_fe_c"
     Application = "general_stage"
     Tier        = "FE"
@@ -57,7 +57,7 @@ resource "aws_subnet" "general_stage_be_subnet_a" {
   availability_zone       = "${data.aws_availability_zones.available.names[0]}"
   map_public_ip_on_launch = "false"
 
-  tags {
+  tags = {
     Name        = "general_stage_be_a"
     Application = "general_stage"
     Tier        = "BE"
@@ -70,7 +70,7 @@ resource "aws_subnet" "general_stage_be_subnet_b" {
   availability_zone       = "${data.aws_availability_zones.available.names[1]}"
   map_public_ip_on_launch = "false"
 
-  tags {
+  tags = {
     Name        = "general_stage_be_b"
     Application = "general_stage"
     Tier        = "BE"
@@ -82,7 +82,7 @@ resource "aws_subnet" "general_stage_be_subnet_c" {
   cidr_block        = "172.29.37.0/20"
   availability_zone = "${data.aws_availability_zones.available.names[2]}"
 
-  tags {
+  tags = {
     Name        = "general_stage_be_c"
     Application = "general_stage"
     Tier        = "BE"
@@ -94,7 +94,7 @@ resource "aws_subnet" "general_stage_db_subnet_a" {
   cidr_block        = "172.29.38.0/20"
   availability_zone = "${data.aws_availability_zones.available.names[0]}"
 
-  tags {
+  tags = {
     Name        = "general_stage_db_a"
     Application = "general_stage"
     Tier        = "DB"
@@ -106,7 +106,7 @@ resource "aws_subnet" "general_stage_db_subnet_b" {
   cidr_block        = "172.29.39.0/20"
   availability_zone = "${data.aws_availability_zones.available.names[1]}"
 
-  tags {
+  tags = {
     Name        = "general_stage_db_b"
     Application = "general_stage"
     Tier        = "DB"
@@ -118,7 +118,7 @@ resource "aws_subnet" "general_stage_db_subnet_c" {
   cidr_block        = "172.24.88.0/24"
   availability_zone = "${data.aws_availability_zones.available.names[2]}"
 
-  tags {
+  tags = {
     Name        = "general_stage_db_c"
     Application = "general_stage"
     Tier        = "DB"
@@ -128,7 +128,7 @@ resource "aws_subnet" "general_stage_db_subnet_c" {
 resource "aws_internet_gateway" "general_stage-ig" {
   vpc_id = "${aws_vpc.general_stage.id}"
 
-  tags {
+  tags = {
     Name        = "general_stage IG"
     Application = "general_stage"
   }
@@ -150,7 +150,7 @@ resource "aws_route_table" "general_stage_public_routetable" {
     gateway_id = "${aws_vpc_peering_connection.csb_stage2general_stage.id}"
   }
 
-  tags {
+  tags = {
     label = "general_stage"
     Name  = "general_stage_public_routetable"
   }
@@ -179,7 +179,7 @@ resource "aws_nat_gateway" "general_stage" {
   allocation_id = "${aws_eip.general_stage_nat.id}"
   subnet_id     = "${aws_subnet.general_stage_public_subnet_a.id}"
 
-  tags {
+  tags = {
     Name = "general_stage VPC NAT"
   }
 }
@@ -201,7 +201,7 @@ resource "aws_route_table" "general_stage_private_routetable" {
   }
   depends_on = ["aws_nat_gateway.general_stage"]
 
-  tags {
+  tags = {
     label = "general_stage"
     Name  = "general_stage_private_routetable"
   }
