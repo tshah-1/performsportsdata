@@ -142,8 +142,8 @@ resource "aws_route_table" "sddp_stage_public_routetable" {
     gateway_id = "${aws_internet_gateway.sddp_stage-ig.id}"
   }
   route {
-    cidr_block = "${aws_vpc.general_stage.cidr_block}"
-    gateway_id = "${aws_vpc_peering_connection.sddp_stage2general_stage.id}"
+    cidr_block                = "${aws_vpc.general_stage.cidr_block}"
+    vpc_peering_connection_id = "${aws_vpc_peering_connection.sddp_stage2general_stage.id}"
   }
 
   tags = {
@@ -188,8 +188,8 @@ resource "aws_route_table" "sddp_stage_private_routetable" {
     nat_gateway_id = "${aws_nat_gateway.sddp_stage.id}"
   }
   route {
-    cidr_block = "${aws_vpc.general_stage.cidr_block}"
-    gateway_id = "${aws_vpc_peering_connection.sddp_stage2general_stage.id}"
+    cidr_block                = "${aws_vpc.general_stage.cidr_block}"
+    vpc_peering_connection_id = "${aws_vpc_peering_connection.sddp_stage2general_stage.id}"
   }
   depends_on = ["aws_nat_gateway.sddp_stage"]
 
