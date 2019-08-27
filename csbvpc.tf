@@ -85,7 +85,7 @@ resource "aws_subnet" "csb_be_subnet_c" {
   tags = {
     Name        = "csb_be_c"
     Application = "csb"
-    Tier = "BE"
+    Tier        = "BE"
   }
 }
 
@@ -97,7 +97,7 @@ resource "aws_subnet" "csb_db_subnet_a" {
   tags = {
     Name        = "csb_db_a"
     Application = "csb"
-    Tier = "DB"
+    Tier        = "DB"
   }
 }
 
@@ -109,7 +109,7 @@ resource "aws_subnet" "csb_db_subnet_b" {
   tags = {
     Name        = "csb_db_b"
     Application = "csb"
-    Tier = "DB"
+    Tier        = "DB"
   }
 }
 
@@ -121,7 +121,7 @@ resource "aws_subnet" "csb_db_subnet_c" {
   tags = {
     Name        = "csb_db_c"
     Application = "csb"
-    Tier = "DB"
+    Tier        = "DB"
   }
 }
 
@@ -186,7 +186,7 @@ resource "aws_route_table" "csb_public_routetable" {
 
   tags = {
     label = "csb"
-    Name = "csb_public_routetable"
+    Name  = "csb_public_routetable"
   }
 }
 
@@ -262,7 +262,7 @@ resource "aws_route_table" "csb_private_routetable" {
 
   tags = {
     label = "csb"
-    Name = "csb_private_routetable"
+    Name  = "csb_private_routetable"
   }
 }
 
@@ -304,19 +304,19 @@ resource "aws_vpc_peering_connection" "csb2gearboxpeer" {
   peer_region   = "eu-west-1"
   auto_accept   = false
 
-#  requester {
-#    allow_remote_vpc_dns_resolution = true
-#  }
+  #  requester {
+  #    allow_remote_vpc_dns_resolution = true
+  #  }
 
-# accepter {
-#    allow_remote_vpc_dns_resolution = true
-#  }
+  # accepter {
+  #    allow_remote_vpc_dns_resolution = true
+  #  }
 
   tags = {
-    Name = "CSB VPC to gearbox VPC peering"
+    Name        = "CSB VPC to gearbox VPC peering"
     Application = "CSB"
-    Company = "Perform"
-    Side = "requestor"
+    Company     = "Perform"
+    Side        = "requestor"
   }
 }
 
@@ -327,19 +327,19 @@ resource "aws_vpc_peering_connection" "stagingcsb2gearboxpeer" {
   peer_region   = "us-west-1"
   auto_accept   = false
 
-#  requester {
-#    allow_remote_vpc_dns_resolution = true
-#  }
+  #  requester {
+  #    allow_remote_vpc_dns_resolution = true
+  #  }
 
-# accepter {
-#    allow_remote_vpc_dns_resolution = true
-#  }
+  # accepter {
+  #    allow_remote_vpc_dns_resolution = true
+  #  }
 
   tags = {
-    Name = "CSB VPC to gearbox staging VPC peering"
+    Name        = "CSB VPC to gearbox staging VPC peering"
     Application = "CSB"
-    Company = "Perform"
-    Side = "requestor"
+    Company     = "Perform"
+    Side        = "requestor"
   }
 }
 

@@ -85,7 +85,7 @@ resource "aws_subnet" "sddp_be_subnet_c" {
   tags = {
     Name        = "sddp_be_c"
     Application = "sddp"
-    Tier = "BE"
+    Tier        = "BE"
   }
 }
 
@@ -97,7 +97,7 @@ resource "aws_subnet" "sddp_db_subnet_a" {
   tags = {
     Name        = "sddp_db_a"
     Application = "sddp"
-    Tier = "DB"
+    Tier        = "DB"
   }
 }
 
@@ -109,7 +109,7 @@ resource "aws_subnet" "sddp_db_subnet_b" {
   tags = {
     Name        = "sddp_db_b"
     Application = "sddp"
-    Tier = "DB"
+    Tier        = "DB"
   }
 }
 
@@ -121,7 +121,7 @@ resource "aws_subnet" "sddp_db_subnet_c" {
   tags = {
     Name        = "sddp_db_c"
     Application = "sddp"
-    Tier = "DB"
+    Tier        = "DB"
   }
 }
 
@@ -148,7 +148,7 @@ resource "aws_route_table" "sddp_public_routetable" {
 
   tags = {
     label = "sddp"
-    Name = "sddp_public_routetable"
+    Name  = "sddp_public_routetable"
   }
 }
 
@@ -195,7 +195,7 @@ resource "aws_route_table" "sddp_private_routetable" {
 
   tags = {
     label = "sddp"
-    Name = "sddp_private_routetable"
+    Name  = "sddp_private_routetable"
   }
 }
 

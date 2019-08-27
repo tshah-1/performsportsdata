@@ -42,7 +42,7 @@ resource "aws_subnet" "es_cluster_subnet_c" {
   tags = {
     Name        = "es_cluster_c"
     Application = "es_cluster"
-    Tier = "BE"
+    Tier        = "BE"
   }
 }
 
@@ -76,14 +76,14 @@ resource "aws_route_table" "es_cluster_private_routetable" {
     nat_gateway_id = "${aws_nat_gateway.es_cluster.id}"
   }
   route {
-    cidr_block     = "172.24.16.0/20"
+    cidr_block                = "172.24.16.0/20"
     vpc_peering_connection_id = "pcx-0a38009c4dc88e7f5"
   }
   depends_on = ["aws_nat_gateway.es_cluster"]
 
   tags = {
     label = "es_cluster"
-    Name = "es_cluster_private_routetable"
+    Name  = "es_cluster_private_routetable"
   }
 }
 
