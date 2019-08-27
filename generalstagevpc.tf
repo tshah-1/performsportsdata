@@ -10,7 +10,7 @@ resource "aws_vpc" "general_stage" {
 
 resource "aws_subnet" "general_stage_public_subnet_a" {
   vpc_id     = "${aws_vpc.general_stage.id}"
-  cidr_block = "172.29.32.0/20"
+  cidr_block = "172.29.32.0/24"
 
   availability_zone       = "${data.aws_availability_zones.available.names[0]}"
   map_public_ip_on_launch = "true"
@@ -24,7 +24,7 @@ resource "aws_subnet" "general_stage_public_subnet_a" {
 
 resource "aws_subnet" "general_stage_public_subnet_b" {
   vpc_id     = "${aws_vpc.general_stage.id}"
-  cidr_block = "172.29.33.0/20"
+  cidr_block = "172.29.33.0/24"
 
   availability_zone       = "${data.aws_availability_zones.available.names[1]}"
   map_public_ip_on_launch = "true"
@@ -38,7 +38,7 @@ resource "aws_subnet" "general_stage_public_subnet_b" {
 
 resource "aws_subnet" "general_stage_public_subnet_c" {
   vpc_id     = "${aws_vpc.general_stage.id}"
-  cidr_block = "172.29.34.0/20"
+  cidr_block = "172.29.34.0/24"
 
   availability_zone       = "${data.aws_availability_zones.available.names[2]}"
   map_public_ip_on_launch = "true"
@@ -53,7 +53,7 @@ resource "aws_subnet" "general_stage_public_subnet_c" {
 
 resource "aws_subnet" "general_stage_be_subnet_a" {
   vpc_id                  = "${aws_vpc.general_stage.id}"
-  cidr_block              = "172.29.35.0/20"
+  cidr_block              = "172.29.35.0/24"
   availability_zone       = "${data.aws_availability_zones.available.names[0]}"
   map_public_ip_on_launch = "false"
 
@@ -66,7 +66,7 @@ resource "aws_subnet" "general_stage_be_subnet_a" {
 
 resource "aws_subnet" "general_stage_be_subnet_b" {
   vpc_id                  = "${aws_vpc.general_stage.id}"
-  cidr_block              = "172.29.36.0/20"
+  cidr_block              = "172.29.36.0/24"
   availability_zone       = "${data.aws_availability_zones.available.names[1]}"
   map_public_ip_on_launch = "false"
 
@@ -79,7 +79,7 @@ resource "aws_subnet" "general_stage_be_subnet_b" {
 
 resource "aws_subnet" "general_stage_be_subnet_c" {
   vpc_id            = "${aws_vpc.general_stage.id}"
-  cidr_block        = "172.29.37.0/20"
+  cidr_block        = "172.29.37.0/24"
   availability_zone = "${data.aws_availability_zones.available.names[2]}"
 
   tags = {
@@ -91,7 +91,7 @@ resource "aws_subnet" "general_stage_be_subnet_c" {
 
 resource "aws_subnet" "general_stage_db_subnet_a" {
   vpc_id            = "${aws_vpc.general_stage.id}"
-  cidr_block        = "172.29.38.0/20"
+  cidr_block        = "172.29.38.0/24"
   availability_zone = "${data.aws_availability_zones.available.names[0]}"
 
   tags = {
@@ -103,7 +103,7 @@ resource "aws_subnet" "general_stage_db_subnet_a" {
 
 resource "aws_subnet" "general_stage_db_subnet_b" {
   vpc_id            = "${aws_vpc.general_stage.id}"
-  cidr_block        = "172.29.39.0/20"
+  cidr_block        = "172.29.39.0/24"
   availability_zone = "${data.aws_availability_zones.available.names[1]}"
 
   tags = {
@@ -115,7 +115,7 @@ resource "aws_subnet" "general_stage_db_subnet_b" {
 
 resource "aws_subnet" "general_stage_db_subnet_c" {
   vpc_id            = "${aws_vpc.general_stage.id}"
-  cidr_block        = "172.24.88.0/24"
+  cidr_block        = "172.29.40.0/24"
   availability_zone = "${data.aws_availability_zones.available.names[2]}"
 
   tags = {
