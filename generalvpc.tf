@@ -142,12 +142,12 @@ resource "aws_route_table" "general_public_routetable" {
     gateway_id = "${aws_internet_gateway.general-ig.id}"
   }
   route {
-    cidr_block = "${aws_vpc.sddp.cidr_block}"
-    gateway_id = "${aws_vpc_peering_connection.sddp2general.id}"
+    cidr_block                = "${aws_vpc.sddp.cidr_block}"
+    vpc_peering_connection_id = "${aws_vpc_peering_connection.sddp2general.id}"
   }
   route {
-    cidr_block = "${aws_vpc.csb.cidr_block}"
-    gateway_id = "${aws_vpc_peering_connection.csb2general.id}"
+    cidr_block                = "${aws_vpc.csb.cidr_block}"
+    vpc_peering_connection_id = "${aws_vpc_peering_connection.csb2general.id}"
   }
 
   tags = {
@@ -192,12 +192,12 @@ resource "aws_route_table" "general_private_routetable" {
     nat_gateway_id = "${aws_nat_gateway.general.id}"
   }
   route {
-    cidr_block = "${aws_vpc.sddp.cidr_block}"
-    gateway_id = "${aws_vpc_peering_connection.sddp2general.id}"
+    cidr_block                = "${aws_vpc.sddp.cidr_block}"
+    vpc_peering_connection_id = "${aws_vpc_peering_connection.sddp2general.id}"
   }
   route {
-    cidr_block = "${aws_vpc.csb.cidr_block}"
-    gateway_id = "${aws_vpc_peering_connection.csb2general.id}"
+    cidr_block                = "${aws_vpc.csb.cidr_block}"
+    vpc_peering_connection_id = "${aws_vpc_peering_connection.csb2general.id}"
   }
   depends_on = ["aws_nat_gateway.general"]
 

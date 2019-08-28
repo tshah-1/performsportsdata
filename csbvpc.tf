@@ -143,45 +143,45 @@ resource "aws_route_table" "csb_public_routetable" {
   }
 
   route {
-    cidr_block = "10.0.2.0/24"
-    gateway_id = "${aws_vpc_peering_connection.stagingcsb2gearboxpeer.id}"
+    cidr_block                = "10.0.2.0/24"
+    vpc_peering_connection_id = "${aws_vpc_peering_connection.stagingcsb2gearboxpeer.id}"
   }
 
   route {
-    cidr_block = "10.0.3.0/24"
-    gateway_id = "${aws_vpc_peering_connection.stagingcsb2gearboxpeer.id}"
+    cidr_block                = "10.0.3.0/24"
+    vpc_peering_connection_id = "${aws_vpc_peering_connection.stagingcsb2gearboxpeer.id}"
   }
   route {
-    cidr_block = "10.0.64.0/24"
-    gateway_id = "${aws_vpc_peering_connection.stagingcsb2gearboxpeer.id}"
+    cidr_block                = "10.0.64.0/24"
+    vpc_peering_connection_id = "${aws_vpc_peering_connection.stagingcsb2gearboxpeer.id}"
   }
   route {
-    cidr_block = "10.0.11.0/24"
-    gateway_id = "${aws_vpc_peering_connection.csb2gearboxpeer.id}"
+    cidr_block                = "10.0.11.0/24"
+    vpc_peering_connection_id = "${aws_vpc_peering_connection.csb2gearboxpeer.id}"
   }
   route {
-    cidr_block = "10.0.12.0/24"
-    gateway_id = "${aws_vpc_peering_connection.csb2gearboxpeer.id}"
+    cidr_block                = "10.0.12.0/24"
+    vpc_peering_connection_id = "${aws_vpc_peering_connection.csb2gearboxpeer.id}"
   }
   route {
-    cidr_block = "10.0.13.0/24"
-    gateway_id = "${aws_vpc_peering_connection.csb2gearboxpeer.id}"
+    cidr_block                = "10.0.13.0/24"
+    vpc_peering_connection_id = "${aws_vpc_peering_connection.csb2gearboxpeer.id}"
   }
   route {
-    cidr_block = "10.0.14.0/24"
-    gateway_id = "${aws_vpc_peering_connection.csb2gearboxpeer.id}"
+    cidr_block                = "10.0.14.0/24"
+    vpc_peering_connection_id = "${aws_vpc_peering_connection.csb2gearboxpeer.id}"
   }
   route {
-    cidr_block = "${aws_vpc.general.cidr_block}"
-    gateway_id = "${aws_vpc_peering_connection.csb2general.id}"
+    cidr_block                = "${aws_vpc.general.cidr_block}"
+    vpc_peering_connection_id = "${aws_vpc_peering_connection.csb2general.id}"
   }
   route {
-    cidr_block = "172.31.0.0/16"
-    gateway_id = "pcx-07e8150d8d3556258"
+    cidr_block                = "172.31.0.0/16"
+    vpc_peering_connection_id = "pcx-07e8150d8d3556258"
   }
   route {
-    cidr_block = "172.24.0.0/24"
-    gateway_id = "pcx-05750b249ed659ec8"
+    cidr_block                = "172.24.0.0/24"
+    vpc_peering_connection_id = "pcx-05750b249ed659ec8"
   }
 
   tags = {
@@ -226,37 +226,37 @@ resource "aws_route_table" "csb_private_routetable" {
     nat_gateway_id = "${aws_nat_gateway.csb.id}"
   }
   route {
-    cidr_block = "10.0.2.0/24"
-    gateway_id = "${aws_vpc_peering_connection.stagingcsb2gearboxpeer.id}"
+    cidr_block                = "10.0.2.0/24"
+    vpc_peering_connection_id = "${aws_vpc_peering_connection.stagingcsb2gearboxpeer.id}"
   }
 
   route {
-    cidr_block = "10.0.3.0/24"
-    gateway_id = "${aws_vpc_peering_connection.stagingcsb2gearboxpeer.id}"
+    cidr_block                = "10.0.3.0/24"
+    vpc_peering_connection_id = "${aws_vpc_peering_connection.stagingcsb2gearboxpeer.id}"
   }
   route {
-    cidr_block = "10.0.64.0/24"
-    gateway_id = "${aws_vpc_peering_connection.stagingcsb2gearboxpeer.id}"
+    cidr_block                = "10.0.64.0/24"
+    vpc_peering_connection_id = "${aws_vpc_peering_connection.stagingcsb2gearboxpeer.id}"
   }
   route {
-    cidr_block = "10.0.11.0/24"
-    gateway_id = "${aws_vpc_peering_connection.csb2gearboxpeer.id}"
+    cidr_block                = "10.0.11.0/24"
+    vpc_peering_connection_id = "${aws_vpc_peering_connection.csb2gearboxpeer.id}"
   }
   route {
-    cidr_block = "10.0.12.0/24"
-    gateway_id = "${aws_vpc_peering_connection.csb2gearboxpeer.id}"
+    cidr_block                = "10.0.12.0/24"
+    vpc_peering_connection_id = "${aws_vpc_peering_connection.csb2gearboxpeer.id}"
   }
   route {
-    cidr_block = "10.0.13.0/24"
-    gateway_id = "${aws_vpc_peering_connection.csb2gearboxpeer.id}"
+    cidr_block                = "10.0.13.0/24"
+    vpc_peering_connection_id = "${aws_vpc_peering_connection.csb2gearboxpeer.id}"
   }
   route {
-    cidr_block = "10.0.14.0/24"
-    gateway_id = "${aws_vpc_peering_connection.csb2gearboxpeer.id}"
+    cidr_block                = "10.0.14.0/24"
+    vpc_peering_connection_id = "${aws_vpc_peering_connection.csb2gearboxpeer.id}"
   }
   route {
-    cidr_block = "${aws_vpc.general.cidr_block}"
-    gateway_id = "${aws_vpc_peering_connection.csb2general.id}"
+    cidr_block                = "${aws_vpc.general.cidr_block}"
+    vpc_peering_connection_id = "${aws_vpc_peering_connection.csb2general.id}"
   }
   depends_on = ["aws_nat_gateway.csb"]
 
