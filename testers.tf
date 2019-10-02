@@ -3,6 +3,31 @@ resource "aws_iam_user" "maja-wloch" {
   path = "/"
 }
 
+resource "aws_iam_user" "arkadiusz-mroczek" {
+  name = "arkadiusz.mroczek"
+  path = "/"
+}
+
+resource "aws_iam_user" "adrian-marzec" {
+  name = "adrian.marzec"
+  path = "/"
+}
+
+resource "aws_iam_user" "emil-dziuba" {
+  name = "emil.dziuba"
+  path = "/"
+}
+
+resource "aws_iam_user" "damian-wilga" {
+  name = "damian.wilga"
+  path = "/"
+}
+
+resource "aws_iam_user" "lukasz-rother" {
+  name = "lukasz.rother"
+  path = "/"
+}
+
 #
 
 resource "aws_iam_group" "testers" {
@@ -18,6 +43,11 @@ resource "aws_iam_group_membership" "testers" {
 
   users = [
     "${aws_iam_user.maja-wloch.name}",
+    "${aws_iam_user.arkadiusz-mroczek.name}",
+    "${aws_iam_user.adrian-marzec.name}",
+    "${aws_iam_user.emil-dziuba.name}",
+    "${aws_iam_user.damian-wilga.name}",
+    "${aws_iam_user.lukasz-rother.name}",
   ]
 }
 
