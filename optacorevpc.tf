@@ -179,8 +179,8 @@ resource "aws_route_table" "optacore_prod_private_routetable" {
     nat_gateway_id = "${aws_nat_gateway.optacore_prod.id}"
   }
   route {
-    cidr_block                = "${aws_vpc.general_prod.cidr_block}"
-    vpc_peering_connection_id = "${aws_vpc_peering_connection.optacore_prod2general_prod.id}"
+    cidr_block                = "${aws_vpc.general.cidr_block}"
+    vpc_peering_connection_id = "${aws_vpc_peering_connection.optacore_prod2general.id}"
   }
   depends_on = ["aws_nat_gateway.optacore_prod"]
 
@@ -221,13 +221,13 @@ resource "aws_route_table_association" "optacore_prod_db_subnet_c" {
   route_table_id = "${aws_route_table.optacore_prod_private_routetable.id}"
 }
 
-resource "aws_vpc_peering_connection" "optacore_prod2general_prod" {
+resource "aws_vpc_peering_connection" "optacore_prod2general" {
   vpc_id      = "${aws_vpc.optacore_prod.id}"
-  peer_vpc_id = "${aws_vpc.general_prod.id}"
+  peer_vpc_id = "${aws_vpc.general.id}"
   auto_accept = true
 
   tags = {
-    Name        = "optacore_prod VPC to general_prod VPC peering"
+    Name        = "optacore_prod VPC to general VPC peering"
     Application = "optacore_prod"
     Company     = "Perform"
   }
