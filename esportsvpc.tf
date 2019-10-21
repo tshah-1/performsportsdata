@@ -258,3 +258,15 @@ resource "aws_vpc_peering_connection" "gearboxpeer" {
     Side        = "requestor"
   }
 }
+
+resource "aws_vpc_peering_connection" "sddp_prod_peer" {
+  vpc_id      = "${aws_vpc.esports.id}"
+  peer_vpc_id = "${aws_vpc.sddp.id}"
+  auto_accept = true
+
+  tags = {
+    Name        = "esports VPC to sddp VPC peering"
+    Application = "esports"
+    Company     = "Perform"
+  }
+}

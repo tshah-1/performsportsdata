@@ -221,3 +221,14 @@ resource "aws_route_table_association" "esportsstaging_db_subnet_c" {
   route_table_id = "${aws_route_table.esportsstaging_private_routetable.id}"
 }
 
+resource "aws_vpc_peering_connection" "sddp_staging_peer" {
+  vpc_id      = "${aws_vpc.esportsstaging.id}"
+  peer_vpc_id = "${aws_vpc.sddp_stage.id}"
+  auto_accept = true
+
+  tags = {
+    Name        = "esportsstaging VPC to sddp_stage VPC peering"
+    Application = "esports"
+    Company     = "Perform"
+  }
+}
