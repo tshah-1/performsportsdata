@@ -145,6 +145,10 @@ resource "aws_route_table" "sddp_public_routetable" {
     cidr_block                = "${aws_vpc.general.cidr_block}"
     vpc_peering_connection_id = "${aws_vpc_peering_connection.sddp2general.id}"
   }
+  route {
+    cidr_block                = "${aws_vpc.esports.cidr_block}"
+    vpc_peering_connection_id = "${aws_vpc_peering_connection.sddp_prod_peer.id}"
+  }
 
   tags = {
     label = "sddp"
@@ -190,6 +194,10 @@ resource "aws_route_table" "sddp_private_routetable" {
   route {
     cidr_block                = "${aws_vpc.general.cidr_block}"
     vpc_peering_connection_id = "${aws_vpc_peering_connection.sddp2general.id}"
+  }
+  route {
+    cidr_block                = "${aws_vpc.esports.cidr_block}"
+    vpc_peering_connection_id = "${aws_vpc_peering_connection.sddp_prod_peer.id}"
   }
   depends_on = ["aws_nat_gateway.sddp"]
 

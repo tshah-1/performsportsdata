@@ -145,6 +145,10 @@ resource "aws_route_table" "sddp_stage_public_routetable" {
     cidr_block                = "${aws_vpc.general_stage.cidr_block}"
     vpc_peering_connection_id = "${aws_vpc_peering_connection.sddp_stage2general_stage.id}"
   }
+  route {
+    cidr_block                = "${aws_vpc.esportsstaging.cidr_block}"
+    vpc_peering_connection_id = "${aws_vpc_peering_connection.sddp_staging_peer.id}"
+  }
 
   tags = {
     label = "sddp_stage"
@@ -190,6 +194,10 @@ resource "aws_route_table" "sddp_stage_private_routetable" {
   route {
     cidr_block                = "${aws_vpc.general_stage.cidr_block}"
     vpc_peering_connection_id = "${aws_vpc_peering_connection.sddp_stage2general_stage.id}"
+  }
+  route {
+    cidr_block                = "${aws_vpc.esportsstaging.cidr_block}"
+    vpc_peering_connection_id = "${aws_vpc_peering_connection.sddp_staging_peer.id}"
   }
   depends_on = ["aws_nat_gateway.sddp_stage"]
 

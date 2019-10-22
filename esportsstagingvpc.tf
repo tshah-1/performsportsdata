@@ -140,6 +140,10 @@ resource "aws_route_table" "esportsstaging_public_routetable" {
     cidr_block = "0.0.0.0/0"
     gateway_id = "${aws_internet_gateway.esportsstaging-ig.id}"
   }
+  route {
+    cidr_block                = "${aws_vpc.sddp_stage.cidr_block}"
+    vpc_peering_connection_id = "${aws_vpc_peering_connection.sddp_staging_peer.id}"
+  }
 
   tags = {
     label = "esportsstaging"
@@ -182,14 +186,19 @@ resource "aws_route_table" "esportsstaging_private_routetable" {
     cidr_block     = "0.0.0.0/0"
     nat_gateway_id = "${aws_nat_gateway.esportsstaging.id}"
   }
+  route {
+    cidr_block                = "${aws_vpc.sddp_stage.cidr_block}"
+    vpc_peering_connection_id = "${aws_vpc_peering_connection.sddp_staging_peer.id}"
+  }
   depends_on = ["aws_nat_gateway.esportsstaging"]
+
+
 
   tags = {
     label = "esportsstaging"
     Name  = "esportsstaging_private_routetable"
   }
 }
-
 
 resource "aws_route_table_association" "esportsstaging_be_subnet_a" {
   subnet_id      = "${aws_subnet.esportsstaging_be_subnet_a.id}"

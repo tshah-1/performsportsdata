@@ -152,6 +152,11 @@ resource "aws_route_table" "esports_public_routetable" {
     vpc_peering_connection_id = "${aws_vpc_peering_connection.gearboxpeer.id}"
   }
 
+  route {
+    cidr_block                = "${aws_vpc.sddp.cidr_block}"
+    vpc_peering_connection_id = "${aws_vpc_peering_connection.sddp_prod_peer.id}"
+  }
+
   tags = {
     label = "esports"
     Name  = "esports_public_routetable"
@@ -196,6 +201,10 @@ resource "aws_route_table" "esports_private_routetable" {
   route {
     cidr_block                = "10.0.0.0/16"
     vpc_peering_connection_id = "${aws_vpc_peering_connection.gearboxpeer.id}"
+  }
+  route {
+    cidr_block                = "${aws_vpc.sddp.cidr_block}"
+    vpc_peering_connection_id = "${aws_vpc_peering_connection.sddp_prod_peer.id}"
   }
   depends_on = ["aws_nat_gateway.esports"]
 
