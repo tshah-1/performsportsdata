@@ -9,10 +9,10 @@ resource "aws_vpc" "sddp" {
 }
 
 resource "aws_subnet" "sddp_public_subnet_a" {
-  vpc_id     = "${aws_vpc.sddp.id}"
+  vpc_id     = aws_vpc.sddp.id
   cidr_block = "172.24.48.0/24"
 
-  availability_zone       = "${data.aws_availability_zones.available.names[0]}"
+  availability_zone       = data.aws_availability_zones.available.names[0]
   map_public_ip_on_launch = "true"
 
   tags = {
@@ -23,10 +23,10 @@ resource "aws_subnet" "sddp_public_subnet_a" {
 }
 
 resource "aws_subnet" "sddp_public_subnet_b" {
-  vpc_id     = "${aws_vpc.sddp.id}"
+  vpc_id     = aws_vpc.sddp.id
   cidr_block = "172.24.49.0/24"
 
-  availability_zone       = "${data.aws_availability_zones.available.names[1]}"
+  availability_zone       = data.aws_availability_zones.available.names[1]
   map_public_ip_on_launch = "true"
 
   tags = {
@@ -37,10 +37,10 @@ resource "aws_subnet" "sddp_public_subnet_b" {
 }
 
 resource "aws_subnet" "sddp_public_subnet_c" {
-  vpc_id     = "${aws_vpc.sddp.id}"
+  vpc_id     = aws_vpc.sddp.id
   cidr_block = "172.24.50.0/24"
 
-  availability_zone       = "${data.aws_availability_zones.available.names[2]}"
+  availability_zone       = data.aws_availability_zones.available.names[2]
   map_public_ip_on_launch = "true"
 
   tags = {
@@ -52,9 +52,9 @@ resource "aws_subnet" "sddp_public_subnet_c" {
 
 
 resource "aws_subnet" "sddp_be_subnet_a" {
-  vpc_id                  = "${aws_vpc.sddp.id}"
+  vpc_id                  = aws_vpc.sddp.id
   cidr_block              = "172.24.51.0/24"
-  availability_zone       = "${data.aws_availability_zones.available.names[0]}"
+  availability_zone       = data.aws_availability_zones.available.names[0]
   map_public_ip_on_launch = "false"
 
   tags = {
@@ -65,9 +65,9 @@ resource "aws_subnet" "sddp_be_subnet_a" {
 }
 
 resource "aws_subnet" "sddp_be_subnet_b" {
-  vpc_id                  = "${aws_vpc.sddp.id}"
+  vpc_id                  = aws_vpc.sddp.id
   cidr_block              = "172.24.52.0/24"
-  availability_zone       = "${data.aws_availability_zones.available.names[1]}"
+  availability_zone       = data.aws_availability_zones.available.names[1]
   map_public_ip_on_launch = "false"
 
   tags = {
@@ -78,9 +78,9 @@ resource "aws_subnet" "sddp_be_subnet_b" {
 }
 
 resource "aws_subnet" "sddp_be_subnet_c" {
-  vpc_id            = "${aws_vpc.sddp.id}"
+  vpc_id            = aws_vpc.sddp.id
   cidr_block        = "172.24.53.0/24"
-  availability_zone = "${data.aws_availability_zones.available.names[2]}"
+  availability_zone = data.aws_availability_zones.available.names[2]
 
   tags = {
     Name        = "sddp_be_c"
@@ -90,9 +90,9 @@ resource "aws_subnet" "sddp_be_subnet_c" {
 }
 
 resource "aws_subnet" "sddp_db_subnet_a" {
-  vpc_id            = "${aws_vpc.sddp.id}"
+  vpc_id            = aws_vpc.sddp.id
   cidr_block        = "172.24.54.0/24"
-  availability_zone = "${data.aws_availability_zones.available.names[0]}"
+  availability_zone = data.aws_availability_zones.available.names[0]
 
   tags = {
     Name        = "sddp_db_a"
@@ -102,9 +102,9 @@ resource "aws_subnet" "sddp_db_subnet_a" {
 }
 
 resource "aws_subnet" "sddp_db_subnet_b" {
-  vpc_id            = "${aws_vpc.sddp.id}"
+  vpc_id            = aws_vpc.sddp.id
   cidr_block        = "172.24.55.0/24"
-  availability_zone = "${data.aws_availability_zones.available.names[1]}"
+  availability_zone = data.aws_availability_zones.available.names[1]
 
   tags = {
     Name        = "sddp_db_b"
@@ -114,9 +114,9 @@ resource "aws_subnet" "sddp_db_subnet_b" {
 }
 
 resource "aws_subnet" "sddp_db_subnet_c" {
-  vpc_id            = "${aws_vpc.sddp.id}"
+  vpc_id            = aws_vpc.sddp.id
   cidr_block        = "172.24.56.0/24"
-  availability_zone = "${data.aws_availability_zones.available.names[2]}"
+  availability_zone = data.aws_availability_zones.available.names[2]
 
   tags = {
     Name        = "sddp_db_c"
@@ -126,7 +126,7 @@ resource "aws_subnet" "sddp_db_subnet_c" {
 }
 
 resource "aws_internet_gateway" "sddp-ig" {
-  vpc_id = "${aws_vpc.sddp.id}"
+  vpc_id = aws_vpc.sddp.id
 
   tags = {
     Name        = "sddp IG"
@@ -135,19 +135,19 @@ resource "aws_internet_gateway" "sddp-ig" {
 }
 
 resource "aws_route_table" "sddp_public_routetable" {
-  vpc_id = "${aws_vpc.sddp.id}"
+  vpc_id = aws_vpc.sddp.id
 
   route {
     cidr_block = "0.0.0.0/0"
-    gateway_id = "${aws_internet_gateway.sddp-ig.id}"
+    gateway_id = aws_internet_gateway.sddp-ig.id
   }
   route {
-    cidr_block                = "${aws_vpc.general.cidr_block}"
-    vpc_peering_connection_id = "${aws_vpc_peering_connection.sddp2general.id}"
+    cidr_block                = aws_vpc.general.cidr_block
+    vpc_peering_connection_id = aws_vpc_peering_connection.sddp2general.id
   }
   route {
-    cidr_block                = "${aws_vpc.esports.cidr_block}"
-    vpc_peering_connection_id = "${aws_vpc_peering_connection.sddp_prod_peer.id}"
+    cidr_block                = aws_vpc.esports.cidr_block
+    vpc_peering_connection_id = aws_vpc_peering_connection.sddp_prod_peer.id
   }
 
   tags = {
@@ -157,18 +157,18 @@ resource "aws_route_table" "sddp_public_routetable" {
 }
 
 resource "aws_route_table_association" "sddp_public_subnet_a" {
-  subnet_id      = "${aws_subnet.sddp_public_subnet_a.id}"
-  route_table_id = "${aws_route_table.sddp_public_routetable.id}"
+  subnet_id      = aws_subnet.sddp_public_subnet_a.id
+  route_table_id = aws_route_table.sddp_public_routetable.id
 }
 
 resource "aws_route_table_association" "sddp_public_subnet_b" {
-  subnet_id      = "${aws_subnet.sddp_public_subnet_b.id}"
-  route_table_id = "${aws_route_table.sddp_public_routetable.id}"
+  subnet_id      = aws_subnet.sddp_public_subnet_b.id
+  route_table_id = aws_route_table.sddp_public_routetable.id
 }
 
 resource "aws_route_table_association" "sddp_public_subnet_c" {
-  subnet_id      = "${aws_subnet.sddp_public_subnet_c.id}"
-  route_table_id = "${aws_route_table.sddp_public_routetable.id}"
+  subnet_id      = aws_subnet.sddp_public_subnet_c.id
+  route_table_id = aws_route_table.sddp_public_routetable.id
 }
 
 resource "aws_eip" "sddp_nat" {
@@ -176,8 +176,8 @@ resource "aws_eip" "sddp_nat" {
 }
 
 resource "aws_nat_gateway" "sddp" {
-  allocation_id = "${aws_eip.sddp_nat.id}"
-  subnet_id     = "${aws_subnet.sddp_public_subnet_a.id}"
+  allocation_id = aws_eip.sddp_nat.id
+  subnet_id     = aws_subnet.sddp_public_subnet_a.id
 
   tags = {
     Name = "sddp VPC NAT"
@@ -185,21 +185,21 @@ resource "aws_nat_gateway" "sddp" {
 }
 
 resource "aws_route_table" "sddp_private_routetable" {
-  vpc_id = "${aws_vpc.sddp.id}"
+  vpc_id = aws_vpc.sddp.id
 
   route {
     cidr_block     = "0.0.0.0/0"
-    nat_gateway_id = "${aws_nat_gateway.sddp.id}"
+    nat_gateway_id = aws_nat_gateway.sddp.id
   }
   route {
-    cidr_block                = "${aws_vpc.general.cidr_block}"
-    vpc_peering_connection_id = "${aws_vpc_peering_connection.sddp2general.id}"
+    cidr_block                = aws_vpc.general.cidr_block
+    vpc_peering_connection_id = aws_vpc_peering_connection.sddp2general.id
   }
   route {
-    cidr_block                = "${aws_vpc.esports.cidr_block}"
-    vpc_peering_connection_id = "${aws_vpc_peering_connection.sddp_prod_peer.id}"
+    cidr_block                = aws_vpc.esports.cidr_block
+    vpc_peering_connection_id = aws_vpc_peering_connection.sddp_prod_peer.id
   }
-  depends_on = ["aws_nat_gateway.sddp"]
+  depends_on = [aws_nat_gateway.sddp]
 
   tags = {
     label = "sddp"
@@ -209,38 +209,38 @@ resource "aws_route_table" "sddp_private_routetable" {
 
 
 resource "aws_route_table_association" "sddp_be_subnet_a" {
-  subnet_id      = "${aws_subnet.sddp_be_subnet_a.id}"
-  route_table_id = "${aws_route_table.sddp_private_routetable.id}"
+  subnet_id      = aws_subnet.sddp_be_subnet_a.id
+  route_table_id = aws_route_table.sddp_private_routetable.id
 }
 
 resource "aws_route_table_association" "sddp_be_subnet_b" {
-  subnet_id      = "${aws_subnet.sddp_be_subnet_b.id}"
-  route_table_id = "${aws_route_table.sddp_private_routetable.id}"
+  subnet_id      = aws_subnet.sddp_be_subnet_b.id
+  route_table_id = aws_route_table.sddp_private_routetable.id
 }
 
 resource "aws_route_table_association" "sddp_be_subnet_c" {
-  subnet_id      = "${aws_subnet.sddp_be_subnet_c.id}"
-  route_table_id = "${aws_route_table.sddp_private_routetable.id}"
+  subnet_id      = aws_subnet.sddp_be_subnet_c.id
+  route_table_id = aws_route_table.sddp_private_routetable.id
 }
 
 resource "aws_route_table_association" "sddp_db_subnet_a" {
-  subnet_id      = "${aws_subnet.sddp_db_subnet_a.id}"
-  route_table_id = "${aws_route_table.sddp_private_routetable.id}"
+  subnet_id      = aws_subnet.sddp_db_subnet_a.id
+  route_table_id = aws_route_table.sddp_private_routetable.id
 }
 
 resource "aws_route_table_association" "sddp_db_subnet_b" {
-  subnet_id      = "${aws_subnet.sddp_db_subnet_b.id}"
-  route_table_id = "${aws_route_table.sddp_private_routetable.id}"
+  subnet_id      = aws_subnet.sddp_db_subnet_b.id
+  route_table_id = aws_route_table.sddp_private_routetable.id
 }
 
 resource "aws_route_table_association" "sddp_db_subnet_c" {
-  subnet_id      = "${aws_subnet.sddp_db_subnet_c.id}"
-  route_table_id = "${aws_route_table.sddp_private_routetable.id}"
+  subnet_id      = aws_subnet.sddp_db_subnet_c.id
+  route_table_id = aws_route_table.sddp_private_routetable.id
 }
 
 resource "aws_vpc_peering_connection" "sddp2general" {
-  vpc_id      = "${aws_vpc.sddp.id}"
-  peer_vpc_id = "${aws_vpc.general.id}"
+  vpc_id      = aws_vpc.sddp.id
+  peer_vpc_id = aws_vpc.general.id
   auto_accept = true
 
   tags = {
