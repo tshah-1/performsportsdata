@@ -1,6 +1,6 @@
 provider "aws" {
-  profile = "${var.profile}"
-  region  = "${terraform.workspace}"
+  profile = var.profile
+  region  = terraform.workspace
 }
 
 data "aws_availability_zones" "available" {}

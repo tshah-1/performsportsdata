@@ -9,10 +9,10 @@ resource "aws_vpc" "general" {
 }
 
 resource "aws_subnet" "general_public_subnet_a" {
-  vpc_id     = "${aws_vpc.general.id}"
+  vpc_id     = aws_vpc.general.id
   cidr_block = "172.24.80.0/24"
 
-  availability_zone       = "${data.aws_availability_zones.available.names[0]}"
+  availability_zone       = data.aws_availability_zones.available.names[0]
   map_public_ip_on_launch = "true"
 
   tags = {
@@ -23,10 +23,10 @@ resource "aws_subnet" "general_public_subnet_a" {
 }
 
 resource "aws_subnet" "general_public_subnet_b" {
-  vpc_id     = "${aws_vpc.general.id}"
+  vpc_id     = aws_vpc.general.id
   cidr_block = "172.24.81.0/24"
 
-  availability_zone       = "${data.aws_availability_zones.available.names[1]}"
+  availability_zone       = data.aws_availability_zones.available.names[1]
   map_public_ip_on_launch = "true"
 
   tags = {
@@ -37,10 +37,10 @@ resource "aws_subnet" "general_public_subnet_b" {
 }
 
 resource "aws_subnet" "general_public_subnet_c" {
-  vpc_id     = "${aws_vpc.general.id}"
+  vpc_id     = aws_vpc.general.id
   cidr_block = "172.24.82.0/24"
 
-  availability_zone       = "${data.aws_availability_zones.available.names[2]}"
+  availability_zone       = data.aws_availability_zones.available.names[2]
   map_public_ip_on_launch = "true"
 
   tags = {
@@ -52,9 +52,9 @@ resource "aws_subnet" "general_public_subnet_c" {
 
 
 resource "aws_subnet" "general_be_subnet_a" {
-  vpc_id                  = "${aws_vpc.general.id}"
+  vpc_id                  = aws_vpc.general.id
   cidr_block              = "172.24.83.0/24"
-  availability_zone       = "${data.aws_availability_zones.available.names[0]}"
+  availability_zone       = data.aws_availability_zones.available.names[0]
   map_public_ip_on_launch = "false"
 
   tags = {
@@ -65,9 +65,9 @@ resource "aws_subnet" "general_be_subnet_a" {
 }
 
 resource "aws_subnet" "general_be_subnet_b" {
-  vpc_id                  = "${aws_vpc.general.id}"
+  vpc_id                  = aws_vpc.general.id
   cidr_block              = "172.24.84.0/24"
-  availability_zone       = "${data.aws_availability_zones.available.names[1]}"
+  availability_zone       = data.aws_availability_zones.available.names[1]
   map_public_ip_on_launch = "false"
 
   tags = {
@@ -78,9 +78,9 @@ resource "aws_subnet" "general_be_subnet_b" {
 }
 
 resource "aws_subnet" "general_be_subnet_c" {
-  vpc_id            = "${aws_vpc.general.id}"
+  vpc_id            = aws_vpc.general.id
   cidr_block        = "172.24.85.0/24"
-  availability_zone = "${data.aws_availability_zones.available.names[2]}"
+  availability_zone = data.aws_availability_zones.available.names[2]
 
   tags = {
     Name        = "general_be_c"
@@ -90,9 +90,9 @@ resource "aws_subnet" "general_be_subnet_c" {
 }
 
 resource "aws_subnet" "general_db_subnet_a" {
-  vpc_id            = "${aws_vpc.general.id}"
+  vpc_id            = aws_vpc.general.id
   cidr_block        = "172.24.86.0/24"
-  availability_zone = "${data.aws_availability_zones.available.names[0]}"
+  availability_zone = data.aws_availability_zones.available.names[0]
 
   tags = {
     Name        = "general_db_a"
@@ -102,9 +102,9 @@ resource "aws_subnet" "general_db_subnet_a" {
 }
 
 resource "aws_subnet" "general_db_subnet_b" {
-  vpc_id            = "${aws_vpc.general.id}"
+  vpc_id            = aws_vpc.general.id
   cidr_block        = "172.24.87.0/24"
-  availability_zone = "${data.aws_availability_zones.available.names[1]}"
+  availability_zone = data.aws_availability_zones.available.names[1]
 
   tags = {
     Name        = "general_db_b"
@@ -114,9 +114,9 @@ resource "aws_subnet" "general_db_subnet_b" {
 }
 
 resource "aws_subnet" "general_db_subnet_c" {
-  vpc_id            = "${aws_vpc.general.id}"
+  vpc_id            = aws_vpc.general.id
   cidr_block        = "172.24.88.0/24"
-  availability_zone = "${data.aws_availability_zones.available.names[2]}"
+  availability_zone = data.aws_availability_zones.available.names[2]
 
   tags = {
     Name        = "general_db_c"
@@ -126,7 +126,7 @@ resource "aws_subnet" "general_db_subnet_c" {
 }
 
 resource "aws_internet_gateway" "general-ig" {
-  vpc_id = "${aws_vpc.general.id}"
+  vpc_id = aws_vpc.general.id
 
   tags = {
     Name        = "general IG"
@@ -135,19 +135,19 @@ resource "aws_internet_gateway" "general-ig" {
 }
 
 resource "aws_route_table" "general_public_routetable" {
-  vpc_id = "${aws_vpc.general.id}"
+  vpc_id = aws_vpc.general.id
 
   route {
     cidr_block = "0.0.0.0/0"
-    gateway_id = "${aws_internet_gateway.general-ig.id}"
+    gateway_id = aws_internet_gateway.general-ig.id
   }
   route {
-    cidr_block                = "${aws_vpc.sddp.cidr_block}"
-    vpc_peering_connection_id = "${aws_vpc_peering_connection.sddp2general.id}"
+    cidr_block                = aws_vpc.sddp.cidr_block
+    vpc_peering_connection_id = aws_vpc_peering_connection.sddp2general.id
   }
   route {
-    cidr_block                = "${aws_vpc.csb.cidr_block}"
-    vpc_peering_connection_id = "${aws_vpc_peering_connection.csb2general.id}"
+    cidr_block                = aws_vpc.csb.cidr_block
+    vpc_peering_connection_id = aws_vpc_peering_connection.csb2general.id
   }
 
   tags = {
@@ -157,18 +157,18 @@ resource "aws_route_table" "general_public_routetable" {
 }
 
 resource "aws_route_table_association" "general_public_subnet_a" {
-  subnet_id      = "${aws_subnet.general_public_subnet_a.id}"
-  route_table_id = "${aws_route_table.general_public_routetable.id}"
+  subnet_id      = aws_subnet.general_public_subnet_a.id
+  route_table_id = aws_route_table.general_public_routetable.id
 }
 
 resource "aws_route_table_association" "general_public_subnet_b" {
-  subnet_id      = "${aws_subnet.general_public_subnet_b.id}"
-  route_table_id = "${aws_route_table.general_public_routetable.id}"
+  subnet_id      = aws_subnet.general_public_subnet_b.id
+  route_table_id = aws_route_table.general_public_routetable.id
 }
 
 resource "aws_route_table_association" "general_public_subnet_c" {
-  subnet_id      = "${aws_subnet.general_public_subnet_c.id}"
-  route_table_id = "${aws_route_table.general_public_routetable.id}"
+  subnet_id      = aws_subnet.general_public_subnet_c.id
+  route_table_id = aws_route_table.general_public_routetable.id
 }
 
 resource "aws_eip" "general_nat" {
@@ -176,8 +176,8 @@ resource "aws_eip" "general_nat" {
 }
 
 resource "aws_nat_gateway" "general" {
-  allocation_id = "${aws_eip.general_nat.id}"
-  subnet_id     = "${aws_subnet.general_public_subnet_a.id}"
+  allocation_id = aws_eip.general_nat.id
+  subnet_id     = aws_subnet.general_public_subnet_a.id
 
   tags = {
     Name = "general VPC NAT"
@@ -185,21 +185,21 @@ resource "aws_nat_gateway" "general" {
 }
 
 resource "aws_route_table" "general_private_routetable" {
-  vpc_id = "${aws_vpc.general.id}"
+  vpc_id = aws_vpc.general.id
 
   route {
     cidr_block     = "0.0.0.0/0"
-    nat_gateway_id = "${aws_nat_gateway.general.id}"
+    nat_gateway_id = aws_nat_gateway.general.id
   }
   route {
-    cidr_block                = "${aws_vpc.sddp.cidr_block}"
-    vpc_peering_connection_id = "${aws_vpc_peering_connection.sddp2general.id}"
+    cidr_block                = aws_vpc.sddp.cidr_block
+    vpc_peering_connection_id = aws_vpc_peering_connection.sddp2general.id
   }
   route {
-    cidr_block                = "${aws_vpc.csb.cidr_block}"
-    vpc_peering_connection_id = "${aws_vpc_peering_connection.csb2general.id}"
+    cidr_block                = aws_vpc.csb.cidr_block
+    vpc_peering_connection_id = aws_vpc_peering_connection.csb2general.id
   }
-  depends_on = ["aws_nat_gateway.general"]
+  depends_on = [aws_nat_gateway.general]
 
   tags = {
     label = "general"
@@ -209,31 +209,31 @@ resource "aws_route_table" "general_private_routetable" {
 
 
 resource "aws_route_table_association" "general_be_subnet_a" {
-  subnet_id      = "${aws_subnet.general_be_subnet_a.id}"
-  route_table_id = "${aws_route_table.general_private_routetable.id}"
+  subnet_id      = aws_subnet.general_be_subnet_a.id
+  route_table_id = aws_route_table.general_private_routetable.id
 }
 
 resource "aws_route_table_association" "general_be_subnet_b" {
-  subnet_id      = "${aws_subnet.general_be_subnet_b.id}"
-  route_table_id = "${aws_route_table.general_private_routetable.id}"
+  subnet_id      = aws_subnet.general_be_subnet_b.id
+  route_table_id = aws_route_table.general_private_routetable.id
 }
 
 resource "aws_route_table_association" "general_be_subnet_c" {
-  subnet_id      = "${aws_subnet.general_be_subnet_c.id}"
-  route_table_id = "${aws_route_table.general_private_routetable.id}"
+  subnet_id      = aws_subnet.general_be_subnet_c.id
+  route_table_id = aws_route_table.general_private_routetable.id
 }
 
 resource "aws_route_table_association" "general_db_subnet_a" {
-  subnet_id      = "${aws_subnet.general_db_subnet_a.id}"
-  route_table_id = "${aws_route_table.general_private_routetable.id}"
+  subnet_id      = aws_subnet.general_db_subnet_a.id
+  route_table_id = aws_route_table.general_private_routetable.id
 }
 
 resource "aws_route_table_association" "general_db_subnet_b" {
-  subnet_id      = "${aws_subnet.general_db_subnet_b.id}"
-  route_table_id = "${aws_route_table.general_private_routetable.id}"
+  subnet_id      = aws_subnet.general_db_subnet_b.id
+  route_table_id = aws_route_table.general_private_routetable.id
 }
 
 resource "aws_route_table_association" "general_db_subnet_c" {
-  subnet_id      = "${aws_subnet.general_db_subnet_c.id}"
-  route_table_id = "${aws_route_table.general_private_routetable.id}"
+  subnet_id      = aws_subnet.general_db_subnet_c.id
+  route_table_id = aws_route_table.general_private_routetable.id
 }

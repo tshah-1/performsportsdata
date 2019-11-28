@@ -9,10 +9,10 @@ resource "aws_vpc" "csb" {
 }
 
 resource "aws_subnet" "csb_public_subnet_a" {
-  vpc_id     = "${aws_vpc.csb.id}"
+  vpc_id     = aws_vpc.csb.id
   cidr_block = "172.24.32.0/24"
 
-  availability_zone       = "${data.aws_availability_zones.available.names[0]}"
+  availability_zone       = data.aws_availability_zones.available.names[0]
   map_public_ip_on_launch = "true"
 
   tags = {
@@ -23,10 +23,10 @@ resource "aws_subnet" "csb_public_subnet_a" {
 }
 
 resource "aws_subnet" "csb_public_subnet_b" {
-  vpc_id     = "${aws_vpc.csb.id}"
+  vpc_id     = aws_vpc.csb.id
   cidr_block = "172.24.33.0/24"
 
-  availability_zone       = "${data.aws_availability_zones.available.names[1]}"
+  availability_zone       = data.aws_availability_zones.available.names[1]
   map_public_ip_on_launch = "true"
 
   tags = {
@@ -37,10 +37,10 @@ resource "aws_subnet" "csb_public_subnet_b" {
 }
 
 resource "aws_subnet" "csb_public_subnet_c" {
-  vpc_id     = "${aws_vpc.csb.id}"
+  vpc_id     = aws_vpc.csb.id
   cidr_block = "172.24.34.0/24"
 
-  availability_zone       = "${data.aws_availability_zones.available.names[2]}"
+  availability_zone       = data.aws_availability_zones.available.names[2]
   map_public_ip_on_launch = "true"
 
   tags = {
@@ -52,9 +52,9 @@ resource "aws_subnet" "csb_public_subnet_c" {
 
 
 resource "aws_subnet" "csb_be_subnet_a" {
-  vpc_id                  = "${aws_vpc.csb.id}"
+  vpc_id                  = aws_vpc.csb.id
   cidr_block              = "172.24.35.0/24"
-  availability_zone       = "${data.aws_availability_zones.available.names[0]}"
+  availability_zone       = data.aws_availability_zones.available.names[0]
   map_public_ip_on_launch = "false"
 
   tags = {
@@ -65,9 +65,9 @@ resource "aws_subnet" "csb_be_subnet_a" {
 }
 
 resource "aws_subnet" "csb_be_subnet_b" {
-  vpc_id                  = "${aws_vpc.csb.id}"
+  vpc_id                  = aws_vpc.csb.id
   cidr_block              = "172.24.36.0/24"
-  availability_zone       = "${data.aws_availability_zones.available.names[1]}"
+  availability_zone       = data.aws_availability_zones.available.names[1]
   map_public_ip_on_launch = "false"
 
   tags = {
@@ -78,9 +78,9 @@ resource "aws_subnet" "csb_be_subnet_b" {
 }
 
 resource "aws_subnet" "csb_be_subnet_c" {
-  vpc_id            = "${aws_vpc.csb.id}"
+  vpc_id            = aws_vpc.csb.id
   cidr_block        = "172.24.37.0/24"
-  availability_zone = "${data.aws_availability_zones.available.names[2]}"
+  availability_zone = data.aws_availability_zones.available.names[2]
 
   tags = {
     Name        = "csb_be_c"
@@ -90,9 +90,9 @@ resource "aws_subnet" "csb_be_subnet_c" {
 }
 
 resource "aws_subnet" "csb_db_subnet_a" {
-  vpc_id            = "${aws_vpc.csb.id}"
+  vpc_id            = aws_vpc.csb.id
   cidr_block        = "172.24.38.0/24"
-  availability_zone = "${data.aws_availability_zones.available.names[0]}"
+  availability_zone = data.aws_availability_zones.available.names[0]
 
   tags = {
     Name        = "csb_db_a"
@@ -102,9 +102,9 @@ resource "aws_subnet" "csb_db_subnet_a" {
 }
 
 resource "aws_subnet" "csb_db_subnet_b" {
-  vpc_id            = "${aws_vpc.csb.id}"
+  vpc_id            = aws_vpc.csb.id
   cidr_block        = "172.24.39.0/24"
-  availability_zone = "${data.aws_availability_zones.available.names[1]}"
+  availability_zone = data.aws_availability_zones.available.names[1]
 
   tags = {
     Name        = "csb_db_b"
@@ -114,9 +114,9 @@ resource "aws_subnet" "csb_db_subnet_b" {
 }
 
 resource "aws_subnet" "csb_db_subnet_c" {
-  vpc_id            = "${aws_vpc.csb.id}"
+  vpc_id            = aws_vpc.csb.id
   cidr_block        = "172.24.40.0/24"
-  availability_zone = "${data.aws_availability_zones.available.names[2]}"
+  availability_zone = data.aws_availability_zones.available.names[2]
 
   tags = {
     Name        = "csb_db_c"
@@ -126,7 +126,7 @@ resource "aws_subnet" "csb_db_subnet_c" {
 }
 
 resource "aws_internet_gateway" "csb-ig" {
-  vpc_id = "${aws_vpc.csb.id}"
+  vpc_id = aws_vpc.csb.id
 
   tags = {
     Name        = "csb IG"
@@ -135,45 +135,45 @@ resource "aws_internet_gateway" "csb-ig" {
 }
 
 resource "aws_route_table" "csb_public_routetable" {
-  vpc_id = "${aws_vpc.csb.id}"
+  vpc_id = aws_vpc.csb.id
 
   route {
     cidr_block = "0.0.0.0/0"
-    gateway_id = "${aws_internet_gateway.csb-ig.id}"
+    gateway_id = aws_internet_gateway.csb-ig.id
   }
 
   route {
     cidr_block                = "10.0.2.0/24"
-    vpc_peering_connection_id = "${aws_vpc_peering_connection.stagingcsb2gearboxpeer.id}"
+    vpc_peering_connection_id = aws_vpc_peering_connection.stagingcsb2gearboxpeer.id
   }
 
   route {
     cidr_block                = "10.0.3.0/24"
-    vpc_peering_connection_id = "${aws_vpc_peering_connection.stagingcsb2gearboxpeer.id}"
+    vpc_peering_connection_id = aws_vpc_peering_connection.stagingcsb2gearboxpeer.id
   }
   route {
     cidr_block                = "10.0.64.0/24"
-    vpc_peering_connection_id = "${aws_vpc_peering_connection.stagingcsb2gearboxpeer.id}"
+    vpc_peering_connection_id = aws_vpc_peering_connection.stagingcsb2gearboxpeer.id
   }
   route {
     cidr_block                = "10.0.11.0/24"
-    vpc_peering_connection_id = "${aws_vpc_peering_connection.csb2gearboxpeer.id}"
+    vpc_peering_connection_id = aws_vpc_peering_connection.csb2gearboxpeer.id
   }
   route {
     cidr_block                = "10.0.12.0/24"
-    vpc_peering_connection_id = "${aws_vpc_peering_connection.csb2gearboxpeer.id}"
+    vpc_peering_connection_id = aws_vpc_peering_connection.csb2gearboxpeer.id
   }
   route {
     cidr_block                = "10.0.13.0/24"
-    vpc_peering_connection_id = "${aws_vpc_peering_connection.csb2gearboxpeer.id}"
+    vpc_peering_connection_id = aws_vpc_peering_connection.csb2gearboxpeer.id
   }
   route {
     cidr_block                = "10.0.14.0/24"
-    vpc_peering_connection_id = "${aws_vpc_peering_connection.csb2gearboxpeer.id}"
+    vpc_peering_connection_id = aws_vpc_peering_connection.csb2gearboxpeer.id
   }
   route {
-    cidr_block                = "${aws_vpc.general.cidr_block}"
-    vpc_peering_connection_id = "${aws_vpc_peering_connection.csb2general.id}"
+    cidr_block                = aws_vpc.general.cidr_block
+    vpc_peering_connection_id = aws_vpc_peering_connection.csb2general.id
   }
   route {
     cidr_block                = "172.31.0.0/16"
@@ -191,18 +191,18 @@ resource "aws_route_table" "csb_public_routetable" {
 }
 
 resource "aws_route_table_association" "csb_public_subnet_a" {
-  subnet_id      = "${aws_subnet.csb_public_subnet_a.id}"
-  route_table_id = "${aws_route_table.csb_public_routetable.id}"
+  subnet_id      = aws_subnet.csb_public_subnet_a.id
+  route_table_id = aws_route_table.csb_public_routetable.id
 }
 
 resource "aws_route_table_association" "csb_public_subnet_b" {
-  subnet_id      = "${aws_subnet.csb_public_subnet_b.id}"
-  route_table_id = "${aws_route_table.csb_public_routetable.id}"
+  subnet_id      = aws_subnet.csb_public_subnet_b.id
+  route_table_id = aws_route_table.csb_public_routetable.id
 }
 
 resource "aws_route_table_association" "csb_public_subnet_c" {
-  subnet_id      = "${aws_subnet.csb_public_subnet_c.id}"
-  route_table_id = "${aws_route_table.csb_public_routetable.id}"
+  subnet_id      = aws_subnet.csb_public_subnet_c.id
+  route_table_id = aws_route_table.csb_public_routetable.id
 }
 
 resource "aws_eip" "csb_nat" {
@@ -210,8 +210,8 @@ resource "aws_eip" "csb_nat" {
 }
 
 resource "aws_nat_gateway" "csb" {
-  allocation_id = "${aws_eip.csb_nat.id}"
-  subnet_id     = "${aws_subnet.csb_public_subnet_a.id}"
+  allocation_id = aws_eip.csb_nat.id
+  subnet_id     = aws_subnet.csb_public_subnet_a.id
 
   tags = {
     Name = "csb VPC NAT"
@@ -219,46 +219,46 @@ resource "aws_nat_gateway" "csb" {
 }
 
 resource "aws_route_table" "csb_private_routetable" {
-  vpc_id = "${aws_vpc.csb.id}"
+  vpc_id = aws_vpc.csb.id
 
   route {
     cidr_block     = "0.0.0.0/0"
-    nat_gateway_id = "${aws_nat_gateway.csb.id}"
+    nat_gateway_id = aws_nat_gateway.csb.id
   }
   route {
     cidr_block                = "10.0.2.0/24"
-    vpc_peering_connection_id = "${aws_vpc_peering_connection.stagingcsb2gearboxpeer.id}"
+    vpc_peering_connection_id = aws_vpc_peering_connection.stagingcsb2gearboxpeer.id
   }
 
   route {
     cidr_block                = "10.0.3.0/24"
-    vpc_peering_connection_id = "${aws_vpc_peering_connection.stagingcsb2gearboxpeer.id}"
+    vpc_peering_connection_id = aws_vpc_peering_connection.stagingcsb2gearboxpeer.id
   }
   route {
     cidr_block                = "10.0.64.0/24"
-    vpc_peering_connection_id = "${aws_vpc_peering_connection.stagingcsb2gearboxpeer.id}"
+    vpc_peering_connection_id = aws_vpc_peering_connection.stagingcsb2gearboxpeer.id
   }
   route {
     cidr_block                = "10.0.11.0/24"
-    vpc_peering_connection_id = "${aws_vpc_peering_connection.csb2gearboxpeer.id}"
+    vpc_peering_connection_id = aws_vpc_peering_connection.csb2gearboxpeer.id
   }
   route {
     cidr_block                = "10.0.12.0/24"
-    vpc_peering_connection_id = "${aws_vpc_peering_connection.csb2gearboxpeer.id}"
+    vpc_peering_connection_id = aws_vpc_peering_connection.csb2gearboxpeer.id
   }
   route {
     cidr_block                = "10.0.13.0/24"
-    vpc_peering_connection_id = "${aws_vpc_peering_connection.csb2gearboxpeer.id}"
+    vpc_peering_connection_id = aws_vpc_peering_connection.csb2gearboxpeer.id
   }
   route {
     cidr_block                = "10.0.14.0/24"
-    vpc_peering_connection_id = "${aws_vpc_peering_connection.csb2gearboxpeer.id}"
+    vpc_peering_connection_id = aws_vpc_peering_connection.csb2gearboxpeer.id
   }
   route {
-    cidr_block                = "${aws_vpc.general.cidr_block}"
-    vpc_peering_connection_id = "${aws_vpc_peering_connection.csb2general.id}"
+    cidr_block                = aws_vpc.general.cidr_block
+    vpc_peering_connection_id = aws_vpc_peering_connection.csb2general.id
   }
-  depends_on = ["aws_nat_gateway.csb"]
+  depends_on = [aws_nat_gateway.csb]
 
   tags = {
     label = "csb"
@@ -268,37 +268,37 @@ resource "aws_route_table" "csb_private_routetable" {
 
 
 resource "aws_route_table_association" "csb_be_subnet_a" {
-  subnet_id      = "${aws_subnet.csb_be_subnet_a.id}"
-  route_table_id = "${aws_route_table.csb_private_routetable.id}"
+  subnet_id      = aws_subnet.csb_be_subnet_a.id
+  route_table_id = aws_route_table.csb_private_routetable.id
 }
 
 resource "aws_route_table_association" "csb_be_subnet_b" {
-  subnet_id      = "${aws_subnet.csb_be_subnet_b.id}"
-  route_table_id = "${aws_route_table.csb_private_routetable.id}"
+  subnet_id      = aws_subnet.csb_be_subnet_b.id
+  route_table_id = aws_route_table.csb_private_routetable.id
 }
 
 resource "aws_route_table_association" "csb_be_subnet_c" {
-  subnet_id      = "${aws_subnet.csb_be_subnet_c.id}"
-  route_table_id = "${aws_route_table.csb_private_routetable.id}"
+  subnet_id      = aws_subnet.csb_be_subnet_c.id
+  route_table_id = aws_route_table.csb_private_routetable.id
 }
 
 resource "aws_route_table_association" "csb_db_subnet_a" {
-  subnet_id      = "${aws_subnet.csb_db_subnet_a.id}"
-  route_table_id = "${aws_route_table.csb_private_routetable.id}"
+  subnet_id      = aws_subnet.csb_db_subnet_a.id
+  route_table_id = aws_route_table.csb_private_routetable.id
 }
 
 resource "aws_route_table_association" "csb_db_subnet_b" {
-  subnet_id      = "${aws_subnet.csb_db_subnet_b.id}"
-  route_table_id = "${aws_route_table.csb_private_routetable.id}"
+  subnet_id      = aws_subnet.csb_db_subnet_b.id
+  route_table_id = aws_route_table.csb_private_routetable.id
 }
 
 resource "aws_route_table_association" "csb_db_subnet_c" {
-  subnet_id      = "${aws_subnet.csb_db_subnet_c.id}"
-  route_table_id = "${aws_route_table.csb_private_routetable.id}"
+  subnet_id      = aws_subnet.csb_db_subnet_c.id
+  route_table_id = aws_route_table.csb_private_routetable.id
 }
 
 resource "aws_vpc_peering_connection" "csb2gearboxpeer" {
-  vpc_id        = "${aws_vpc.csb.id}"
+  vpc_id        = aws_vpc.csb.id
   peer_vpc_id   = "vpc-b590e0dd"
   peer_owner_id = "447795335313"
   peer_region   = "eu-west-1"
@@ -321,7 +321,7 @@ resource "aws_vpc_peering_connection" "csb2gearboxpeer" {
 }
 
 resource "aws_vpc_peering_connection" "stagingcsb2gearboxpeer" {
-  vpc_id        = "${aws_vpc.csb.id}"
+  vpc_id        = aws_vpc.csb.id
   peer_vpc_id   = "vpc-e1691a88"
   peer_owner_id = "447795335313"
   peer_region   = "us-west-1"
@@ -344,8 +344,8 @@ resource "aws_vpc_peering_connection" "stagingcsb2gearboxpeer" {
 }
 
 resource "aws_vpc_peering_connection" "csb2general" {
-  vpc_id      = "${aws_vpc.csb.id}"
-  peer_vpc_id = "${aws_vpc.general.id}"
+  vpc_id      = aws_vpc.csb.id
+  peer_vpc_id = aws_vpc.general.id
   auto_accept = true
 
   tags = {
