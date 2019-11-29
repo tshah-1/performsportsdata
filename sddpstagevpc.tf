@@ -142,7 +142,7 @@ resource "aws_route_table" "sddp_stage_public_routetable" {
     gateway_id = aws_internet_gateway.sddp_stage-ig.id
   }
   route {
-    cidr_block                = aws_vpc.general_stage.cidr_block
+    cidr_block                = "172.29.32.0/20" # it was aws_vpc.general_stage.cidr_block
     vpc_peering_connection_id = aws_vpc_peering_connection.sddp_stage2general_stage.id
   }
   route {
@@ -192,7 +192,7 @@ resource "aws_route_table" "sddp_stage_private_routetable" {
     nat_gateway_id = aws_nat_gateway.sddp_stage.id
   }
   route {
-    cidr_block                = aws_vpc.general_stage.cidr_block
+    cidr_block                = "172.29.32.0/20" # it was aws_vpc.general_stage.cidr_block
     vpc_peering_connection_id = aws_vpc_peering_connection.sddp_stage2general_stage.id
   }
   route {
@@ -240,7 +240,7 @@ resource "aws_route_table_association" "sddp_stage_db_subnet_c" {
 
 resource "aws_vpc_peering_connection" "sddp_stage2general_stage" {
   vpc_id      = aws_vpc.sddp_stage.id
-  peer_vpc_id = aws_vpc.general_stage.id
+  peer_vpc_id = "vpc-0d4024983f55e5b9d" # it was aws_vpc.general_stage.id
   auto_accept = true
 
   tags = {
