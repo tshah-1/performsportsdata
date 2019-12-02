@@ -188,6 +188,14 @@
         "iam:ListGroupsForUser"
       ],
       "Resource": "arn:aws:iam::*:user/sddp-utils-prod-mailer"
+    },
+
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ssm:*"
+      ],
+      "Resource": "*"
     }
   ]
 }
