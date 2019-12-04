@@ -16,7 +16,6 @@
         }
       }
     },
-
     {
       "Action": [
         "dynamodb:*",
@@ -106,7 +105,6 @@
         }
       }
     },
-
     {
       "Effect": "Allow",
       "Action": [
@@ -114,7 +112,6 @@
       ],
       "Resource": "*"
     },
-
     {
       "Effect": "Allow",
       "Action": [
@@ -141,7 +138,6 @@
       "Action": "apigateway:GET",
       "Resource": "arn:aws:apigateway:*::/domainnames"
     },
-
     {
       "Action": [
         "es:*"
@@ -149,7 +145,6 @@
       "Effect": "Allow",
       "Resource": "*"
     },
-
     {
       "Effect": "Allow",
       "Action": [
@@ -161,7 +156,6 @@
       ],
       "Resource": "arn:aws:iam::*:user/${aws:username}"
     },
-
     {
       "Effect": "Allow",
       "Action": [
@@ -175,7 +169,6 @@
       ],
       "Resource": "*"
     },
-
     {
       "Effect": "Allow",
       "Action": [
@@ -189,11 +182,17 @@
       ],
       "Resource": "arn:aws:iam::*:user/sddp-utils-prod-mailer"
     },
-
     {
       "Effect": "Allow",
       "Action": [
         "ssm:*"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "kms:ListAliases"
       ],
       "Resource": "*"
     }
