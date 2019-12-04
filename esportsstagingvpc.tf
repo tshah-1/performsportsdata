@@ -141,7 +141,7 @@ resource "aws_route_table" "esportsstaging_public_routetable" {
     gateway_id = aws_internet_gateway.esportsstaging-ig.id
   }
   route {
-    cidr_block                = aws_vpc.sddp_stage.cidr_block
+    cidr_block                = "172.29.16.0/20"
     vpc_peering_connection_id = aws_vpc_peering_connection.sddp_staging_peer.id
   }
 
@@ -187,7 +187,7 @@ resource "aws_route_table" "esportsstaging_private_routetable" {
     nat_gateway_id = aws_nat_gateway.esportsstaging.id
   }
   route {
-    cidr_block                = aws_vpc.sddp_stage.cidr_block
+    cidr_block                = "172.29.16.0/20"
     vpc_peering_connection_id = aws_vpc_peering_connection.sddp_staging_peer.id
   }
   depends_on = [aws_nat_gateway.esportsstaging]
@@ -232,7 +232,7 @@ resource "aws_route_table_association" "esportsstaging_db_subnet_c" {
 
 resource "aws_vpc_peering_connection" "sddp_staging_peer" {
   vpc_id      = aws_vpc.esportsstaging.id
-  peer_vpc_id = aws_vpc.sddp_stage.id
+  peer_vpc_id = "vpc-03ad24bff94e7d469"
   auto_accept = true
 
   tags = {
