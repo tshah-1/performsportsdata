@@ -82,7 +82,8 @@
       "Action": [
         "iam:AddRoleToInstanceProfile",
         "iam:CreateInstanceProfile",
-        "iam:CreateRole"
+        "iam:CreateRole",
+        "iam:TagRole"
       ],
       "Resource": [
         "arn:aws:iam::*:role/aws-elasticbeanstalk*",
