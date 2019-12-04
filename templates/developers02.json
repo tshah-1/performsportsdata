@@ -199,7 +199,8 @@
     {
       "Effect": "Allow",
       "Action": [
-        "elasticfilesystem:CreateFileSystem"
+        "elasticfilesystem:CreateFileSystem",
+        "elasticfilesystem:DescribeFileSystems"
       ],
       "Resource": "*"
     }
