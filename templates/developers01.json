@@ -6,7 +6,6 @@
       "Action": "s3:*",
       "Resource": "*"
     },
-
     {
       "Action": "ec2:*",
       "Effect": "Allow",
@@ -44,7 +43,6 @@
         }
       }
     },
-
     {
       "Effect": "Allow",
       "Action": [
@@ -88,6 +86,7 @@
       ],
       "Resource": [
         "arn:aws:iam::*:role/aws-elasticbeanstalk*",
+        "arn:aws:iam::*:role/sddp-*",
         "arn:aws:iam::*:instance-profile/aws-elasticbeanstalk*"
       ]
     },
@@ -148,7 +147,6 @@
         }
       }
     },
-
     {
       "Action": [
         "autoscaling:Describe*",
@@ -172,7 +170,6 @@
         }
       }
     },
-
     {
       "Action": [
         "rds:*",
