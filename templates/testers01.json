@@ -25,7 +25,6 @@
       "Action": "autoscaling:Describe*",
       "Resource": "*"
     },
-
     {
       "Effect": "Allow",
       "Action": [
@@ -34,6 +33,7 @@
         "elasticbeanstalk:List*",
         "elasticbeanstalk:RequestEnvironmentInfo",
         "elasticbeanstalk:RetrieveEnvironmentInfo",
+        "elasticbeanstalk:RestartAppServer",
         "ec2:Describe*",
         "elasticloadbalancing:Describe*",
         "autoscaling:Describe*",
@@ -55,7 +55,6 @@
       ],
       "Resource": "*"
     },
-
     {
       "Action": [
         "autoscaling:Describe*",
@@ -73,7 +72,6 @@
       "Effect": "Allow",
       "Resource": "*"
     },
-
     {
       "Action": [
         "es:Describe*",
@@ -83,7 +81,6 @@
       "Effect": "Allow",
       "Resource": "*"
     },
-
     {
       "Action": [
         "elasticache:Describe*"
