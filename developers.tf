@@ -23,7 +23,10 @@ resource "aws_iam_group_membership" "developers" {
 
   users = [
     aws_iam_user.wiktor-walasek.name,
-    aws_iam_user.grzegorz-wakan.name
+    aws_iam_user.grzegorz-wakan.name,
+    aws_iam_user.adrian-marzec.name,
+    aws_iam_user.emil-dziuba.name,
+    aws_iam_user.lukasz-rother.name
   ]
 }
 
@@ -50,4 +53,3 @@ resource "aws_iam_group_policy_attachment" "developers" {
   group      = aws_iam_group.developers.name
   policy_arn = each.value
 }
-
