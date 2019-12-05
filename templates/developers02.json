@@ -154,7 +154,7 @@
         "iam:DeleteServiceSpecificCredential",
         "iam:ResetServiceSpecificCredential"
       ],
-      "Resource": "arn:aws:iam::*:user/${aws:username}"
+      "Resource": "arn:aws:iam::*:user/$${aws:username}"
     },
     {
       "Effect": "Allow",
@@ -207,6 +207,13 @@
         "elasticfilesystem:DescribeMountTargetSecurityGroups"
       ],
       "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "elasticfilesystem:DeleteFileSystem"
+      ],
+      "Resource": "arn:aws:elasticfilesystem::${account_id}:file-system/sddp-*"
     }
   ]
 }
