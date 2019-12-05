@@ -200,7 +200,8 @@
       "Effect": "Allow",
       "Action": [
         "elasticfilesystem:CreateFileSystem",
-        "elasticfilesystem:DescribeFileSystems"
+        "elasticfilesystem:DescribeFileSystems",
+        "elasticfilesystem:DescribeTags"
       ],
       "Resource": "*"
     }
