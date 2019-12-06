@@ -200,6 +200,7 @@
       "Effect": "Allow",
       "Action": [
         "elasticfilesystem:CreateFileSystem",
+        "elasticfilesystem:CreateMountTarget",
         "elasticfilesystem:DescribeFileSystems",
         "elasticfilesystem:DescribeTags",
         "elasticfilesystem:DescribeLifecycleConfiguration",
