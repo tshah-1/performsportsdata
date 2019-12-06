@@ -213,7 +213,7 @@
       "Action": [
         "elasticfilesystem:DeleteFileSystem"
       ],
-      "Resource": "arn:aws:elasticfilesystem:*:${account_id}:file-system/sddp*"
+      "Resource": "arn:aws:elasticfilesystem:*:${account_id}:file-system/*"
     }
   ]
 }
