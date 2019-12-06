@@ -83,6 +83,7 @@
         "iam:AddRoleToInstanceProfile",
         "iam:CreateInstanceProfile",
         "iam:CreateRole",
+        "iam:DeleteRole",
         "iam:TagRole",
         "iam:AttachRolePolicy",
         "iam:DetachRolePolicy"
