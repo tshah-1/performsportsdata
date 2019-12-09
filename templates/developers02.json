@@ -212,7 +212,8 @@
     {
       "Effect": "Allow",
       "Action": [
-        "elasticfilesystem:DeleteFileSystem"
+        "elasticfilesystem:DeleteFileSystem",
+        "elasticfilesystem:DeleteMountTarget"
       ],
       "Resource": "arn:aws:elasticfilesystem:*:${account_id}:file-system/*"
     }
