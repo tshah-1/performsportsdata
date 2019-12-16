@@ -142,7 +142,7 @@ resource "aws_route_table" "general_public_routetable" {
     gateway_id = aws_internet_gateway.general-ig.id
   }
   route {
-    cidr_block                = aws_vpc.sddp.cidr_block
+    cidr_block                = "172.24.48.0/20"
     vpc_peering_connection_id = aws_vpc_peering_connection.sddp2general.id
   }
   route {
@@ -192,7 +192,7 @@ resource "aws_route_table" "general_private_routetable" {
     nat_gateway_id = aws_nat_gateway.general.id
   }
   route {
-    cidr_block                = aws_vpc.sddp.cidr_block
+    cidr_block                = "172.24.48.0/20"
     vpc_peering_connection_id = aws_vpc_peering_connection.sddp2general.id
   }
   route {

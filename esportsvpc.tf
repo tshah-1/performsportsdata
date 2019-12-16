@@ -153,7 +153,7 @@ resource "aws_route_table" "esports_public_routetable" {
   }
 
   route {
-    cidr_block                = aws_vpc.sddp.cidr_block
+    cidr_block                = "172.24.48.0/20"
     vpc_peering_connection_id = aws_vpc_peering_connection.sddp_prod_peer.id
   }
 
@@ -203,7 +203,7 @@ resource "aws_route_table" "esports_private_routetable" {
     vpc_peering_connection_id = aws_vpc_peering_connection.gearboxpeer.id
   }
   route {
-    cidr_block                = aws_vpc.sddp.cidr_block
+    cidr_block                = "172.24.48.0/20" # sddp
     vpc_peering_connection_id = aws_vpc_peering_connection.sddp_prod_peer.id
   }
   depends_on = [aws_nat_gateway.esports]
@@ -270,7 +270,7 @@ resource "aws_vpc_peering_connection" "gearboxpeer" {
 
 resource "aws_vpc_peering_connection" "sddp_prod_peer" {
   vpc_id      = aws_vpc.esports.id
-  peer_vpc_id = aws_vpc.sddp.id
+  peer_vpc_id = "vpc-0e0c8150af78b40ba"
   auto_accept = true
 
   tags = {
