@@ -172,7 +172,7 @@ resource "aws_route_table" "csb_public_routetable" {
     vpc_peering_connection_id = aws_vpc_peering_connection.csb2gearboxpeer.id
   }
   route {
-    cidr_block                = aws_vpc.general.cidr_block
+    cidr_block                = "172.24.80.0/20"
     vpc_peering_connection_id = aws_vpc_peering_connection.csb2general.id
   }
   route {
@@ -255,7 +255,7 @@ resource "aws_route_table" "csb_private_routetable" {
     vpc_peering_connection_id = aws_vpc_peering_connection.csb2gearboxpeer.id
   }
   route {
-    cidr_block                = aws_vpc.general.cidr_block
+    cidr_block                = "172.24.80.0/20"
     vpc_peering_connection_id = aws_vpc_peering_connection.csb2general.id
   }
   depends_on = [aws_nat_gateway.csb]
@@ -345,7 +345,7 @@ resource "aws_vpc_peering_connection" "stagingcsb2gearboxpeer" {
 
 resource "aws_vpc_peering_connection" "csb2general" {
   vpc_id      = aws_vpc.csb.id
-  peer_vpc_id = aws_vpc.general.id
+  peer_vpc_id = "vpc-0274690a550711dc1"
   auto_accept = true
 
   tags = {
