@@ -179,7 +179,7 @@ resource "aws_route_table" "optacore_prod_private_routetable" {
     nat_gateway_id = aws_nat_gateway.optacore_prod.id
   }
   route {
-    cidr_block                = aws_vpc.general.cidr_block
+    cidr_block                = "172.24.80.0/20"
     vpc_peering_connection_id = aws_vpc_peering_connection.optacore_prod2general.id
   }
   depends_on = [aws_nat_gateway.optacore_prod]
@@ -223,7 +223,7 @@ resource "aws_route_table_association" "optacore_prod_db_subnet_c" {
 
 resource "aws_vpc_peering_connection" "optacore_prod2general" {
   vpc_id      = aws_vpc.optacore_prod.id
-  peer_vpc_id = aws_vpc.general.id
+  peer_vpc_id = "vpc-0274690a550711dc1"
   auto_accept = true
 
   tags = {
