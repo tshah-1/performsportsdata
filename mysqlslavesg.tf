@@ -1,7 +1,7 @@
 resource "aws_security_group" "oc_mysqlslave" {
   name        = "oc_mysqlslave"
   description = "OC mysql slave access SG"
-  vpc_id      = "${aws_vpc.optacore_prod.id}"
+  vpc_id      = "vpc-0548054043f3a866a"
 
   ingress {
     from_port   = 22
@@ -11,11 +11,11 @@ resource "aws_security_group" "oc_mysqlslave" {
   }
 
   ingress {
-    from_port       = 3306
-    to_port         = 3306
-    protocol        = "tcp"
+    from_port   = 3306
+    to_port     = 3306
+    protocol    = "tcp"
     cidr_blocks = ["10.12.52.0/24"]
-    self            = true
+    self        = true
   }
 
   egress {
@@ -25,7 +25,7 @@ resource "aws_security_group" "oc_mysqlslave" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  tags =  {
+  tags = {
     Name        = "OC slave DB SG"
     Application = "opta core"
   }
